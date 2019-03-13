@@ -3,7 +3,7 @@
 
 # details
 
-Make a simple function for creating a details section in markdown.
+Simple function for creating a details block for markdown documents.
 
 ## Installation
 
