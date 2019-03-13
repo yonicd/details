@@ -8,7 +8,6 @@ Authors@R:
            email = "yonicd@gmail.com")
 Description: Simple package to fill a details template to place in a markdown text.
 Depends: R (>= 3.2.0)
-Suggests: magrittr
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: false
