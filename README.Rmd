@@ -30,14 +30,14 @@ remotes::install_github("yonicd/details")
 library(magrittr)
 
 sessioninfo::session_info()%>%
-  details::details(summary = 'current session info',lang = 'r')
+  details::details(summary = 'current session info')
 ```
 
 ## Open by default
 
 ```{r,results='asis'}
 sessioninfo::session_info()%>%
-  details::details(summary = 'open session info',open = TRUE,lang = 'r')
+  details::details(summary = 'open session info',open = TRUE)
 ```
 
 ## Highlight Language

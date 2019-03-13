@@ -19,7 +19,7 @@ remotes::install_github("yonicd/details")
 library(magrittr)
 
 sessioninfo::session_info()%>%
-  details::details(summary = 'current session info',lang = 'r')
+  details::details(summary = 'current session info')
 ```
 
 <details closed>
@@ -71,7 +71,7 @@ info</summary>
 
 ``` r
 sessioninfo::session_info()%>%
-  details::details(summary = 'open session info',open = TRUE,lang = 'r')
+  details::details(summary = 'open session info',open = TRUE)
 ```
 
 <details open>
