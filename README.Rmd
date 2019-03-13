@@ -24,7 +24,9 @@ remotes::install_github("yonicd/details")
 
 ## Example
 
-## Basic
+## Character
+
+### Basic
 
 ```{r,results='asis'}
 library(magrittr)
@@ -33,17 +35,48 @@ sessioninfo::session_info()%>%
   details::details(summary = 'current session info')
 ```
 
-## Open by default
+### Open by default
 
 ```{r,results='asis'}
 sessioninfo::session_info()%>%
   details::details(summary = 'open session info',open = TRUE)
 ```
 
-## Highlight Language
+### Custom tooltip
+
+```{r,results='asis'}
+sessioninfo::session_info()%>%
+  details::details(summary = 'session info with date tooltip ', tooltip = Sys.Date())
+```
+
+### Highlight Language
 
 ```{r,results='asis'}
 
 readLines('https://raw.githubusercontent.com/metrumresearchgroup/covrpage/master/_pkgdown.yml')%>%
   details::details(summary = 'yaml example',lang = 'yml')
+```
+
+## data.frame/tibble
+
+### data.frame
+
+```{r,results='asis'}
+ iris%>%
+  details::details(summary = 'data.frame')
+```
+
+### tibble
+
+```{r,results='asis'}
+ iris%>%
+  tibble::as_tibble()%>%
+  details::details(summary = 'tibble')
+```
+
+## lists
+
+```{r,results='asis'}
+ list(a = 1,b = head(iris))%>%
+  details::details(summary = 'list')
 ```

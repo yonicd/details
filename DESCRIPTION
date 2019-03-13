@@ -1,6 +1,6 @@
 Package: details
 Title: Create details section for markdown text
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: 
     person(given = "Jonathan",
            family = "Sidi",

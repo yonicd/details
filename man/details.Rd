@@ -4,12 +4,15 @@
 \alias{details}
 \title{create markdown details}
 \usage{
-details(text, summary = NULL, open = FALSE, lang = "r")
+details(text, summary = NULL, tooltip = "Click to Expand",
+  open = FALSE, lang = "r")
 }
 \arguments{
 \item{text}{character, text to put in details block}
 
 \item{summary}{character, text to put in summary block, Default: NULL}
+
+\item{tooltip}{character, text for tooltip on the summary, Default: 'Click to Expand'}
 
 \item{open}{logical, is the details open (TRUE) or closed (FALSE), Default: FALSE}
 
@@ -20,4 +23,7 @@ character
 }
 \description{
 Create details block for markdown with summary as optional.
+}
+\details{
+To remove summary or tooltip set them to NULL
 }
