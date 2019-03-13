@@ -1,0 +1,15 @@
+Package: details
+Title: Create details section for markdown text
+Version: 0.0.1
+Authors@R: 
+    person(given = "Jonathan",
+           family = "Sidi",
+           role = c("aut", "cre"),
+           email = "yonicd@gmail.com")
+Description: Simple package to fill a details template to place in a markdown text.
+Depends: R (>= 3.2.0)
+Suggests: magrittr
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: false
+RoxygenNote: 6.1.1
