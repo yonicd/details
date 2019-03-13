@@ -24,18 +24,26 @@ remotes::install_github("yonicd/details")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+## Basic
 
 ```{r,results='asis'}
 library(magrittr)
 
 sessioninfo::session_info()%>%
-  details::details(summary = 'current session info','r')
+  details::details(summary = 'current session info',lang = 'r')
 ```
 
+## Open by default
+
+```{r,results='asis'}
+sessioninfo::session_info()%>%
+  details::details(summary = 'open session info',open = TRUE,lang = 'r')
+```
+
+## Highlight Language
 
 ```{r,results='asis'}
 
 readLines('https://raw.githubusercontent.com/metrumresearchgroup/covrpage/master/_pkgdown.yml')%>%
-  details::details(summary = 'yaml example','yml')
+  details::details(summary = 'yaml example',lang = 'yml')
 ```

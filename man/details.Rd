@@ -4,12 +4,14 @@
 \alias{details}
 \title{create markdown details}
 \usage{
-details(text, summary = NULL, lang = "r")
+details(text, summary = NULL, open = FALSE, lang = "r")
 }
 \arguments{
 \item{text}{character, text to put in details block}
 
 \item{summary}{character, text to put in summary block, Default: NULL}
+
+\item{open}{logical, is the details open (TRUE) or closed (FALSE), Default: FALSE}
 
 \item{lang}{character, language of block (for markdown highlighting) Default: 'r'}
 }
