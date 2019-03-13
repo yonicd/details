@@ -8,7 +8,7 @@ Make a simple function for creating a details section in markdown.
 ## Installation
 
 ``` r
-remotes::installgithub("yonicd/details")
+remotes::install_github("yonicd/details")
 ```
 
 ## Example
