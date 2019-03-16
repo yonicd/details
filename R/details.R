@@ -31,20 +31,18 @@ details <- function(text, summary = NULL, tooltip = 'Click to Expand', open = FA
     state = 'closed'
   }
   
-  if('data.frame'%in%class(text)){
-    text <- capture.output(print(text))
-  }
-  
-  if(!any(c('data.frame','character','session_info')%in%class(text))){
-    text <- capture.output(str(text))
-  }
-  
   ret <- sprintf(
     '<details %s>%s\n\n```%s\n%s\n```\n\n</details><br>',
-    state, summary,lang,paste0(text,collapse = '\n')
+    state, summary,lang,capture.print(text)
   )
   
   cat(ret)
 }
 
-
+#' @importFrom utils capture.output
+capture.print <- function(obj){
+  if(!inherits(obj,'character')){
+    obj <- utils::capture.output(print(obj))
+  }
+  paste0(obj,collapse = '\n')
+}

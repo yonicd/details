@@ -40,7 +40,7 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-03-13                  
+ date     2019-03-16                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version date       lib source                            
@@ -92,14 +92,14 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-03-13                  
+ date     2019-03-16                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version date       lib source                            
  assertthat    0.2.0   2017-04-11 [1] CRAN (R 3.5.0)                    
  cli           1.0.1   2018-09-25 [1] CRAN (R 3.5.0)                    
  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
- details       0.0.3   2019-03-13 [1] local                             
+ details       0.0.4   2019-03-16 [1] local                             
  digest        0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
  evaluate      0.13    2019-02-12 [1] CRAN (R 3.5.2)                    
  htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    
@@ -131,7 +131,7 @@ sessioninfo::session_info()%>%
 
 <details closed>
 
-<summary> <span title="2019-03-13"> session info with date tooltip
+<summary> <span title="2019-03-16"> session info with date tooltip
 </span>
 </summary>
 
@@ -146,14 +146,14 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-03-13                  
+ date     2019-03-16                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version date       lib source                            
  assertthat    0.2.0   2017-04-11 [1] CRAN (R 3.5.0)                    
  cli           1.0.1   2018-09-25 [1] CRAN (R 3.5.0)                    
  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
- details       0.0.3   2019-03-13 [1] local                             
+ details       0.0.4   2019-03-16 [1] local                             
  digest        0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
  evaluate      0.13    2019-02-12 [1] CRAN (R 3.5.2)                    
  htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    
@@ -459,14 +459,17 @@ articles:
 <summary> <span title="Click to Expand"> list </span> </summary>
 
 ``` r
-List of 2
- $ a: num 1
- $ b:'data.frame':  6 obs. of  5 variables:
-  ..$ Sepal.Length: num [1:6] 5.1 4.9 4.7 4.6 5 5.4
-  ..$ Sepal.Width : num [1:6] 3.5 3 3.2 3.1 3.6 3.9
-  ..$ Petal.Length: num [1:6] 1.4 1.4 1.3 1.5 1.4 1.7
-  ..$ Petal.Width : num [1:6] 0.2 0.2 0.2 0.2 0.2 0.4
-  ..$ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1
+$a
+[1] 1
+
+$b
+  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa
 ```
 
 </details>
