@@ -13,6 +13,13 @@ remotes::install_github("yonicd/details")
 
 ## Example
 
+The function `details::details` can output to result either to `console`
+(default), `clipboard` (via clipr) or to the R `file.editor` pop up
+(useful when clipr not available).
+
+For this document it makes most sense to use the default output
+(`console`).
+
 ## Character
 
 ### Basic
@@ -40,19 +47,19 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-03-16                  
+ date     2019-04-04                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version date       lib source                            
- assertthat    0.2.0   2017-04-11 [1] CRAN (R 3.5.0)                    
- cli           1.0.1   2018-09-25 [1] CRAN (R 3.5.0)                    
+ assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.5.1)                    
+ cli           1.1.0   2019-03-19 [1] CRAN (R 3.5.1)                    
  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
  digest        0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
  evaluate      0.13    2019-02-12 [1] CRAN (R 3.5.2)                    
  htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    
- knitr         1.21    2018-12-10 [1] CRAN (R 3.5.1)                    
+ knitr         1.22    2019-03-08 [1] CRAN (R 3.5.2)                    
  magrittr    * 1.5     2014-11-22 [1] CRAN (R 3.5.0)                    
- Rcpp          1.0.0   2018-11-07 [1] CRAN (R 3.5.0)                    
+ Rcpp          1.0.1   2019-03-17 [1] CRAN (R 3.5.2)                    
  rmarkdown     1.11.6  2019-02-21 [1] Github (rstudio/rmarkdown@bbd0786)
  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.5.0)                    
  stringi       1.4.3   2019-03-12 [1] CRAN (R 3.5.1)                    
@@ -92,20 +99,20 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-03-16                  
+ date     2019-04-04                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version date       lib source                            
- assertthat    0.2.0   2017-04-11 [1] CRAN (R 3.5.0)                    
- cli           1.0.1   2018-09-25 [1] CRAN (R 3.5.0)                    
+ assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.5.1)                    
+ cli           1.1.0   2019-03-19 [1] CRAN (R 3.5.1)                    
  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
- details       0.0.4   2019-03-16 [1] local                             
+ details       0.0.4   2019-04-04 [1] local                             
  digest        0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
  evaluate      0.13    2019-02-12 [1] CRAN (R 3.5.2)                    
  htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    
- knitr         1.21    2018-12-10 [1] CRAN (R 3.5.1)                    
+ knitr         1.22    2019-03-08 [1] CRAN (R 3.5.2)                    
  magrittr    * 1.5     2014-11-22 [1] CRAN (R 3.5.0)                    
- Rcpp          1.0.0   2018-11-07 [1] CRAN (R 3.5.0)                    
+ Rcpp          1.0.1   2019-03-17 [1] CRAN (R 3.5.2)                    
  rmarkdown     1.11.6  2019-02-21 [1] Github (rstudio/rmarkdown@bbd0786)
  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.5.0)                    
  stringi       1.4.3   2019-03-12 [1] CRAN (R 3.5.1)                    
@@ -131,7 +138,7 @@ sessioninfo::session_info()%>%
 
 <details closed>
 
-<summary> <span title="2019-03-16"> session info with date tooltip
+<summary> <span title="2019-04-04"> session info with date tooltip
 </span>
 </summary>
 
@@ -146,20 +153,20 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-03-16                  
+ date     2019-04-04                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version date       lib source                            
- assertthat    0.2.0   2017-04-11 [1] CRAN (R 3.5.0)                    
- cli           1.0.1   2018-09-25 [1] CRAN (R 3.5.0)                    
+ assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.5.1)                    
+ cli           1.1.0   2019-03-19 [1] CRAN (R 3.5.1)                    
  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
- details       0.0.4   2019-03-16 [1] local                             
+ details       0.0.4   2019-04-04 [1] local                             
  digest        0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
  evaluate      0.13    2019-02-12 [1] CRAN (R 3.5.2)                    
  htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    
- knitr         1.21    2018-12-10 [1] CRAN (R 3.5.1)                    
+ knitr         1.22    2019-03-08 [1] CRAN (R 3.5.2)                    
  magrittr    * 1.5     2014-11-22 [1] CRAN (R 3.5.0)                    
- Rcpp          1.0.0   2018-11-07 [1] CRAN (R 3.5.0)                    
+ Rcpp          1.0.1   2019-03-17 [1] CRAN (R 3.5.2)                    
  rmarkdown     1.11.6  2019-02-21 [1] Github (rstudio/rmarkdown@bbd0786)
  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.5.0)                    
  stringi       1.4.3   2019-03-12 [1] CRAN (R 3.5.1)                    

@@ -1,6 +1,6 @@
 Package: details
 Title: Create details section for markdown text
-Version: 0.0.4
+Version: 0.0.5
 Authors@R: 
     person(given = "Jonathan",
            family = "Sidi",
@@ -8,7 +8,7 @@ Authors@R:
            email = "yonicd@gmail.com")
 Description: Simple package to fill a details template to place in a markdown text.
 Depends: R (>= 3.2.0)
-Imports: utils
+Imports: utils, clipr
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: false

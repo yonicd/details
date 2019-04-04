@@ -24,6 +24,10 @@ remotes::install_github("yonicd/details")
 
 ## Example
 
+The function `details::details` can output to result either to `console` (default), `clipboard` (via clipr) or to the R `file.editor` pop up (useful when clipr not available).
+
+For this document it makes most sense to use the default output (`console`).
+
 ## Character
 
 ### Basic

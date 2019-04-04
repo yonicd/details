@@ -5,11 +5,15 @@
 #' @param tooltip character, text for tooltip on the summary, Default: 'Click to Expand'
 #' @param open logical, is the details open (TRUE) or closed (FALSE), Default: FALSE
 #' @param lang character, language of block (for markdown highlighting) Default: 'r'
+#' @param output character, where to output the file console (Default), clipboard or R file editor,
+#'  Default: c('console','clipr','file.edit')
 #' @details To remove summary or tooltip set them to NULL
 #' @return character
 #' @rdname details
 #' @export 
-details <- function(text, summary = NULL, tooltip = 'Click to Expand', open = FALSE, lang = 'r'){
+#' @importFrom clipr write_clip
+#' @importFrom utils file.edit
+details <- function(text, summary = NULL, tooltip = 'Click to Expand', open = FALSE, lang = 'r',output = c('console','clipr','file.edit')){
   
   if(!is.null(summary)){
     
@@ -36,7 +40,15 @@ details <- function(text, summary = NULL, tooltip = 'Click to Expand', open = FA
     state, summary,lang,capture.print(text)
   )
   
-  cat(ret)
+  switch(match.arg(output,c('console','clipr','file.edit')),
+         'console' = cat(ret),
+         'clipr'   = clipr::write_clip(ret),
+         'file.edit' = {
+           tf <- tempfile(fileext = '.R')
+           cat(ret,file = tf,sep = '\n')
+           utils::file.edit(tf)
+         }
+         )
 }
 
 #' @importFrom utils capture.output

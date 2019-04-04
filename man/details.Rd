@@ -5,7 +5,8 @@
 \title{create markdown details}
 \usage{
 details(text, summary = NULL, tooltip = "Click to Expand",
-  open = FALSE, lang = "r")
+  open = FALSE, lang = "r", output = c("console", "clipr",
+  "file.edit"))
 }
 \arguments{
 \item{text}{character, text to put in details block}
