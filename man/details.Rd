@@ -18,6 +18,9 @@ details(text, summary = NULL, tooltip = "Click to Expand",
 \item{open}{logical, is the details open (TRUE) or closed (FALSE), Default: FALSE}
 
 \item{lang}{character, language of block (for markdown highlighting) Default: 'r'}
+
+\item{output}{character, where to output the file console (Default), clipboard or R file editor,
+Default: c('console','clipr','file.edit')}
 }
 \value{
 character
@@ -26,5 +29,6 @@ character
 Create details block for markdown with summary as optional.
 }
 \details{
-To remove summary or tooltip set them to NULL
+To remove summary or tooltip set them to NULL.
+  If the text is a file path, it will automatically it's lines will be read in internally.
 }

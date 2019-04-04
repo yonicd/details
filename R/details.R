@@ -7,7 +7,9 @@
 #' @param lang character, language of block (for markdown highlighting) Default: 'r'
 #' @param output character, where to output the file console (Default), clipboard or R file editor,
 #'  Default: c('console','clipr','file.edit')
-#' @details To remove summary or tooltip set them to NULL
+#' @details 
+#'   To remove summary or tooltip set them to NULL.
+#'   If the text is a file path, it will automatically it's lines will be read in internally.
 #' @return character
 #' @rdname details
 #' @export 
@@ -34,6 +36,13 @@ details <- function(text, summary = NULL, tooltip = 'Click to Expand', open = FA
   }else{
     state = 'closed'
   }
+  
+  if(length(text)==1){
+    if(file.exists(text)){
+      text <- readLines(text)
+    }    
+  }
+
   
   ret <- sprintf(
     '<details %s>%s\n\n```%s\n%s\n```\n\n</details><br>',

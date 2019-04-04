@@ -17,6 +17,9 @@ The function `details::details` can output to result either to `console`
 (default), `clipboard` (via clipr) or to the R `file.editor` pop up
 (useful when clipr not available).
 
+If the input is a file path then it will be identified internally and
+the lines will be read in automatically.
+
 For this document it makes most sense to use the default output
 (`console`).
 
@@ -105,8 +108,9 @@ sessioninfo::session_info()%>%
  package     * version date       lib source                            
  assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.5.1)                    
  cli           1.1.0   2019-03-19 [1] CRAN (R 3.5.1)                    
+ clipr         0.5.0   2019-01-11 [1] CRAN (R 3.5.2)                    
  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
- details       0.0.4   2019-04-04 [1] local                             
+ details       0.0.51  2019-04-04 [1] local                             
  digest        0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
  evaluate      0.13    2019-02-12 [1] CRAN (R 3.5.2)                    
  htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    
@@ -159,8 +163,9 @@ sessioninfo::session_info()%>%
  package     * version date       lib source                            
  assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.5.1)                    
  cli           1.1.0   2019-03-19 [1] CRAN (R 3.5.1)                    
+ clipr         0.5.0   2019-01-11 [1] CRAN (R 3.5.2)                    
  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
- details       0.0.4   2019-04-04 [1] local                             
+ details       0.0.51  2019-04-04 [1] local                             
  digest        0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
  evaluate      0.13    2019-02-12 [1] CRAN (R 3.5.2)                    
  htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    

@@ -26,6 +26,8 @@ remotes::install_github("yonicd/details")
 
 The function `details::details` can output to result either to `console` (default), `clipboard` (via clipr) or to the R `file.editor` pop up (useful when clipr not available).
 
+If the input is a file path then it will be identified internally and the lines will be read in automatically.
+
 For this document it makes most sense to use the default output (`console`).
 
 ## Character
