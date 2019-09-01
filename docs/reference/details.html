@@ -147,8 +147,15 @@ Default: c('console','clipr','file.edit')</p></td>
     <p>To remove summary or tooltip set them to NULL.
 If the text is a file path, it will automatically it's lines will be read in internally.</p>
 <p><br><details><summary> <span title='Click to Expand'> More Details </span> </summary>
-    Here more information can be inserted without overwhelming the user
-</details></p>
+    Here more information can be inserted without overwhelming the user.</p>
+<p>To enable this
+feature add <code>Roxygen: list(markdown = TRUE)</code> to the DESCRIPTION file before rendering
+the roxygen2</p>
+<p>you can use this feature by wrapping documentation with the macros</p>
+<p><code>\foldstart{[SUMMARY TEXT]}</code></p>
+<p><code>#' DOCUMENTATION</code></p>
+<p><code>\foldend</code></p>
+<p></details></p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
