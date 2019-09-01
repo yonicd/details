@@ -3,7 +3,8 @@
 
 # details
 
-Simple function for creating a details block for markdown documents.
+Simple function for creating a details block for markdown documents and
+Roxygen2 documentation.
 
 ## Installation
 
@@ -11,7 +12,40 @@ Simple function for creating a details block for markdown documents.
 remotes::install_github("yonicd/details")
 ```
 
-## Example
+## Roxygen2
+
+Many times in documentation there is a lot to say, but you do not want
+to overwhelm the user.
+
+To solve this we can use folding blocks in the documentation (which are
+then rendered into pkgdown website automatically)
+
+To enable this feature add `Roxygen: list(markdown = TRUE)` to the
+DESCRIPTION file before rendering the roxygen2
+
+You can use this feature by wrapping documentation with the macros
+
+    \foldstart{[SUMMARY TEXT]}
+    
+    #' DOCUMENTATION
+    #' ...
+    #' DOCUMENTATION
+    
+    \foldend
+
+The `SUMMARY_TEXT` is optional, where the folded block will have a
+header of
+<svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 192 512"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg>
+**your text**.
+
+The default will display
+<svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 192 512"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg>
+**details**.
+
+These folded blocks can be inserted anywhere in the documentation, eg
+`@description`, `@param`, `@details`, `@return`, ….
+
+## Markdown
 
 The function `details::details` can output to result either to `console`
 (default), `clipboard` (via clipr) or to the R `file.editor` pop up
@@ -23,9 +57,9 @@ the lines will be read in automatically.
 For this document it makes most sense to use the default output
 (`console`).
 
-## Character
+### Character
 
-### Basic
+#### Basic
 
 ``` r
 library(magrittr)
@@ -42,44 +76,64 @@ sessioninfo::session_info()%>%
 ``` r
 ─ Session info ──────────────────────────────────────────────────────────
  setting  value                       
- version  R version 3.5.1 (2018-07-02)
- os       macOS  10.14.3              
+ version  R version 3.6.1 (2019-07-05)
+ os       macOS Mojave 10.14.5        
  system   x86_64, darwin15.6.0        
  ui       X11                         
  language (EN)                        
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-04-04                  
+ date     2019-09-01                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
- package     * version date       lib source                            
- assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.5.1)                    
- cli           1.1.0   2019-03-19 [1] CRAN (R 3.5.1)                    
- crayon        1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
- digest        0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
- evaluate      0.13    2019-02-12 [1] CRAN (R 3.5.2)                    
- htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    
- knitr         1.22    2019-03-08 [1] CRAN (R 3.5.2)                    
- magrittr    * 1.5     2014-11-22 [1] CRAN (R 3.5.0)                    
- Rcpp          1.0.1   2019-03-17 [1] CRAN (R 3.5.2)                    
- rmarkdown     1.11.6  2019-02-21 [1] Github (rstudio/rmarkdown@bbd0786)
- sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.5.0)                    
- stringi       1.4.3   2019-03-12 [1] CRAN (R 3.5.1)                    
- stringr       1.4.0   2019-02-10 [1] CRAN (R 3.5.2)                    
- withr         2.1.2   2018-03-15 [1] CRAN (R 3.5.0)                    
- xfun          0.5     2019-02-20 [1] CRAN (R 3.5.1)                    
- yaml          2.2.0   2018-07-25 [1] CRAN (R 3.5.0)                    
+ package     * version    date       lib
+ assertthat    0.2.1      2019-03-21 [1]
+ cli           1.1.0      2019-03-19 [1]
+ crayon        1.3.4      2017-09-16 [1]
+ digest        0.6.20     2019-07-04 [1]
+ evaluate      0.14       2019-05-28 [1]
+ fontawesome   0.1.0      2019-09-01 [1]
+ htmltools     0.3.6.9004 2019-08-28 [1]
+ knitr         1.23       2019-05-18 [1]
+ magrittr    * 1.5        2014-11-22 [1]
+ Rcpp          1.0.2      2019-07-25 [1]
+ rlang         0.4.0      2019-06-25 [1]
+ rmarkdown     1.14       2019-07-12 [1]
+ sessioninfo   1.1.1      2018-11-05 [1]
+ stringi       1.4.3      2019-03-12 [1]
+ stringr       1.4.0      2019-02-10 [1]
+ withr         2.1.2      2018-03-15 [1]
+ xfun          0.8        2019-06-25 [1]
+ yaml          2.2.0      2018-07-25 [1]
+ source                              
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ Github (rstudio/fontawesome@ba97af5)
+ Github (rstudio/htmltools@cb452a8)  
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
 
-[1] /Users/yonis/Library/R/3.5/library
-[2] /Library/Frameworks/R.framework/Versions/3.5/Resources/library
+[1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
 ```
 
 </details>
 
 <br>
 
-### Open by default
+#### Open by default
 
 ``` r
 sessioninfo::session_info()%>%
@@ -94,46 +148,68 @@ sessioninfo::session_info()%>%
 ``` r
 ─ Session info ──────────────────────────────────────────────────────────
  setting  value                       
- version  R version 3.5.1 (2018-07-02)
- os       macOS  10.14.3              
+ version  R version 3.6.1 (2019-07-05)
+ os       macOS Mojave 10.14.5        
  system   x86_64, darwin15.6.0        
  ui       X11                         
  language (EN)                        
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-04-04                  
+ date     2019-09-01                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
- package     * version date       lib source                            
- assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.5.1)                    
- cli           1.1.0   2019-03-19 [1] CRAN (R 3.5.1)                    
- clipr         0.5.0   2019-01-11 [1] CRAN (R 3.5.2)                    
- crayon        1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
- details       0.0.51  2019-04-04 [1] local                             
- digest        0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
- evaluate      0.13    2019-02-12 [1] CRAN (R 3.5.2)                    
- htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    
- knitr         1.22    2019-03-08 [1] CRAN (R 3.5.2)                    
- magrittr    * 1.5     2014-11-22 [1] CRAN (R 3.5.0)                    
- Rcpp          1.0.1   2019-03-17 [1] CRAN (R 3.5.2)                    
- rmarkdown     1.11.6  2019-02-21 [1] Github (rstudio/rmarkdown@bbd0786)
- sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.5.0)                    
- stringi       1.4.3   2019-03-12 [1] CRAN (R 3.5.1)                    
- stringr       1.4.0   2019-02-10 [1] CRAN (R 3.5.2)                    
- withr         2.1.2   2018-03-15 [1] CRAN (R 3.5.0)                    
- xfun          0.5     2019-02-20 [1] CRAN (R 3.5.1)                    
- yaml          2.2.0   2018-07-25 [1] CRAN (R 3.5.0)                    
+ package     * version    date       lib
+ assertthat    0.2.1      2019-03-21 [1]
+ cli           1.1.0      2019-03-19 [1]
+ clipr         0.7.0      2019-07-23 [1]
+ crayon        1.3.4      2017-09-16 [1]
+ details       0.0.6      2019-09-01 [1]
+ digest        0.6.20     2019-07-04 [1]
+ evaluate      0.14       2019-05-28 [1]
+ fontawesome   0.1.0      2019-09-01 [1]
+ htmltools     0.3.6.9004 2019-08-28 [1]
+ knitr         1.23       2019-05-18 [1]
+ magrittr    * 1.5        2014-11-22 [1]
+ Rcpp          1.0.2      2019-07-25 [1]
+ rlang         0.4.0      2019-06-25 [1]
+ rmarkdown     1.14       2019-07-12 [1]
+ sessioninfo   1.1.1      2018-11-05 [1]
+ stringi       1.4.3      2019-03-12 [1]
+ stringr       1.4.0      2019-02-10 [1]
+ withr         2.1.2      2018-03-15 [1]
+ xfun          0.8        2019-06-25 [1]
+ yaml          2.2.0      2018-07-25 [1]
+ source                              
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ local                               
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ Github (rstudio/fontawesome@ba97af5)
+ Github (rstudio/htmltools@cb452a8)  
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
 
-[1] /Users/yonis/Library/R/3.5/library
-[2] /Library/Frameworks/R.framework/Versions/3.5/Resources/library
+[1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
 ```
 
 </details>
 
 <br>
 
-### Custom tooltip
+#### Custom tooltip
 
 ``` r
 sessioninfo::session_info()%>%
@@ -142,53 +218,75 @@ sessioninfo::session_info()%>%
 
 <details closed>
 
-<summary> <span title="2019-04-04"> session info with date tooltip
+<summary> <span title="2019-09-01"> session info with date tooltip
 </span>
 </summary>
 
 ``` r
 ─ Session info ──────────────────────────────────────────────────────────
  setting  value                       
- version  R version 3.5.1 (2018-07-02)
- os       macOS  10.14.3              
+ version  R version 3.6.1 (2019-07-05)
+ os       macOS Mojave 10.14.5        
  system   x86_64, darwin15.6.0        
  ui       X11                         
  language (EN)                        
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-04-04                  
+ date     2019-09-01                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
- package     * version date       lib source                            
- assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.5.1)                    
- cli           1.1.0   2019-03-19 [1] CRAN (R 3.5.1)                    
- clipr         0.5.0   2019-01-11 [1] CRAN (R 3.5.2)                    
- crayon        1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
- details       0.0.51  2019-04-04 [1] local                             
- digest        0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
- evaluate      0.13    2019-02-12 [1] CRAN (R 3.5.2)                    
- htmltools     0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    
- knitr         1.22    2019-03-08 [1] CRAN (R 3.5.2)                    
- magrittr    * 1.5     2014-11-22 [1] CRAN (R 3.5.0)                    
- Rcpp          1.0.1   2019-03-17 [1] CRAN (R 3.5.2)                    
- rmarkdown     1.11.6  2019-02-21 [1] Github (rstudio/rmarkdown@bbd0786)
- sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.5.0)                    
- stringi       1.4.3   2019-03-12 [1] CRAN (R 3.5.1)                    
- stringr       1.4.0   2019-02-10 [1] CRAN (R 3.5.2)                    
- withr         2.1.2   2018-03-15 [1] CRAN (R 3.5.0)                    
- xfun          0.5     2019-02-20 [1] CRAN (R 3.5.1)                    
- yaml          2.2.0   2018-07-25 [1] CRAN (R 3.5.0)                    
+ package     * version    date       lib
+ assertthat    0.2.1      2019-03-21 [1]
+ cli           1.1.0      2019-03-19 [1]
+ clipr         0.7.0      2019-07-23 [1]
+ crayon        1.3.4      2017-09-16 [1]
+ details       0.0.6      2019-09-01 [1]
+ digest        0.6.20     2019-07-04 [1]
+ evaluate      0.14       2019-05-28 [1]
+ fontawesome   0.1.0      2019-09-01 [1]
+ htmltools     0.3.6.9004 2019-08-28 [1]
+ knitr         1.23       2019-05-18 [1]
+ magrittr    * 1.5        2014-11-22 [1]
+ Rcpp          1.0.2      2019-07-25 [1]
+ rlang         0.4.0      2019-06-25 [1]
+ rmarkdown     1.14       2019-07-12 [1]
+ sessioninfo   1.1.1      2018-11-05 [1]
+ stringi       1.4.3      2019-03-12 [1]
+ stringr       1.4.0      2019-02-10 [1]
+ withr         2.1.2      2018-03-15 [1]
+ xfun          0.8        2019-06-25 [1]
+ yaml          2.2.0      2018-07-25 [1]
+ source                              
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ local                               
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ Github (rstudio/fontawesome@ba97af5)
+ Github (rstudio/htmltools@cb452a8)  
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
 
-[1] /Users/yonis/Library/R/3.5/library
-[2] /Library/Frameworks/R.framework/Versions/3.5/Resources/library
+[1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
 ```
 
 </details>
 
 <br>
 
-### Highlight Language
+#### Highlight Language
 
 ``` r
 
@@ -255,9 +353,9 @@ articles:
 
 <br>
 
-## data.frame/tibble
+### data.frame/tibble
 
-### data.frame
+#### data.frame
 
 ``` r
  iris%>%
@@ -426,7 +524,7 @@ articles:
 
 <br>
 
-### tibble
+#### tibble
 
 ``` r
  iris%>%
@@ -459,7 +557,7 @@ articles:
 
 <br>
 
-## lists
+### lists
 
 ``` r
  list(a = 1,b = head(iris))%>%

@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 ```
 # details
 
-Simple function for creating a details block for markdown documents.
+Simple function for creating a details block for markdown documents and Roxygen2 documentation.
 
 ## Installation
 
@@ -22,7 +22,34 @@ Simple function for creating a details block for markdown documents.
 remotes::install_github("yonicd/details")
 ```
 
-## Example
+## Roxygen2
+
+Many times in documentation there is a lot to say, but you do not want to overwhelm the user. 
+
+To solve this we can use folding blocks in the documentation (which are then rendered into pkgdown website automatically)
+
+  
+To enable this feature add `Roxygen: list(markdown = TRUE)` to the DESCRIPTION file before rendering the roxygen2
+
+You can use this feature by wrapping documentation with the macros
+ 
+```
+\foldstart{[SUMMARY TEXT]}
+
+#' DOCUMENTATION
+#' ...
+#' DOCUMENTATION
+
+\foldend
+```
+
+The `SUMMARY_TEXT` is optional, where the folded block will have a header of `r fontawesome::fa("caret-right")` __your text__.
+
+The default will display `r fontawesome::fa("caret-right")` __details__. 
+
+These folded blocks can be inserted anywhere in the documentation, eg `@description`, `@param`, `@details`, `@return`, ....
+
+## Markdown
 
 The function `details::details` can output to result either to `console` (default), `clipboard` (via clipr) or to the R `file.editor` pop up (useful when clipr not available).
 
@@ -30,9 +57,9 @@ If the input is a file path then it will be identified internally and the lines 
 
 For this document it makes most sense to use the default output (`console`).
 
-## Character
+### Character
 
-### Basic
+#### Basic
 
 ```{r,results='asis'}
 library(magrittr)
@@ -41,21 +68,21 @@ sessioninfo::session_info()%>%
   details::details(summary = 'current session info')
 ```
 
-### Open by default
+#### Open by default
 
 ```{r,results='asis'}
 sessioninfo::session_info()%>%
   details::details(summary = 'open session info',open = TRUE)
 ```
 
-### Custom tooltip
+#### Custom tooltip
 
 ```{r,results='asis'}
 sessioninfo::session_info()%>%
   details::details(summary = 'session info with date tooltip ', tooltip = Sys.Date())
 ```
 
-### Highlight Language
+#### Highlight Language
 
 ```{r,results='asis'}
 
@@ -63,16 +90,16 @@ readLines('https://raw.githubusercontent.com/metrumresearchgroup/covrpage/master
   details::details(summary = 'yaml example',lang = 'yml')
 ```
 
-## data.frame/tibble
+### data.frame/tibble
 
-### data.frame
+#### data.frame
 
 ```{r,results='asis'}
  iris%>%
   details::details(summary = 'data.frame')
 ```
 
-### tibble
+#### tibble
 
 ```{r,results='asis'}
  iris%>%
@@ -80,7 +107,7 @@ readLines('https://raw.githubusercontent.com/metrumresearchgroup/covrpage/master
   details::details(summary = 'tibble')
 ```
 
-## lists
+### lists
 
 ```{r,results='asis'}
  list(a = 1,b = head(iris))%>%
