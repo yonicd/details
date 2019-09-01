@@ -1,5 +1,7 @@
-#' @title create markdown details
+#' @title create markdown details 
+#' 
 #' @description Create details block for markdown with summary as optional.
+#' 
 #' @param text character, text to put in details block
 #' @param summary character, text to put in summary block, Default: NULL
 #' @param tooltip character, text for tooltip on the summary, Default: 'Click to Expand'
@@ -7,9 +9,16 @@
 #' @param lang character, language of block (for markdown highlighting) Default: 'r'
 #' @param output character, where to output the file console (Default), clipboard or R file editor,
 #'  Default: c('console','clipr','file.edit')
+#'
 #' @details 
 #'   To remove summary or tooltip set them to NULL.
 #'   If the text is a file path, it will automatically it's lines will be read in internally.
+#'
+#' \foldstart{More Details}
+#'  Here more information can be inserted without overwhelming the user
+#' \foldend
+#' 
+#'
 #' @return character
 #' @rdname details
 #' @export 

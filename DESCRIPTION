@@ -1,6 +1,6 @@
 Package: details
 Title: Create details section for markdown text
-Version: 0.0.51
+Version: 0.0.6
 Authors@R: 
     person(given = "Jonathan",
            family = "Sidi",
@@ -13,3 +13,4 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: false
 RoxygenNote: 6.1.1
+Roxygen: list(markdown = TRUE)
