@@ -84,6 +84,7 @@ sessioninfo::session_info()%>%
 </summary>
 
 ``` r
+
 ─ Session info ──────────────────────────────────────────────────────────
  setting  value                       
  version  R version 3.6.1 (2019-07-05)
@@ -156,6 +157,7 @@ sessioninfo::session_info()%>%
 </summary>
 
 ``` r
+
 ─ Session info ──────────────────────────────────────────────────────────
  setting  value                       
  version  R version 3.6.1 (2019-07-05)
@@ -229,10 +231,10 @@ sessioninfo::session_info()%>%
 <details closed>
 
 <summary> <span title="2019-09-03"> session info with date tooltip
-</span>
-</summary>
+</span> </summary>
 
 ``` r
+
 ─ Session info ──────────────────────────────────────────────────────────
  setting  value                       
  version  R version 3.6.1 (2019-07-05)
@@ -309,6 +311,7 @@ readLines('https://raw.githubusercontent.com/metrumresearchgroup/covrpage/master
 <summary> <span title="Click to Expand"> yaml example </span> </summary>
 
 ``` yml
+
 title: covrpage
 
 development:
@@ -377,6 +380,7 @@ articles:
 <summary> <span title="Click to Expand"> data.frame </span> </summary>
 
 ``` r
+
     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
 1            5.1         3.5          1.4         0.2     setosa
 2            4.9         3.0          1.4         0.2     setosa
@@ -547,6 +551,7 @@ articles:
 <summary> <span title="Click to Expand"> tibble </span> </summary>
 
 ``` r
+
 # A tibble: 150 x 5
    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
           <dbl>       <dbl>        <dbl>       <dbl> <fct>  
@@ -579,6 +584,7 @@ articles:
 <summary> <span title="Click to Expand"> list </span> </summary>
 
 ``` r
+
 $a
 [1] 1
 

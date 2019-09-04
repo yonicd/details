@@ -7,5 +7,5 @@ end_details <- function(){
 }
 
 body_details <- function(lang,text){
-  sprintf('```%s\n%s\n```',lang,text)
+  sprintf('```%s\n\n%s\n\n```',lang,text)
 }

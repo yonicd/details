@@ -19,6 +19,7 @@ knitr::opts_chunk$set(
 [![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_09_03-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
 
+
 # details
 
 Simple function for creating a details block for markdown documents and Roxygen2 documentation.
