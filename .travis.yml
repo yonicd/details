@@ -1,0 +1,22 @@
+dist: trusty
+language: R
+cache: packages
+r_packages:
+- pkgdown
+r_github_packages:
+- metrumresearchgroup/covrpage
+after_success:
+- Rscript -e 'covr::codecov()'
+- Rscript -e 'devtools::install(); covrpage::covrpage_ci()'
+- Rscript -e 'pkgdown::build_site()'
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: "$GITHUB_PAT"
+  keep-history: true
+  local-dir: docs
+  on:
+    branch: master
+env:
+  global:
+    secure: IBUCxiqGy71sUYUJDUqOrR8mMn3YZU2Mw8hgNWApGDKv8cQ/BSYiC+B8jUSDKCP2IpwPoFYAGD5D9AvTkpmvnPVzAdXGktbA7lWsRLyIz5UReZUgKSlG9IyXHiEkqU254Edk3laAxUxbNGcHtnr4qe4aFDQNaNr7W95LOwAuCwq6N4uKQH9enUhTBecismLWwuHmNZlHoxvghYVPuOFsIlHwd9FKC6KF26qnnfeVyqxVQnMXsmSX4jYTZdiZHsIVRkowQEMGd5NSBs7Cg5g7JNrExu7uUcCpFTBngPiFGYgFTmmJIgCheedj/N2ETft3ALKzozgcWG2LwWtrerTrkfZbyDCgckqRy3OpZPh2W2+SYusspX5qmG9ifDWqRXsfpVxcqhm4qOTbPN9zPnXgHlpTU2oprWTDlxCkRuf5XCCOjUamQNWLt2xjy6PlcC9tfaEj08OUg8838jFOFL4YtyB928GeT7lxSdNsY6urzYgErMJShiYchb5eEsz8W/11x2okEt+17xsh5bQo3hMYe5ZRu8+v53+TMQALjHDiln3BJNhOws7zuuOn9PN9zWetbldlwJiHJ1QJnQX8ES+oDxd7QRQzLK0Eg+6eri+myQ86F15cGvy8pyfRbpZhQfh1YqcZQyzB+jmGzL1kd04ngOMXcGqoy/v2+XYUdhICD3A=

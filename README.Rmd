@@ -12,6 +12,13 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
+
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.org/yonicd/details.svg?branch=master)](https://travis-ci.org/yonicd/details)
+[![Codecov test coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/details?branch=master)
+[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_09_03-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
+<!-- badges: end -->
+
 # details
 
 Simple function for creating a details block for markdown documents and Roxygen2 documentation.

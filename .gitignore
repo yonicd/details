@@ -36,3 +36,4 @@ vignettes/*.pdf
 rsconnect/
 
 *.Rproj
+inst/doc
