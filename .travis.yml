@@ -2,6 +2,8 @@ dist: trusty
 language: R
 cache: packages
 r_github_packages:
+- rstudio/fontawesome
+- metrumresearchgroup/pkgdown
 - metrumresearchgroup/covrpage
 after_success:
 - Rscript -e 'covr::codecov()'
