@@ -84,7 +84,7 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-09-01                  
+ date     2019-09-03                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version    date       lib
@@ -156,7 +156,7 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-09-01                  
+ date     2019-09-03                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version    date       lib
@@ -164,7 +164,7 @@ sessioninfo::session_info()%>%
  cli           1.1.0      2019-03-19 [1]
  clipr         0.7.0      2019-07-23 [1]
  crayon        1.3.4      2017-09-16 [1]
- details       0.0.6      2019-09-01 [1]
+ details       0.0.7      2019-09-04 [1]
  digest        0.6.20     2019-07-04 [1]
  evaluate      0.14       2019-05-28 [1]
  fontawesome   0.1.0      2019-09-01 [1]
@@ -218,7 +218,7 @@ sessioninfo::session_info()%>%
 
 <details closed>
 
-<summary> <span title="2019-09-01"> session info with date tooltip
+<summary> <span title="2019-09-03"> session info with date tooltip
 </span>
 </summary>
 
@@ -233,7 +233,7 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-09-01                  
+ date     2019-09-03                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version    date       lib
@@ -241,7 +241,7 @@ sessioninfo::session_info()%>%
  cli           1.1.0      2019-03-19 [1]
  clipr         0.7.0      2019-07-23 [1]
  crayon        1.3.4      2017-09-16 [1]
- details       0.0.6      2019-09-01 [1]
+ details       0.0.7      2019-09-04 [1]
  digest        0.6.20     2019-07-04 [1]
  evaluate      0.14       2019-05-28 [1]
  fontawesome   0.1.0      2019-09-01 [1]

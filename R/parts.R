@@ -1,0 +1,11 @@
+start_details <- function(state,summary){
+  sprintf('<details %s>%s',state, summary)
+}
+
+end_details <- function(){
+  paste('</details>','<br>',sep='\n')
+}
+
+body_details <- function(lang,text){
+  sprintf('```%s\n%s\n```',lang,text)
+}

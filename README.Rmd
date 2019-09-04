@@ -28,7 +28,6 @@ Many times in documentation there is a lot to say, but you do not want to overwh
 
 To solve this we can use folding blocks in the documentation (which are then rendered into pkgdown website automatically)
 
-  
 To enable this feature add `Roxygen: list(markdown = TRUE)` to the DESCRIPTION file before rendering the roxygen2
 
 You can use this feature by wrapping documentation with the macros

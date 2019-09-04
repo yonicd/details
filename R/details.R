@@ -35,57 +35,18 @@
 #' @return character
 #' @rdname details
 #' @export 
-#' @importFrom clipr write_clip
-#' @importFrom utils file.edit
-details <- function(text, summary = NULL, tooltip = 'Click to Expand', open = FALSE, lang = 'r',output = c('console','clipr','file.edit')){
+details <- function(text, 
+                    summary = NULL, 
+                    tooltip = 'Click to Expand', 
+                    open    = FALSE, 
+                    lang    = 'r',
+                    output  = c('console','clipr','edit','character')){
   
-  if(!is.null(summary)){
-    
-    if(!is.null(tooltip)){
-      
-      summary <-  sprintf("<span title='%s'> %s </span>",tooltip, summary)
-      
-    }
-    
-    summary <- sprintf('\n<summary> %s </summary>',summary)
-
-  }else{
-    summary = ''
-  }
+  build_details(text    = read_text(text), 
+                summary = build_summary(summary,tooltip), 
+                state   = build_state(open), 
+                lang    = lang,
+                output  = match.arg(output,c('console','clipr','edit','character'))
+               )
   
-  if(open){
-    state = 'open'
-  }else{
-    state = 'closed'
-  }
-  
-  if(length(text)==1){
-    if(file.exists(text)){
-      text <- readLines(text)
-    }    
-  }
-
-  
-  ret <- sprintf(
-    '<details %s>%s\n\n```%s\n%s\n```\n\n</details><br>',
-    state, summary,lang,capture.print(text)
-  )
-  
-  switch(match.arg(output,c('console','clipr','file.edit')),
-         'console' = cat(ret),
-         'clipr'   = clipr::write_clip(ret),
-         'file.edit' = {
-           tf <- tempfile(fileext = '.R')
-           cat(ret,file = tf,sep = '\n')
-           utils::file.edit(tf)
-         }
-         )
-}
-
-#' @importFrom utils capture.output
-capture.print <- function(obj){
-  if(!inherits(obj,'character')){
-    obj <- utils::capture.output(print(obj))
-  }
-  paste0(obj,collapse = '\n')
 }
