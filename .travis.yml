@@ -1,9 +1,8 @@
 dist: trusty
 language: R
 cache: packages
-r_packages:
-- pkgdown
 r_github_packages:
+- metrumresearchgroup/pkgdown
 - metrumresearchgroup/covrpage
 after_success:
 - Rscript -e 'covr::codecov()'
