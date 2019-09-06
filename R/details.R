@@ -8,7 +8,7 @@
 #' @param open logical, is the details open (TRUE) or closed (FALSE), Default: FALSE
 #' @param lang character, language of block (for markdown highlighting) Default: 'r'
 #' @param output character, where to output the file console (Default), clipboard or R file editor,
-#'  Default: c('console','clipr','file.edit')
+#'  Default: c('console','clipr','file.edit','character')
 #'
 #' @details 
 #'   To remove summary or tooltip set them to NULL.

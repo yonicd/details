@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-03 September, 2019 21:37:33
+06 September, 2019 09:49:43
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -15,13 +15,13 @@ Coverage summary is created using the
 
 | Object                          | Coverage (%) |
 | :------------------------------ | :----------: |
-| details                         |    46.81     |
-| [R/collapse.R](../R/collapse.R) |     0.00     |
-| [R/print.R](../R/print.R)       |     0.00     |
-| [R/read.R](../R/read.R)         |    28.57     |
-| [R/build.R](../R/build.R)       |    63.16     |
-| [R/parts.R](../R/parts.R)       |    66.67     |
+| details                         |    91.49     |
+| [R/print.R](../R/print.R)       |    33.33     |
+| [R/build.R](../R/build.R)       |    100.00    |
+| [R/collapse.R](../R/collapse.R) |    100.00    |
 | [R/details.R](../R/details.R)   |    100.00    |
+| [R/parts.R](../R/parts.R)       |    100.00    |
+| [R/read.R](../R/read.R)         |    100.00    |
 
 <br>
 
@@ -31,18 +31,33 @@ Unit Test summary is created using the
 [testthat](https://github.com/r-lib/testthat)
 package.
 
-| file                                  | n |  time | error | failed | skipped | warning |
-| :------------------------------------ | -: | ----: | ----: | -----: | ------: | ------: |
-| [test-basic.R](testthat/test-basic.R) | 1 | 0.001 |     0 |      0 |       0 |       0 |
+| file                                        | n |  time | error | failed | skipped | warning |
+| :------------------------------------------ | -: | ----: | ----: | -----: | ------: | ------: |
+| [test-basic.R](testthat/test-basic.R)       | 3 | 0.012 |     0 |      0 |       0 |       0 |
+| [test-collapse.R](testthat/test-collapse.R) | 3 | 0.002 |     0 |      0 |       0 |       0 |
+| [test-print.R](testthat/test-print.R)       | 2 | 0.005 |     0 |      0 |       0 |       0 |
+| [test-utils.R](testthat/test-utils.R)       | 5 | 0.003 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
 <summary> Show Detailed Test Results
 </summary>
 
-| file                                        | context | test         | status | n |  time |
-| :------------------------------------------ | :------ | :----------- | :----- | -: | ----: |
-| [test-basic.R](testthat/test-basic.R#L6_L9) | basic   | basic: empty | PASS   | 1 | 0.001 |
+| file                                                | context   | test                                | status | n |  time |
+| :-------------------------------------------------- | :-------- | :---------------------------------- | :----- | -: | ----: |
+| [test-basic.R](testthat/test-basic.R#L6_L9)         | basic     | basic: empty                        | PASS   | 1 | 0.001 |
+| [test-basic.R](testthat/test-basic.R#L13_L16)       | basic     | basic: object                       | PASS   | 1 | 0.009 |
+| [test-basic.R](testthat/test-basic.R#L20_L23)       | basic     | basic: file                         | PASS   | 1 | 0.002 |
+| [test-collapse.R](testthat/test-collapse.R#L6_L9)   | collapse  | collapse methods: close             | PASS   | 1 | 0.001 |
+| [test-collapse.R](testthat/test-collapse.R#L13_L16) | collapse  | collapse methods: open default      | PASS   | 1 | 0.001 |
+| [test-collapse.R](testthat/test-collapse.R#L20_L23) | collapse  | collapse methods: open with summary | PASS   | 1 | 0.000 |
+| [test-print.R](testthat/test-print.R#L5_L8)         | print     | print methods: console              | PASS   | 1 | 0.004 |
+| [test-print.R](testthat/test-print.R#L12_L15)       | print     | print methods: character            | PASS   | 1 | 0.001 |
+| [test-utils.R](testthat/test-utils.R#L6_L9)         | utilities | utilities: tooltip default          | PASS   | 1 | 0.000 |
+| [test-utils.R](testthat/test-utils.R#L13_L16)       | utilities | utilities: tooltip with text        | PASS   | 1 | 0.001 |
+| [test-utils.R](testthat/test-utils.R#L21_L24)       | utilities | utilities: summary default          | PASS   | 1 | 0.001 |
+| [test-utils.R](testthat/test-utils.R#L28_L31)       | utilities | utilities: state open               | PASS   | 1 | 0.001 |
+| [test-utils.R](testthat/test-utils.R#L35_L38)       | utilities | utilities: state closed             | PASS   | 1 | 0.000 |
 
 </details>
 

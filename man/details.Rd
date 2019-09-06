@@ -20,7 +20,7 @@ details(text, summary = NULL, tooltip = "Click to Expand",
 \item{lang}{character, language of block (for markdown highlighting) Default: 'r'}
 
 \item{output}{character, where to output the file console (Default), clipboard or R file editor,
-Default: c('console','clipr','file.edit')}
+Default: c('console','clipr','file.edit','character')}
 }
 \value{
 character

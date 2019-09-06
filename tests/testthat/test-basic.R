@@ -9,4 +9,19 @@ testthat::describe('basic',{
         )
        })
   
+  it('object',{
+    testthat::expect_equal(
+      print(details::details(mtcars,output = 'character')),
+      unlist(strsplit(bench_fun(mtcars),'\\n'))
+    )
+  })
+  
+  it('file',{
+    testthat::expect_equal(
+      print(details::details(text = 'helpers.R',output = 'character')),
+      unlist(strsplit(bench_fun(readLines('helpers.R')),'\\n'))
+    )
+  })
+  
 })
+
