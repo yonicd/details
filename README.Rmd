@@ -29,6 +29,26 @@ Simple function for creating a details block for markdown documents and Roxygen2
 ``` r
 remotes::install_github("yonicd/details")
 ```
+## Markdown
+
+The function `details::details` can output to result to
+
+  - console (default)
+  - clipboard via [clipr](https://github.com/mdlincoln/clipr)
+  - [file.editor](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/file.edit.html) useful when clipr not available
+
+If the input is a file path then it will be identified internally and the lines will be read in automatically.
+
+### Example
+
+One one the most popular uses for `details` is to paste the sessioninfo at the bottom of a GitHub issue.
+
+```{r,results='asis'}
+library(details)
+
+sessioninfo::session_info()%>%
+  details::details(summary = 'current session info')
+```
 
 ## Roxygen2
 
@@ -56,67 +76,7 @@ The default will display `r fontawesome::fa("caret-right")` __details__.
 
 These folded blocks can be inserted anywhere in the documentation, eg `@description`, `@param`, `@details`, `@return`, ....
 
-## Markdown
 
-The function `details::details` can output to result either to `console` (default), `clipboard` (via clipr) or to the R `file.editor` pop up (useful when clipr not available).
+## Vignettes
 
-If the input is a file path then it will be identified internally and the lines will be read in automatically.
-
-For this document it makes most sense to use the default output (`console`).
-
-### Character
-
-#### Basic
-
-```{r,results='asis'}
-library(magrittr)
-
-sessioninfo::session_info()%>%
-  details::details(summary = 'current session info')
-```
-
-#### Open by default
-
-```{r,results='asis'}
-sessioninfo::session_info()%>%
-  details::details(summary = 'open session info',open = TRUE)
-```
-
-#### Custom tooltip
-
-```{r,results='asis'}
-sessioninfo::session_info()%>%
-  details::details(summary = 'session info with date tooltip ', tooltip = Sys.Date())
-```
-
-#### Highlight Language
-
-```{r,results='asis'}
-
-readLines('https://raw.githubusercontent.com/metrumresearchgroup/covrpage/master/_pkgdown.yml')%>%
-  details::details(summary = 'yaml example',lang = 'yml')
-```
-
-### data.frame/tibble
-
-#### data.frame
-
-```{r,results='asis'}
- iris%>%
-  details::details(summary = 'data.frame')
-```
-
-#### tibble
-
-```{r,results='asis'}
- iris%>%
-  tibble::as_tibble()%>%
-  details::details(summary = 'tibble')
-```
-
-### lists
-
-```{r,results='asis'}
- list(a = 1,b = head(iris))%>%
-  details::details(summary = 'list')
-```
+For more information on customizing the details output and what R objects details can handle see the [articles](https://yonicd.github.io/details/) on the package site.
