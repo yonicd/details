@@ -5,14 +5,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Create details section for markdown and roxygen2 • details</title>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<title>sessioninfo • details</title>
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="Create details section for markdown and roxygen2">
-<meta property="og:description" content="Programatically build a details template to place in a markdown,
-        `Rmarkdown` and `roxygen2` documentation.">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<script src="../pkgdown.js"></script><meta property="og:title" content="sessioninfo">
+<meta property="og:description" content="">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -31,7 +30,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">details</a>
+        <a class="navbar-link" href="../index.html">details</a>
         <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.7</span>
       </span>
     </div>
@@ -39,13 +38,13 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -55,19 +54,19 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="articles/custom.html">Customizing Details</a>
+      <a href="../articles/custom.html">Customizing Details</a>
     </li>
     <li>
-      <a href="articles/documentation.html">Details with Roxyen2</a>
+      <a href="../articles/documentation.html">Details with Roxyen2</a>
     </li>
     <li>
-      <a href="articles/objects.html">Special Details</a>
+      <a href="../articles/objects.html">Special Details</a>
     </li>
     <li>
-      <a href="articles/sessioninfo.html">sessioninfo</a>
+      <a href="../articles/sessioninfo.html">sessioninfo</a>
     </li>
     <li>
-      <a href="articles/tests_and_coverage.html">Tests and Coverage</a>
+      <a href="../articles/tests_and_coverage.html">Tests and Coverage</a>
     </li>
   </ul>
 </li>
@@ -90,43 +89,26 @@
       
       </header><div class="row">
   <div class="col-md-9 contents">
-    
+    <div class="page-header toc-ignore">
+      <h1>sessioninfo</h1>
+            
+      
+      <small class="dont-index">Source: <a href="https://github.com/yonicd/details/blob/master/vignettes/sessioninfo.Rmd"><code>vignettes/sessioninfo.Rmd</code></a></small>
+      <div class="hidden name"><code>sessioninfo.Rmd</code></div>
+
+    </div>
 
     
     
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-<!-- badges: start -->
-
-<div id="details" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#details" class="anchor"></a>details</h1></div>
-<p>Simple function for creating a details block for markdown documents and Roxygen2 documentation.</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">remotes<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"yonicd/details"</span>)</a></code></pre></div>
-</div>
-<div id="markdown" class="section level2">
-<h2 class="hasAnchor">
-<a href="#markdown" class="anchor"></a>Markdown</h2>
-<p>The function <code><a href="reference/details.html">details::details</a></code> can output to result to</p>
-<ul>
-<li>console (default)</li>
-<li>clipboard via <a href="https://github.com/mdlincoln/clipr">clipr</a>
-</li>
-<li>
-<a href="https://stat.ethz.ch/R-manual/R-devel/library/utils/html/file.edit.html">file.editor</a> useful when clipr not available</li>
-</ul>
-<p>If the input is a file path then it will be identified internally and the lines will be read in automatically.</p>
-<div id="example" class="section level3">
-<h3 class="hasAnchor">
-<a href="#example" class="anchor"></a>Example</h3>
-<p>One the most popular uses for <code>details</code> is to paste the sessioninfo at the bottom of a GitHub issue.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">library</span>(details)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3">sessioninfo<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/sessioninfo/topics/session_info">session_info</a></span>()<span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="st">  </span>details<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/details/topics/details">details</a></span>(<span class="dt">summary =</span> <span class="st">'current session info'</span>)</a></code></pre></div>
-<details closed><p><summary><span title="Click to Expand"> current session info </span> </summary></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(details)</a></code></pre></div>
+<p>One the most basic and popular uses for <code>details</code> is to paste the sessioninfo at the bottom of a GitHub issue.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">sessioninfo<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/sessioninfo/topics/session_info">session_info</a></span>()<span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="st">  </span>details<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/details/topics/details">details</a></span>(</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">    <span class="dt">summary =</span> <span class="st">'Current session info'</span>,</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">    <span class="dt">open    =</span> <span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">  )</a></code></pre></div>
+<details open><p><summary><span title="Click to Expand"> Current session info </span> </summary></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"></a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">─ Session info ──────────────────────────────────────────────────────────</a>
 <a class="sourceLine" id="cb3-3" data-line-number="3"> setting  value                       </a>
@@ -208,74 +190,11 @@
 <a class="sourceLine" id="cb3-79" data-line-number="79">[<span class="dv">2</span>] <span class="op">/</span>usr<span class="op">/</span>local<span class="op">/</span>lib<span class="op">/</span>R<span class="op">/</span>site<span class="op">-</span>library</a>
 <a class="sourceLine" id="cb3-80" data-line-number="80">[<span class="dv">3</span>] <span class="op">/</span>home<span class="op">/</span>travis<span class="op">/</span>R<span class="op">-</span>bin<span class="op">/</span>lib<span class="op">/</span>R<span class="op">/</span>library</a></code></pre></div>
 </details><p><br></p>
-</div>
-</div>
-<div id="roxygen2" class="section level2">
-<h2 class="hasAnchor">
-<a href="#roxygen2" class="anchor"></a>Roxygen2</h2>
-<p>Many times in documentation there is a lot to say, but you do not want to overwhelm the user.</p>
-<p>To solve this we can use folding blocks in the documentation (which are then rendered into pkgdown website automatically)</p>
-<p>To enable this feature add <code>Roxygen: list(markdown = TRUE)</code> to the DESCRIPTION file before rendering the roxygen2</p>
-<p>You can use this feature by wrapping documentation with the macros</p>
-<pre><code>\foldstart{[SUMMARY TEXT]}
-
-#' DOCUMENTATION
-#' ...
-#' DOCUMENTATION
-
-\foldend</code></pre>
-<p>The <code>SUMMARY_TEXT</code> is optional, where the folded block will have a header of <svg style="height:0.8em;top:.04em;position:relative;" viewbox="0 0 192 512"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path></svg><strong>your text</strong>.</p>
-<p>The default will display <svg style="height:0.8em;top:.04em;position:relative;" viewbox="0 0 192 512"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path></svg><strong>details</strong>.</p>
-<p>These folded blocks can be inserted anywhere in the documentation, eg <code>@description</code>, <code>@param</code>, <code>@details</code>, <code>@return</code>, ….</p>
-</div>
-<div id="vignettes" class="section level2">
-<h2 class="hasAnchor">
-<a href="#vignettes" class="anchor"></a>Vignettes</h2>
-<p>More information can be found in the <a href="https://yonicd.github.io/details/">articles</a> of the package site.</p>
-<ul>
-<li>Creating a sessioninfo to paste into Github, Stackoverflow or Community Sites.</li>
-<li>Customizing the details output</li>
-<li>What R objects details can handle</li>
-<li>Using details in Roxygen2</li>
-</ul>
-</div>
-</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div class="links">
-<h2>Links</h2>
-<ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/yonicd/details">https://​github.com/​yonicd/​details</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/yonicd/details/issues">https://​github.com/​yonicd/​details/​issues</a>
-</li>
-</ul>
-</div>
-<div class="license">
-<h2>License</h2>
-<ul class="list-unstyled">
-<li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
-</ul>
-</div>
-<div class="developers">
-<h2>Developers</h2>
-<ul class="list-unstyled">
-<li>Jonathan Sidi <br><small class="roles"> Author, maintainer </small>  </li>
-</ul>
-</div>
 
-
-      <div class="dev-status">
-<h2>Dev status</h2>
-<ul class="list-unstyled">
-<li><a href="https://travis-ci.org/yonicd/details"><img src="https://travis-ci.org/yonicd/details.svg?branch=master" alt="Travis build status"></a></li>
-<li><a href="https://codecov.io/gh/yonicd/details?branch=master"><img src="https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
-<li><a href="http://tinyurl.com/yyodcwc7"><img src="https://img.shields.io/badge/covrpage-Last_Build_2019_09_07-brightgreen.svg" alt="Covrpage Summary"></a></li>
-</ul>
-</div>
-</div>
+      </div>
 
 </div>
 
