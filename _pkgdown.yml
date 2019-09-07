@@ -34,3 +34,6 @@ articles:
   - title: "Unit Tests and Code Coverage"
     contents: 
       - tests_and_coverage      
+
+hexURL:
+  https://github.com/yonicd/details/blob/master/input/logo.png?raw=true

@@ -11,7 +11,7 @@ coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](h
 Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_09_06-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
 
-# details
+# details <img src="https://github.com/yonicd/details/raw/master/input/logo.png" align="right" />
 
 Create and customize details blocks for [markdown](#markdown) documents
 and [Roxygen2](#package-documentation) documentation.
@@ -75,7 +75,7 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-09-06                  
+ date     2019-09-07                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version    date       lib
