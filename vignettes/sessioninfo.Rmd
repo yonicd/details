@@ -1,0 +1,31 @@
+---
+title: "sessioninfo"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{sessioninfo}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(details)
+```
+
+One the most basic and popular uses for `details` is to paste the sessioninfo at the bottom of a GitHub issue.
+
+```{r,results='asis'}
+
+sessioninfo::session_info()%>%
+  details::details(
+    summary = 'Current session info',
+    open    = TRUE
+  )
+
+```

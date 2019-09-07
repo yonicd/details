@@ -37,8 +37,8 @@ the lines will be read in automatically.
 
 ### Example
 
-One one the most popular uses for `details` is to paste the sessioninfo
-at the bottom of a GitHub issue.
+One the most popular uses for `details` is to paste the sessioninfo at
+the bottom of a GitHub issue.
 
 ``` r
 library(details)
@@ -150,6 +150,11 @@ These folded blocks can be inserted anywhere in the documentation, eg
 
 ## Vignettes
 
-For more information on customizing the details output and what R
-objects details can handle see the
-[articles](https://yonicd.github.io/details/) on the package site.
+More information can be found in the
+[articles](https://yonicd.github.io/details/) of the package site.
+
+  - Creating a sessioninfo to paste into Github, Stackoverflow or
+    Community Sites.
+  - Customizing the details output
+  - What R objects details can handle
+  - Using details in Roxygen2
