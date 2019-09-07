@@ -8,6 +8,8 @@ Description: Programatically build a details template to place in a markdown,
 Depends: R (>= 3.2.0)
 Imports: utils, clipr, magrittr
 Suggests:
+    sessioninfo,
+    tibble,
     testthat,
     knitr,
     rmarkdown,
