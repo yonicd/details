@@ -32,9 +32,9 @@ You can use this feature by wrapping documentation with the macros
 \foldend
 ```
 
-The `SUMMARY_TEXT` is optional, where the folded block will have a header of `r fontawesome::fa("caret-right")` __your text__.
+The `SUMMARY_TEXT` is optional, where the folded block will have a header of __your text__.
 
-The default will display `r fontawesome::fa("caret-right")` __details__. 
+The default will display __details__. 
 
 These folded blocks can be inserted anywhere in the documentation, eg `@description`, `@param`, `@details`, `@return`, ....
 
