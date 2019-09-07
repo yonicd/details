@@ -13,8 +13,8 @@ Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_09_06-brightgreen
 
 # details
 
-Simple function for creating a details block for markdown documents and
-Roxygen2 documentation.
+Create and customize details blocks for [markdown](#markdown) documents
+and [Roxygen2](#package-documentation) documentation.
 
 ## Installation
 
@@ -24,6 +24,20 @@ remotes::install_github("yonicd/details")
 
 ## Markdown
 
+### Input
+
+The function `details::details` can handle inputs
+
+  - R object with supported classes:
+      - `character`
+      - `data.frame`
+      - `tibble`
+      - `list`
+  - File paths will be identified internally and the lines will be read
+    in automatically.
+
+### Output
+
 The function `details::details` can output to result to
 
   - console (default)
@@ -31,9 +45,6 @@ The function `details::details` can output to result to
     [clipr](https://github.com/mdlincoln/clipr)
   - [file.editor](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/file.edit.html)
     useful when clipr not available
-
-If the input is a file path then it will be identified internally and
-the lines will be read in automatically.
 
 ### Example
 
@@ -115,7 +126,7 @@ sessioninfo::session_info()%>%
 
 <br>
 
-## Roxygen2
+## Package Documentation
 
 Many times in documentation there is a lot to say, but you do not want
 to overwhelm the user.

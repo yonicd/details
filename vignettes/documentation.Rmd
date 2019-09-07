@@ -1,8 +1,8 @@
 ---
-title: "Details with Roxyen2"
+title: "Package Documentation"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{documentation}
+  %\VignetteIndexEntry{Package Documentation}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

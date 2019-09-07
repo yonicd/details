@@ -1,1 +1,36 @@
 destination: docs
+
+title: details
+
+development:
+  mode: auto
+
+navbar:
+  structure:
+    left:  [home, reference, articleindex, news]
+    right: [github, twitter]
+  components:
+    articles: ~
+    articleindex:
+      text: Articles
+      href: articles/index.html
+    twitter:
+      icon: fa-lg fa-twitter
+      href: http://twitter.com/yoniceedee
+
+reference:
+  - title: 'details'
+    contents: details
+
+articles:
+  - title: "Markdown"
+    contents:
+      - sessioninfo
+      - custom
+      - objects
+  - title: "Package Documentation"      
+    contents:
+      - documentation
+  - title: "Unit Tests and Code Coverage"
+    contents: 
+      - tests_and_coverage      
