@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>create markdown details — details • details</title>
+<title>Create HTML DOM Details — details • details</title>
 
 <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 
@@ -34,8 +34,9 @@
 
 
 
-<meta property="og:title" content="create markdown details — details" />
-<meta property="og:description" content="Create details block for markdown with summary as optional." />
+<meta property="og:title" content="Create HTML DOM Details — details" />
+<meta property="og:description" content="Create HTLM DOM Details block for Markdown documents
+with summary as optional." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -66,7 +67,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">details</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.7</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.8</span>
       </span>
     </div>
 
@@ -110,13 +111,14 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>create markdown details</h1>
+    <h1>Create HTML DOM Details</h1>
     <small class="dont-index">Source: <a href='https://github.com/yonicd/details/blob/master/R/details.R'><code>R/details.R</code></a></small>
     <div class="hidden name"><code>details.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Create details block for markdown with summary as optional.</p>
+    <p>Create HTLM DOM Details block for Markdown documents
+with summary as optional.</p>
     </div>
 
     <pre class="usage"><span class='fu'>details</span>(<span class='no'>text</span>, <span class='kw'>summary</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tooltip</span> <span class='kw'>=</span> <span class='st'>"Click to Expand"</span>,
@@ -160,16 +162,6 @@ Default: c('console','clipr','file.edit','character')</p></td>
 
     <p>To remove summary or tooltip set them to NULL.
 If the text is a file path, it will automatically it's lines will be read in internally.</p>
-<p><br><details><summary> <span title='Click to Expand'> More Details </span> </summary>
-    Here more information can be inserted without overwhelming the user.</p>
-<p>To enable this
-feature add <code>Roxygen: list(markdown = TRUE)</code> to the DESCRIPTION file before rendering
-the roxygen2</p>
-<p>you can use this feature by wrapping documentation with the macros</p>
-<p><code>\foldstart{[SUMMARY TEXT]}</code></p>
-<p><code>#' DOCUMENTATION</code></p>
-<p><code>\foldend</code></p>
-<p></details></p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
