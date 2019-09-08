@@ -33,7 +33,7 @@ gh_logo <- bunny::github %>%
   image_scale("50x50")
 
 gh <- image_canvas_ghcard() %>%
-  image_compose(img_hex_gh, gravity = "East", offset = "+20+0") %>%
+  image_compose(img_hex_gh, gravity = "East", offset = "+40+0") %>%
   image_annotate("Saying More With Less", gravity = "West", location = "+50-30",
                  color="#0d4448", size=60, font="Aller", weight = 700) %>%
   image_compose(gh_logo, gravity="West", offset = "+50+40") %>%

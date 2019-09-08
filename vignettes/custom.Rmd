@@ -28,25 +28,34 @@ You can customize the details output:
 ### Default
 
 ```{r,results='asis'}
-sessioninfo::session_info()%>%
+  R.version %>%
   details::details()
 ```
 
 ### Title
 
 ```{r,results='asis'}
-sessioninfo::session_info()%>%
+R.version.string %>%
   details::details(
-    summary = 'current session info'
+    summary = 'R Version'
+  )
+```
+
+Manipulating the title style
+
+```{r,results='asis'}
+R.version.string %>%
+  details::details(
+    summary = '<font color="red"> R Version </font>'
   )
 ```
 
 ### Open
 
 ```{r,results='asis'}
-sessioninfo::session_info()%>%
+R.version.string %>%
   details::details(
-    summary = 'open session info',
+    summary = 'Open by default',
     open = TRUE
   )
 ```
@@ -54,9 +63,9 @@ sessioninfo::session_info()%>%
 #### Tooltip
 
 ```{r,results='asis'}
-sessioninfo::session_info()%>%
+R.version.string %>%
   details::details(
-    summary = 'session info with date tooltip ',
+    summary = 'Use the current date as the tooltip',
     tooltip = Sys.Date()
   )
 ```

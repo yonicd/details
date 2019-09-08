@@ -19,8 +19,10 @@ navbar:
       href: http://twitter.com/yoniceedee
 
 reference:
-  - title: 'details'
-    contents: details
+  - title: 'Functions'
+    contents: 
+      - details
+      - has_concept("fold")
 
 articles:
   - title: "Markdown"

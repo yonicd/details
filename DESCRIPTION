@@ -1,6 +1,6 @@
 Package: details
 Title: Create details section for markdown and roxygen2
-Version: 0.0.7
+Version: 0.0.8
 Authors@R: person(given = "Jonathan", family = "Sidi", role = c("aut", "cre"),
         email = "yonicd@gmail.com")
 Description: Programatically build a details template to place in a markdown,

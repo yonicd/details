@@ -2,7 +2,7 @@
 % Please edit documentation in R/details.R
 \name{details}
 \alias{details}
-\title{create markdown details}
+\title{Create HTML DOM Details}
 \usage{
 details(text, summary = NULL, tooltip = "Click to Expand",
   open = FALSE, lang = "r", output = c("console", "clipr", "edit",
@@ -26,26 +26,10 @@ Default: c('console','clipr','file.edit','character')}
 character
 }
 \description{
-Create details block for markdown with summary as optional.
+Create HTLM DOM Details block for Markdown documents
+with summary as optional.
 }
 \details{
 To remove summary or tooltip set them to NULL.
 If the text is a file path, it will automatically it's lines will be read in internally.
-
-\foldstart{More Details}
-Here more information can be inserted without overwhelming the user.
-
-To enable this
-feature add \code{Roxygen: list(markdown = TRUE)} to the DESCRIPTION file before rendering
-the roxygen2
-
-you can use this feature by wrapping documentation with the macros
-
-\code{\\foldstart{[SUMMARY TEXT]}}
-
-\code{#' DOCUMENTATION}
-
-\code{\\foldend}
-
-\foldend
 }
