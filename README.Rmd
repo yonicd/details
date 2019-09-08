@@ -19,6 +19,7 @@ knitr::opts_chunk$set(
 [![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_09_08-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
 
+
 # details `r if(knitr::opts_knit$get('rmarkdown.pandoc.to')=='gfm-ascii_identifiers') '<img src="https://github.com/yonicd/details/raw/master/input/logo.png" align="right" />'`
 
 Create and customize details blocks for [markdown](#markdown) documents and [Roxygen2](#package-documentation) documentation.
