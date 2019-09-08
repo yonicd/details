@@ -8,7 +8,7 @@ status](https://travis-ci.org/yonicd/details.svg?branch=master)](https://travis-
 [![Codecov test
 coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/details?branch=master)
 [![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_09_06-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_09_08-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
 
 # details <img src="https://github.com/yonicd/details/raw/master/input/logo.png" align="right" />
@@ -70,7 +70,7 @@ sessioninfo::session_info()%>%
  version  R version 3.6.1 (2019-07-05)
  os       macOS Mojave 10.14.5        
  system   x86_64, darwin15.6.0        
- ui       X11                         
+ ui       RStudio                     
  language (EN)                        
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
@@ -80,44 +80,112 @@ sessioninfo::session_info()%>%
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version    date       lib
  assertthat    0.2.1      2019-03-21 [1]
+ backports     1.1.4      2019-04-10 [1]
+ callr         3.3.1      2019-07-18 [1]
  cli           1.1.0      2019-03-19 [1]
  clipr         0.7.0      2019-07-23 [1]
+ commonmark    1.7        2018-12-01 [1]
+ covr        * 3.2.1      2018-10-18 [1]
+ covrpage      0.0.70     2019-07-22 [1]
  crayon        1.3.4      2017-09-16 [1]
+ curl          4.0        2019-07-22 [1]
+ desc          1.2.0      2019-07-25 [1]
  details     * 0.0.7      2019-09-08 [1]
  digest        0.6.20     2019-07-04 [1]
  evaluate      0.14       2019-05-28 [1]
+ fontawesome   0.1.0      2019-09-01 [1]
+ fs            1.3.1      2019-05-06 [1]
+ git2r         0.26.1     2019-06-29 [1]
+ highr         0.8        2019-03-20 [1]
  htmltools     0.3.6.9004 2019-09-08 [1]
- knitr         1.23       2019-05-18 [1]
- magrittr      1.5        2014-11-22 [1]
+ httr          1.4.1      2019-08-05 [1]
+ knitr       * 1.23       2019-05-18 [1]
+ lazyeval      0.2.2      2019-03-15 [1]
+ magrittr    * 1.5        2014-11-22 [1]
+ MASS          7.3-51.4   2019-03-31 [1]
+ memoise       1.1.0      2017-04-21 [1]
+ packrat       0.5.0      2018-11-14 [1]
+ pillar        1.4.2      2019-06-29 [1]
+ pkgconfig     2.0.2      2018-08-16 [1]
+ pkgdown       1.1.0.9000 2019-08-06 [1]
+ processx      3.4.1      2019-07-18 [1]
+ ps            1.3.0      2018-12-21 [1]
+ purrr         0.3.2      2019-03-15 [1]
+ R6            2.4.0      2019-02-14 [1]
  Rcpp          1.0.2      2019-07-25 [1]
+ rematch2      2.1.0      2019-07-11 [1]
+ remotes       2.1.0      2019-06-24 [1]
+ rex           1.1.2      2017-10-19 [1]
  rlang         0.4.0      2019-06-25 [1]
  rmarkdown     1.14       2019-07-12 [1]
+ roxygen2      6.1.1      2018-11-07 [1]
+ rprojroot     1.3-2      2018-01-03 [1]
+ rsconnect     0.8.15     2019-07-22 [1]
+ rstudioapi    0.10       2019-03-19 [1]
  sessioninfo   1.1.1      2018-11-05 [1]
  stringi       1.4.3      2019-03-12 [1]
  stringr       1.4.0      2019-02-10 [1]
+ testthat    * 2.1.1      2019-04-23 [1]
+ tibble        2.1.3      2019-06-06 [1]
+ whisker       0.4        2019-08-28 [1]
  withr         2.1.2      2018-03-15 [1]
  xfun          0.8        2019-06-25 [1]
+ xml2          1.2.2      2019-08-09 [1]
  yaml          2.2.0      2018-07-25 [1]
- source                            
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- local                             
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- Github (rstudio/htmltools@840d786)
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
+ source                              
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ local                               
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.1)                      
+ Github (r-lib/desc@c860e7b)         
+ local                               
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ Github (rstudio/fontawesome@ba97af5)
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ Github (rstudio/htmltools@840d786)  
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.1)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ local                               
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.1)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
+ CRAN (R 3.6.0)                      
 
 [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
 ```

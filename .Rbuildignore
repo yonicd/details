@@ -7,3 +7,4 @@
 ^pkgdown$
 ^\.travis\.yml$
 ^codecov\.yml$
+^input$
