@@ -33,6 +33,7 @@ The function `details::details` can handle inputs
       - `data.frame`
       - `tibble`
       - `list`
+      - `device` (eg plots)
   - File paths will be identified internally and the lines will be read
     in automatically.
 
@@ -87,8 +88,10 @@ sessioninfo::session_info()%>%
  digest        0.6.20     2019-07-04 [1]
  evaluate      0.14       2019-05-28 [1]
  htmltools     0.3.6.9004 2019-09-08 [1]
+ httr          1.4.1      2019-08-05 [1]
  knitr         1.23       2019-05-18 [1]
  magrittr      1.5        2014-11-22 [1]
+ R6            2.4.0      2019-02-14 [1]
  Rcpp          1.0.2      2019-07-25 [1]
  rlang         0.4.0      2019-06-25 [1]
  rmarkdown     1.14       2019-07-12 [1]
@@ -97,6 +100,7 @@ sessioninfo::session_info()%>%
  stringr       1.4.0      2019-02-10 [1]
  withr         2.1.2      2018-03-15 [1]
  xfun          0.8        2019-06-25 [1]
+ xml2          1.2.2      2019-08-09 [1]
  yaml          2.2.0      2018-07-25 [1]
  source                            
  CRAN (R 3.6.0)                    
@@ -107,6 +111,9 @@ sessioninfo::session_info()%>%
  CRAN (R 3.6.0)                    
  CRAN (R 3.6.0)                    
  Github (rstudio/htmltools@840d786)
+ CRAN (R 3.6.0)                    
+ CRAN (R 3.6.0)                    
+ CRAN (R 3.6.0)                    
  CRAN (R 3.6.0)                    
  CRAN (R 3.6.0)                    
  CRAN (R 3.6.0)                    
@@ -139,7 +146,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/h9y4KPy.png)
+![](https://i.imgur.com/MiMW4A1.png)
 
 </details>
 
