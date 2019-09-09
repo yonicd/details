@@ -1,10 +1,18 @@
 #' @importFrom utils capture.output
 capture.print <- function(obj){
   
-  if(!inherits(obj,'character')){
+  if(details_env$device){
     
-    obj <- utils::capture.output(print(obj))
+    obj <- sprintf('![](%s)',imgur_upload(obj))
     
+  }else{
+
+    if(!inherits(obj,'character')){
+      
+      obj <- utils::capture.output(print(obj))  
+      
+    }
+        
   }
   
   paste0(obj,collapse = '\n')
@@ -12,7 +20,7 @@ capture.print <- function(obj){
 
 read_text <- function(text){
   
-  if(length(text)==1){
+  if(length(text)==1 & !details_env$device){
     if(file.exists(text)){
       text <- readLines(text,warn = FALSE)
     }    
@@ -20,4 +28,3 @@ read_text <- function(text){
   
   text
 }
-

@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-08 September, 2019 09:29:12
+09 September, 2019 18:37:06
 
   - [Coverage](#coverage)
   - [Unit Tests](#unit-tests)
@@ -15,13 +15,14 @@ Coverage summary is created using the
 
 | Object                        | Coverage (%) |
 | :---------------------------- | :----------: |
-| details                       |    91.67     |
+| details                       |    90.12     |
 | [R/print.R](../R/print.R)     |    33.33     |
+| [R/device.R](../R/device.R)   |    87.50     |
+| [R/read.R](../R/read.R)       |    88.89     |
 | [R/build.R](../R/build.R)     |    100.00    |
 | [R/details.R](../R/details.R) |    100.00    |
 | [R/fold.R](../R/fold.R)       |    100.00    |
 | [R/parts.R](../R/parts.R)     |    100.00    |
-| [R/read.R](../R/read.R)       |    100.00    |
 
 <br>
 
@@ -33,10 +34,11 @@ package.
 
 | file                                        | n |  time | error | failed | skipped | warning |
 | :------------------------------------------ | -: | ----: | ----: | -----: | ------: | ------: |
-| [test-basic.R](testthat/test-basic.R)       | 3 | 0.013 |     0 |      0 |       0 |       0 |
+| [test-basic.R](testthat/test-basic.R)       | 3 | 0.019 |     0 |      0 |       0 |       0 |
 | [test-collapse.R](testthat/test-collapse.R) | 3 | 0.004 |     0 |      0 |       0 |       0 |
-| [test-print.R](testthat/test-print.R)       | 2 | 0.004 |     0 |      0 |       0 |       0 |
-| [test-utils.R](testthat/test-utils.R)       | 5 | 0.005 |     0 |      0 |       0 |       0 |
+| [test-device.R](testthat/test-device.R)     | 3 | 0.929 |     0 |      0 |       0 |       0 |
+| [test-print.R](testthat/test-print.R)       | 2 | 0.005 |     0 |      0 |       0 |       0 |
+| [test-utils.R](testthat/test-utils.R)       | 5 | 0.006 |     0 |      0 |       0 |       0 |
 
 <details closed>
 
@@ -45,15 +47,18 @@ package.
 
 | file                                                | context   | test                            | status | n |  time |
 | :-------------------------------------------------- | :-------- | :------------------------------ | :----- | -: | ----: |
-| [test-basic.R](testthat/test-basic.R#L6_L9)         | basic     | basic: empty                    | PASS   | 1 | 0.001 |
-| [test-basic.R](testthat/test-basic.R#L13_L16)       | basic     | basic: object                   | PASS   | 1 | 0.010 |
-| [test-basic.R](testthat/test-basic.R#L20_L23)       | basic     | basic: file                     | PASS   | 1 | 0.002 |
+| [test-basic.R](testthat/test-basic.R#L6_L9)         | basic     | basic: empty                    | PASS   | 1 | 0.002 |
+| [test-basic.R](testthat/test-basic.R#L13_L16)       | basic     | basic: object                   | PASS   | 1 | 0.014 |
+| [test-basic.R](testthat/test-basic.R#L20_L23)       | basic     | basic: file                     | PASS   | 1 | 0.003 |
 | [test-collapse.R](testthat/test-collapse.R#L6_L9)   | fold      | fold methods: close             | PASS   | 1 | 0.001 |
-| [test-collapse.R](testthat/test-collapse.R#L13_L16) | fold      | fold methods: open default      | PASS   | 1 | 0.001 |
-| [test-collapse.R](testthat/test-collapse.R#L20_L23) | fold      | fold methods: open with summary | PASS   | 1 | 0.002 |
+| [test-collapse.R](testthat/test-collapse.R#L13_L16) | fold      | fold methods: open default      | PASS   | 1 | 0.002 |
+| [test-collapse.R](testthat/test-collapse.R#L20_L23) | fold      | fold methods: open with summary | PASS   | 1 | 0.001 |
+| [test-device.R](testthat/test-device.R#L16)         | device    | using device: device flag       | PASS   | 1 | 0.001 |
+| [test-device.R](testthat/test-device.R#L20)         | device    | using device: device png        | PASS   | 1 | 0.001 |
+| [test-device.R](testthat/test-device.R#L26)         | device    | using device: device upload     | PASS   | 1 | 0.927 |
 | [test-print.R](testthat/test-print.R#L5_L8)         | print     | print methods: console          | PASS   | 1 | 0.003 |
-| [test-print.R](testthat/test-print.R#L12_L15)       | print     | print methods: character        | PASS   | 1 | 0.001 |
-| [test-utils.R](testthat/test-utils.R#L6_L9)         | utilities | utilities: tooltip default      | PASS   | 1 | 0.001 |
+| [test-print.R](testthat/test-print.R#L12_L15)       | print     | print methods: character        | PASS   | 1 | 0.002 |
+| [test-utils.R](testthat/test-utils.R#L6_L9)         | utilities | utilities: tooltip default      | PASS   | 1 | 0.002 |
 | [test-utils.R](testthat/test-utils.R#L13_L16)       | utilities | utilities: tooltip with text    | PASS   | 1 | 0.001 |
 | [test-utils.R](testthat/test-utils.R#L21_L24)       | utilities | utilities: summary default      | PASS   | 1 | 0.001 |
 | [test-utils.R](testthat/test-utils.R#L28_L31)       | utilities | utilities: state open           | PASS   | 1 | 0.001 |

@@ -3,7 +3,7 @@
 #' @description Create HTLM DOM Details block for Markdown documents
 #'  with summary as optional.
 #' 
-#' @param text character, text to put in details block
+#' @param object object, object to put in details block
 #' @param summary character, text to put in summary block, Default: NULL
 #' @param tooltip character, text for tooltip on the summary, Default: 'Click to Expand'
 #' @param open logical, is the details open (TRUE) or closed (FALSE), Default: FALSE
@@ -13,19 +13,74 @@
 #'
 #' @details 
 #'   To remove summary or tooltip set them to NULL.
-#'   If the text is a file path, it will automatically it's lines will be read in internally.
+#'   If the object is a file path, it will automatically it's lines will be read in internally.
 #'
 #' @return character
+#' @examples 
+#' 
+#' #basic
+#'   details::details('test')
+#' 
+#' #sessionInfo
+#'   details::details(sessionInfo(),
+#'  summary='sessionInfo')
+#' 
+#' #data.frame
+#'   details::details(head(mtcars))
+#' 
+#' if(interactive()){
+#' 
+#' #plots
+#' 
+#'   details(
+#'   plot(x=mtcars$mpg,y=mtcars$wt),
+#'   summary = 'Plots')
+#'  
+#'
+#' }
+#' 
+#' #output options
+#' 
+#' #character
+#'   details::details('test',
+#'   output = 'character')
+#' 
+#' #clipboard
+#' if(clipr::clipr_available()){
+#' 
+#' details::details('test',
+#' output = 'clipr')
+#' 
+#' clipr::read_clip()
+#' 
+#' }
+#' 
+#' #file.edit
+#' \dontrun{
+#'   details::details('test',
+#'   output = 'file.edit')
+#' }
+#' 
+#' 
+#' 
 #' @rdname details
-#' @export 
-details <- function(text, 
+#' @importFrom clipr read_clip clipr_available
+#' @export
+details <- function(object, 
                     summary = NULL, 
                     tooltip = 'Click to Expand', 
                     open    = FALSE, 
                     lang    = 'r',
                     output  = c('console','clipr','edit','character')){
   
-  build_details(text    = read_text(text), 
+  on.exit({
+    unlink(details_env$f_png)
+    details_env$device <- FALSE
+    },add = TRUE)
+
+  object <- device_check(object,env = details_env)
+  
+  build_details(text    = read_text(object), 
                 summary = build_summary(summary,tooltip), 
                 state   = build_state(open), 
                 lang    = lang,

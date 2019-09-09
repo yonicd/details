@@ -4,12 +4,12 @@
 \alias{details}
 \title{Create HTML DOM Details}
 \usage{
-details(text, summary = NULL, tooltip = "Click to Expand",
+details(object, summary = NULL, tooltip = "Click to Expand",
   open = FALSE, lang = "r", output = c("console", "clipr", "edit",
   "character"))
 }
 \arguments{
-\item{text}{character, text to put in details block}
+\item{object}{object, object to put in details block}
 
 \item{summary}{character, text to put in summary block, Default: NULL}
 
@@ -31,5 +31,53 @@ with summary as optional.
 }
 \details{
 To remove summary or tooltip set them to NULL.
-If the text is a file path, it will automatically it's lines will be read in internally.
+If the object is a file path, it will automatically it's lines will be read in internally.
+}
+\examples{
+
+#basic
+  details::details('test')
+
+#sessionInfo
+  details::details(sessionInfo(),
+ summary='sessionInfo')
+
+#data.frame
+  details::details(head(mtcars))
+
+if(interactive()){
+
+#plots
+
+  details(
+  plot(x=mtcars$mpg,y=mtcars$wt),
+  summary = 'Plots')
+ 
+
+}
+
+#output options
+
+#character
+  details::details('test',
+  output = 'character')
+
+#clipboard
+if(clipr::clipr_available()){
+
+details::details('test',
+output = 'clipr')
+
+clipr::read_clip()
+
+}
+
+#file.edit
+\dontrun{
+  details::details('test',
+  output = 'file.edit')
+}
+
+
+
 }

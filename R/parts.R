@@ -7,5 +7,13 @@ end_details <- function(){
 }
 
 body_details <- function(lang,text){
-  sprintf('```%s\n\n%s\n\n```',lang,text)
+  
+  if(!details_env$device){
+    
+    text <- sprintf('```%s\n\n%s\n\n```',lang,text)  
+    
+  }
+    
+  text
+    
 }
