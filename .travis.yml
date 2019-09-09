@@ -3,6 +3,7 @@ language: R
 cache: packages
 r_packages:
 - ggplot2
+- xml2
 r_github_packages:
 - rstudio/fontawesome
 - metrumresearchgroup/pkgdown
