@@ -1,9 +1,17 @@
 #' @importFrom utils capture.output
-capture.print <- function(obj){
+capture.print <- function(obj,device = FALSE){
   
   if(!inherits(obj,'character')){
     
-    obj <- utils::capture.output(print(obj))
+    if(device){
+      
+      obj <- read_device(obj)
+      
+    }else{
+      
+      obj <- utils::capture.output(print(obj))  
+      
+    }
     
   }
   
@@ -21,3 +29,16 @@ read_text <- function(text){
   text
 }
 
+read_device <- function(expr){
+  
+  f_png <- tempfile(fileext = ".png")
+  on.exit(unlink(f_png),add = TRUE)
+  
+  png(f_png)
+  capture.output(print(eval(expr)))
+  dev.off()
+  
+  res <- knitr::imgur_upload(f_png)
+  
+  sprintf('![](%s)',attr(res, "XML")[['link']][[1]])
+}

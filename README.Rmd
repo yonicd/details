@@ -51,7 +51,7 @@ The function `details::details` can output to result to
   - clipboard via [clipr](https://github.com/mdlincoln/clipr)
   - [file.editor](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/file.edit.html) useful when clipr not available
 
-### Example
+### Examples
 
 One the most popular uses for `details` is to paste the sessioninfo at the bottom of a GitHub issue.
 
@@ -60,6 +60,17 @@ library(details)
 
 sessioninfo::session_info()%>%
   details::details(summary = 'current session info')
+```
+
+There are a [number of objects](https://yonicd.github.io/details/articles/objects.html) that can be placed in a details block other than a character object. An example of a object is a device output such as a plot
+
+```{r,results='asis'}
+details({
+  ggplot2::ggplot(ggplot2::aes(x=mpg,y=wt),data=mtcars) + 
+    ggplot2::geom_point()
+  },
+  summary = 'My plot',
+  device = TRUE)
 ```
 
 ## Package Documentation

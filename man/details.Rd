@@ -4,12 +4,12 @@
 \alias{details}
 \title{Create HTML DOM Details}
 \usage{
-details(text, summary = NULL, tooltip = "Click to Expand",
-  open = FALSE, lang = "r", output = c("console", "clipr", "edit",
-  "character"))
+details(object, summary = NULL, tooltip = "Click to Expand",
+  open = FALSE, lang = "r", device = FALSE, output = c("console",
+  "clipr", "edit", "character"))
 }
 \arguments{
-\item{text}{character, text to put in details block}
+\item{object}{object, object to put in details block}
 
 \item{summary}{character, text to put in summary block, Default: NULL}
 
@@ -18,6 +18,10 @@ details(text, summary = NULL, tooltip = "Click to Expand",
 \item{open}{logical, is the details open (TRUE) or closed (FALSE), Default: FALSE}
 
 \item{lang}{character, language of block (for markdown highlighting) Default: 'r'}
+
+\item{device}{logical, If TRUE then a device will be created internally to upload
+the input into a png and invoke \link[knitr:upload_imgur]{upload_imgur} to place a URL
+link pointing the output.}
 
 \item{output}{character, where to output the file console (Default), clipboard or R file editor,
 Default: c('console','clipr','file.edit','character')}
@@ -31,5 +35,5 @@ with summary as optional.
 }
 \details{
 To remove summary or tooltip set them to NULL.
-If the text is a file path, it will automatically it's lines will be read in internally.
+If the object is a file path, it will automatically it's lines will be read in internally.
 }
