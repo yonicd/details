@@ -21,6 +21,10 @@ img_hex %>%
   magick::image_scale("200x200")%>%
   magick::image_write(here::here("input", "logo.png"), density = 600)
 
+img_hex %>%
+  magick::image_scale("100x100")%>%
+  magick::image_write(here::here("input", "pkgdown.png"), density = 600)
+
 img_hex%>%
 magick::image_scale("1200x1200") %>%
 magick::image_write(here::here("input", "hex.png"), density = 600)
