@@ -30,6 +30,7 @@ read_text <- function(text){
 }
 
 #' @importFrom grDevices png dev.off
+#' @importFrom knitr imgur_upload
 read_device <- function(expr){
   
   f_png <- tempfile(fileext = ".png")
