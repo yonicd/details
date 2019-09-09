@@ -1,26 +1,26 @@
 #' @importFrom utils capture.output
 capture.print <- function(obj,device = FALSE){
   
-  if(!inherits(obj,'character')){
+  if(device){
     
-    if(device){
-      
-      obj <- read_device(obj)
-      
-    }else{
+    obj <- sprintf('![](%s)',imgur_upload(obj))
+    
+  }else{
+
+    if(!inherits(obj,'character')){
       
       obj <- utils::capture.output(print(obj))  
       
     }
-    
+        
   }
   
   paste0(obj,collapse = '\n')
 }
 
-read_text <- function(text){
+read_text <- function(text,device = FALSE){
   
-  if(length(text)==1){
+  if(length(text)==1 & !device){
     if(file.exists(text)){
       text <- readLines(text,warn = FALSE)
     }    
@@ -29,18 +29,42 @@ read_text <- function(text){
   text
 }
 
-#' @importFrom grDevices png dev.off
-#' @importFrom knitr imgur_upload
-read_device <- function(expr){
+#' @importFrom httr POST add_headers upload_file stop_for_status content
+#' @importFrom xml2 as_list read_xml
+#' @importFrom utils packageVersion
+# augmented function from knitr::imgur_upload
+imgur_upload <- function (file, key = "9f3460e67f308f6",only_link = TRUE){
   
-  f_png <- tempfile(fileext = ".png")
-  on.exit(unlink(f_png),add = TRUE)
+  if (!is.character(key)) 
+    stop("The Imgur API Key must be a character string!")
   
-  grDevices::png(f_png)
-  capture.output(print(eval(expr)))
-  grDevices::dev.off()
+  resp <- httr::POST(
+    "https://api.imgur.com/3/image.xml", 
+    config = httr::add_headers(Authorization = paste("Client-ID", key)),
+    body = list(image = httr::upload_file(file))
+  )
   
-  res <- knitr::imgur_upload(f_png)
+  httr::stop_for_status(resp, "upload to imgur")
   
-  sprintf('![](%s)',attr(res, "XML")[['link']][[1]])
+  res <- httr::content(resp, as = "raw")
+  
+  res <- if (length(res)) 
+    xml2::as_list(xml2::read_xml(res))
+  
+  if (utils::packageVersion("xml2") >= "1.2.0") 
+    res <- res[[1L]]
+  
+  if (is.null(res$link[[1]])) 
+    stop("failed to upload ", file)
+  
+  if(only_link){
+    
+    res$link[[1]]
+    
+  }else{
+    
+    structure(res$link[[1]], XML = res)  
+    
+  }
+  
 }

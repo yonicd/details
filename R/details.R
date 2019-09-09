@@ -8,9 +8,6 @@
 #' @param tooltip character, text for tooltip on the summary, Default: 'Click to Expand'
 #' @param open logical, is the details open (TRUE) or closed (FALSE), Default: FALSE
 #' @param lang character, language of block (for markdown highlighting) Default: 'r'
-#' @param device logical, If TRUE then a device will be created internally to upload
-#' the input into a png and invoke [imgur_upload][knitr::imgur_upload] to place a URL
-#' link pointing the output.
 #' @param output character, where to output the file console (Default), clipboard or R file editor,
 #'  Default: c('console','clipr','file.edit','character')
 #'
@@ -20,20 +17,26 @@
 #'
 #' @return character
 #' @rdname details
-#' @export 
+#' @export
 details <- function(object, 
                     summary = NULL, 
                     tooltip = 'Click to Expand', 
                     open    = FALSE, 
                     lang    = 'r',
-                    device = FALSE,
                     output  = c('console','clipr','edit','character')){
   
-  build_details(text    = read_text(object), 
+  on.exit({
+    unlink(details_env$f_png)
+    details_env$device <- FALSE
+    },add = TRUE)
+
+  object <- device_check(object,env = details_env)
+  
+  build_details(text    = read_text(object,details_env$device), 
                 summary = build_summary(summary,tooltip), 
                 state   = build_state(open), 
                 lang    = lang,
-                device  = device,
+                device  = details_env$device,
                 output  = match.arg(output,c('console','clipr','edit','character'))
                )
   

@@ -65,12 +65,7 @@ sessioninfo::session_info()%>%
 There are a [number of objects](https://yonicd.github.io/details/articles/objects.html) that can be placed in a details block other than a character object. An example of a object is a device output such as a plot
 
 ```{r,results='asis'}
-details({
-  ggplot2::ggplot(ggplot2::aes(x=mpg,y=wt),data=mtcars) + 
-    ggplot2::geom_point()
-  },
-  summary = 'My plot',
-  device = TRUE)
+details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 ```
 
 ## Package Documentation

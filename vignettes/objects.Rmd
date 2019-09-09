@@ -52,9 +52,7 @@ You can wrap print methods of R objects in a `details` environment.
 ```{r,results='asis'}
 
 details(
-  quote(plot(x=mtcars$mpg,y=mtcars$wt)),
-  summary = 'plots',
-  tooltip = 'This Must be in a "quote"',
-  device = TRUE)
+  plot(x=mtcars$mpg,y=mtcars$wt),
+  summary = 'plots')
 
 ```

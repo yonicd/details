@@ -1,8 +1,6 @@
 dist: trusty
 language: R
 cache: packages
-r_packages:
-- ggplot2
 r_github_packages:
 - rstudio/fontawesome
 - metrumresearchgroup/pkgdown
