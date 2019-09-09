@@ -29,14 +29,15 @@ read_text <- function(text){
   text
 }
 
+#' @importFrom grDevices png dev.off
 read_device <- function(expr){
   
   f_png <- tempfile(fileext = ".png")
   on.exit(unlink(f_png),add = TRUE)
   
-  png(f_png)
+  grDevices::png(f_png)
   capture.output(print(eval(expr)))
-  dev.off()
+  grDevices::dev.off()
   
   res <- knitr::imgur_upload(f_png)
   

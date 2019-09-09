@@ -9,7 +9,7 @@
 #' @param open logical, is the details open (TRUE) or closed (FALSE), Default: FALSE
 #' @param lang character, language of block (for markdown highlighting) Default: 'r'
 #' @param device logical, If TRUE then a device will be created internally to upload
-#' the input into a png and invoke [upload_imgur][knitr::upload_imgur] to place a URL
+#' the input into a png and invoke [imgur_upload][knitr::imgur_upload] to place a URL
 #' link pointing the output.
 #' @param output character, where to output the file console (Default), clipboard or R file editor,
 #'  Default: c('console','clipr','file.edit','character')
