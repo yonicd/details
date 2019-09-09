@@ -5,7 +5,7 @@ testthat::describe('basic',{
   it('empty',{
        testthat::expect_error(
          details::details(),
-         regexp = 'argument "text" is missing'
+         regexp = 'argument "object" is missing'
         )
        })
   
@@ -18,7 +18,7 @@ testthat::describe('basic',{
   
   it('file',{
     testthat::expect_equal(
-      print(details::details(text = 'helpers.R',output = 'character')),
+      print(details::details(object = 'helpers.R',output = 'character')),
       unlist(strsplit(bench_fun(readLines('helpers.R')),'\\n'))
     )
   })
