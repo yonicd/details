@@ -33,3 +33,51 @@ with summary as optional.
 To remove summary or tooltip set them to NULL.
 If the object is a file path, it will automatically it's lines will be read in internally.
 }
+\examples{
+
+#basic
+  details::details('test')
+
+#sessionInfo
+  details::details(sessionInfo(),
+ summary='sessionInfo')
+
+#data.frame
+  details::details(head(mtcars))
+
+if(interactive()){
+
+#plots
+
+  details(
+  plot(x=mtcars$mpg,y=mtcars$wt),
+  summary = 'Plots')
+ 
+
+}
+
+#output options
+
+#character
+  details::details('test',
+  output = 'character')
+
+#clipboard
+if(clipr::clipr_available()){
+
+details::details('test',
+output = 'clipr')
+
+clipr::read_clip()
+
+}
+
+#file.edit
+\dontrun{
+  details::details('test',
+  output = 'file.edit')
+}
+
+
+
+}

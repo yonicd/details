@@ -1,7 +1,7 @@
 #' @importFrom utils capture.output
-capture.print <- function(obj,device = FALSE){
+capture.print <- function(obj){
   
-  if(device){
+  if(details_env$device){
     
     obj <- sprintf('![](%s)',imgur_upload(obj))
     
@@ -18,9 +18,9 @@ capture.print <- function(obj,device = FALSE){
   paste0(obj,collapse = '\n')
 }
 
-read_text <- function(text,device = FALSE){
+read_text <- function(text){
   
-  if(length(text)==1 & !device){
+  if(length(text)==1 & !details_env$device){
     if(file.exists(text)){
       text <- readLines(text,warn = FALSE)
     }    

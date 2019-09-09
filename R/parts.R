@@ -6,9 +6,9 @@ end_details <- function(){
   paste('</details>','<br>',sep='\n')
 }
 
-body_details <- function(lang,text,device){
+body_details <- function(lang,text){
   
-  if(!device){
+  if(!details_env$device){
     
     text <- sprintf('```%s\n\n%s\n\n```',lang,text)  
     

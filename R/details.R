@@ -16,7 +16,55 @@
 #'   If the object is a file path, it will automatically it's lines will be read in internally.
 #'
 #' @return character
+#' @examples 
+#' 
+#' #basic
+#'   details::details('test')
+#' 
+#' #sessionInfo
+#'   details::details(sessionInfo(),
+#'  summary='sessionInfo')
+#' 
+#' #data.frame
+#'   details::details(head(mtcars))
+#' 
+#' if(interactive()){
+#' 
+#' #plots
+#' 
+#'   details(
+#'   plot(x=mtcars$mpg,y=mtcars$wt),
+#'   summary = 'Plots')
+#'  
+#'
+#' }
+#' 
+#' #output options
+#' 
+#' #character
+#'   details::details('test',
+#'   output = 'character')
+#' 
+#' #clipboard
+#' if(clipr::clipr_available()){
+#' 
+#' details::details('test',
+#' output = 'clipr')
+#' 
+#' clipr::read_clip()
+#' 
+#' }
+#' 
+#' #file.edit
+#' \dontrun{
+#'   details::details('test',
+#'   output = 'file.edit')
+#' }
+#' 
+#' 
+#' 
 #' @rdname details
+#' @importFrom clipr read_clip clipr_available
 #' @export
 details <- function(object, 
                     summary = NULL, 
@@ -32,11 +80,10 @@ details <- function(object,
 
   object <- device_check(object,env = details_env)
   
-  build_details(text    = read_text(object,details_env$device), 
+  build_details(text    = read_text(object), 
                 summary = build_summary(summary,tooltip), 
                 state   = build_state(open), 
                 lang    = lang,
-                device  = details_env$device,
                 output  = match.arg(output,c('console','clipr','edit','character'))
                )
   
