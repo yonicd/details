@@ -9,6 +9,7 @@ Depends: R (>= 3.2.0)
 Imports: utils, clipr, magrittr, knitr, grDevices
 Suggests:
     sessioninfo,
+    xml2,
     tibble,
     testthat,
     rmarkdown,
