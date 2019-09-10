@@ -85,12 +85,19 @@
 <div id="details" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#details" class="anchor"></a>details</h1></div>
-<p>Create and customize details blocks for <a href="#markdown">markdown</a> documents and <a href="#package-documentation">Roxygen2</a> documentation.</p>
+<p>Suppose you’re opening an issue in GitHub and there’s a lot noisey logs that may be useful or you want to add the <code>sessionInfo()</code> to the end of the issue.</p>
+<p>Rather than wrecking readability, wrapping it in a <code>&lt;details&gt;</code> tag is a great solution</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb1-1" data-line-number="1">&lt;details&gt;</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"> &lt;summary&gt;Summary Goes Here&lt;/summary&gt;</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"> ...this is hidden, collapsable content...</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">&lt;/details&gt;</a></code></pre></div>
+<p>Doing this manually every time is a pain.</p>
+<p><code>details</code> is a package lets you create and customize details blocks for <a href="#markdown">markdown</a> documents and <a href="#package-documentation">Roxygen2</a> documentation within <code>R</code>.</p>
 <p><img src="https://github.com/yonicd/details/raw/media/input/details.gif"></p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">remotes<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"yonicd/details"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">remotes<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"yonicd/details"</span>)</a></code></pre></div>
 </div>
 <div id="markdown" class="section level2">
 <h2 class="hasAnchor">
@@ -129,98 +136,98 @@
 <h3 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h3>
 <p>One the most popular uses for <code>details</code> is to paste the sessioninfo at the bottom of a GitHub issue.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">library</span>(details)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3">sessioninfo<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/sessioninfo/topics/session_info">session_info</a></span>()<span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="st">  </span>details<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/details/topics/details">details</a></span>(<span class="dt">summary =</span> <span class="st">'current session info'</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">library</span>(details)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">sessioninfo<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/sessioninfo/topics/session_info">session_info</a></span>()<span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="st">  </span>details<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/details/topics/details">details</a></span>(<span class="dt">summary =</span> <span class="st">'current session info'</span>)</a></code></pre></div>
 <details closed><p><summary><span title="Click to Expand"> current session info </span> </summary></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"></a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">─ Session info ──────────────────────────────────────────────────────────</a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"> setting  value                       </a>
-<a class="sourceLine" id="cb3-4" data-line-number="4"> version  R version <span class="dv">3</span>.<span class="fl">6.1</span> (<span class="dv">2017-01-27</span>)</a>
-<a class="sourceLine" id="cb3-5" data-line-number="5"> os       Ubuntu <span class="dv">14</span>.<span class="fl">04.5</span> LTS          </a>
-<a class="sourceLine" id="cb3-6" data-line-number="6"> system   x86_<span class="dv">64</span>, linux<span class="op">-</span>gnu           </a>
-<a class="sourceLine" id="cb3-7" data-line-number="7"> ui       X11                         </a>
-<a class="sourceLine" id="cb3-8" data-line-number="8"> <span class="kw">language</span> (EN)                        </a>
-<a class="sourceLine" id="cb3-9" data-line-number="9"> collate  en_US.UTF<span class="dv">-8</span>                 </a>
-<a class="sourceLine" id="cb3-10" data-line-number="10"> ctype    en_US.UTF<span class="dv">-8</span>                 </a>
-<a class="sourceLine" id="cb3-11" data-line-number="11"> tz       UTC                         </a>
-<a class="sourceLine" id="cb3-12" data-line-number="12"> date     <span class="dv">2019-09-10</span>                  </a>
-<a class="sourceLine" id="cb3-13" data-line-number="13"></a>
-<a class="sourceLine" id="cb3-14" data-line-number="14">─ Packages ──────────────────────────────────────────────────────────────</a>
-<a class="sourceLine" id="cb3-15" data-line-number="15"> package     <span class="op">*</span><span class="st"> </span>version    date       lib</a>
-<a class="sourceLine" id="cb3-16" data-line-number="16"> assertthat    <span class="dv">0</span>.<span class="fl">2.1</span>      <span class="dv">2019-03-21</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-17" data-line-number="17"> backports     <span class="dv">1</span>.<span class="fl">1.4</span>      <span class="dv">2019-04-10</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-18" data-line-number="18"> cli           <span class="dv">1</span>.<span class="fl">1.0</span>      <span class="dv">2019-03-19</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-19" data-line-number="19"> clipr         <span class="dv">0</span>.<span class="fl">7.0</span>      <span class="dv">2019-07-23</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-20" data-line-number="20"> commonmark    <span class="fl">1.7</span>        <span class="dv">2018-12-01</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-21" data-line-number="21"> crayon        <span class="dv">1</span>.<span class="fl">3.4</span>      <span class="dv">2017-09-16</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-22" data-line-number="22"> desc          <span class="dv">1</span>.<span class="fl">2.0</span>      <span class="dv">2018-05-01</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-23" data-line-number="23"> details     <span class="op">*</span><span class="st"> </span><span class="dv">0</span>.<span class="fl">0.9</span>      <span class="dv">2019-09-10</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-24" data-line-number="24"> digest        <span class="dv">0</span>.<span class="fl">6.20</span>     <span class="dv">2019-07-04</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-25" data-line-number="25"> evaluate      <span class="fl">0.14</span>       <span class="dv">2019-05-28</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-26" data-line-number="26"> fs            <span class="dv">1</span>.<span class="fl">3.1</span>      <span class="dv">2019-05-06</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-27" data-line-number="27"> htmltools     <span class="dv">0</span>.<span class="fl">3.6</span>      <span class="dv">2017-04-28</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-28" data-line-number="28"> httr          <span class="dv">1</span>.<span class="fl">4.1</span>      <span class="dv">2019-08-05</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-29" data-line-number="29"> knitr         <span class="fl">1.24</span>       <span class="dv">2019-08-08</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-30" data-line-number="30"> magrittr      <span class="fl">1.5</span>        <span class="dv">2014-11-22</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-31" data-line-number="31"> MASS          <span class="fl">7.3-51.4</span>   <span class="dv">2019-03-31</span> [<span class="dv">3</span>]</a>
-<a class="sourceLine" id="cb3-32" data-line-number="32"> memoise       <span class="dv">1</span>.<span class="fl">1.0</span>      <span class="dv">2017-04-21</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-33" data-line-number="33"> pkgdown       <span class="dv">1</span>.<span class="dv">1</span>.<span class="fl">0.9000</span> <span class="dv">2019-09-04</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-34" data-line-number="34"> R6            <span class="dv">2</span>.<span class="fl">4.0</span>      <span class="dv">2019-02-14</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-35" data-line-number="35"> Rcpp          <span class="dv">1</span>.<span class="fl">0.2</span>      <span class="dv">2019-07-25</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-36" data-line-number="36"> rlang         <span class="dv">0</span>.<span class="fl">4.0</span>      <span class="dv">2019-06-25</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-37" data-line-number="37"> rmarkdown     <span class="fl">1.15</span>       <span class="dv">2019-08-21</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-38" data-line-number="38"> roxygen2      <span class="dv">6</span>.<span class="fl">1.1</span>      <span class="dv">2018-11-07</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-39" data-line-number="39"> rprojroot     <span class="fl">1.3</span><span class="dv">-2</span>      <span class="dv">2018-01-03</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-40" data-line-number="40"> sessioninfo   <span class="dv">1</span>.<span class="fl">1.1</span>      <span class="dv">2018-11-05</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-41" data-line-number="41"> stringi       <span class="dv">1</span>.<span class="fl">4.3</span>      <span class="dv">2019-03-12</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-42" data-line-number="42"> stringr       <span class="dv">1</span>.<span class="fl">4.0</span>      <span class="dv">2019-02-10</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-43" data-line-number="43"> withr         <span class="dv">2</span>.<span class="fl">1.2</span>      <span class="dv">2018-03-15</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-44" data-line-number="44"> xfun          <span class="fl">0.9</span>        <span class="dv">2019-08-21</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-45" data-line-number="45"> xml2          <span class="dv">1</span>.<span class="fl">2.2</span>      <span class="dv">2019-08-09</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-46" data-line-number="46"> yaml          <span class="dv">2</span>.<span class="fl">2.0</span>      <span class="dv">2018-07-25</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-47" data-line-number="47"> source                                      </a>
-<a class="sourceLine" id="cb3-48" data-line-number="48"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-49" data-line-number="49"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-50" data-line-number="50"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-51" data-line-number="51"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-52" data-line-number="52"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-53" data-line-number="53"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-54" data-line-number="54"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-55" data-line-number="55"> local                                       </a>
-<a class="sourceLine" id="cb3-56" data-line-number="56"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-57" data-line-number="57"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-58" data-line-number="58"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-59" data-line-number="59"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-60" data-line-number="60"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-61" data-line-number="61"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-62" data-line-number="62"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-63" data-line-number="63"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-64" data-line-number="64"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-65" data-line-number="65"> <span class="kw">Github</span> (metrumresearchgroup<span class="op">/</span>pkgdown<span class="op">@</span>a5af998)</a>
-<a class="sourceLine" id="cb3-66" data-line-number="66"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-67" data-line-number="67"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-68" data-line-number="68"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-69" data-line-number="69"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-70" data-line-number="70"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-71" data-line-number="71"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-72" data-line-number="72"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-73" data-line-number="73"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-74" data-line-number="74"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-75" data-line-number="75"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-76" data-line-number="76"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-77" data-line-number="77"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-78" data-line-number="78"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
-<a class="sourceLine" id="cb3-79" data-line-number="79"></a>
-<a class="sourceLine" id="cb3-80" data-line-number="80">[<span class="dv">1</span>] <span class="op">/</span>home<span class="op">/</span>travis<span class="op">/</span>R<span class="op">/</span>Library</a>
-<a class="sourceLine" id="cb3-81" data-line-number="81">[<span class="dv">2</span>] <span class="op">/</span>usr<span class="op">/</span>local<span class="op">/</span>lib<span class="op">/</span>R<span class="op">/</span>site<span class="op">-</span>library</a>
-<a class="sourceLine" id="cb3-82" data-line-number="82">[<span class="dv">3</span>] <span class="op">/</span>home<span class="op">/</span>travis<span class="op">/</span>R<span class="op">-</span>bin<span class="op">/</span>lib<span class="op">/</span>R<span class="op">/</span>library</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">─ Session info ──────────────────────────────────────────────────────────</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"> setting  value                       </a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"> version  R version <span class="dv">3</span>.<span class="fl">6.1</span> (<span class="dv">2017-01-27</span>)</a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"> os       Ubuntu <span class="dv">14</span>.<span class="fl">04.5</span> LTS          </a>
+<a class="sourceLine" id="cb4-6" data-line-number="6"> system   x86_<span class="dv">64</span>, linux<span class="op">-</span>gnu           </a>
+<a class="sourceLine" id="cb4-7" data-line-number="7"> ui       X11                         </a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"> <span class="kw">language</span> (EN)                        </a>
+<a class="sourceLine" id="cb4-9" data-line-number="9"> collate  en_US.UTF<span class="dv">-8</span>                 </a>
+<a class="sourceLine" id="cb4-10" data-line-number="10"> ctype    en_US.UTF<span class="dv">-8</span>                 </a>
+<a class="sourceLine" id="cb4-11" data-line-number="11"> tz       UTC                         </a>
+<a class="sourceLine" id="cb4-12" data-line-number="12"> date     <span class="dv">2019-09-10</span>                  </a>
+<a class="sourceLine" id="cb4-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb4-14" data-line-number="14">─ Packages ──────────────────────────────────────────────────────────────</a>
+<a class="sourceLine" id="cb4-15" data-line-number="15"> package     <span class="op">*</span><span class="st"> </span>version    date       lib</a>
+<a class="sourceLine" id="cb4-16" data-line-number="16"> assertthat    <span class="dv">0</span>.<span class="fl">2.1</span>      <span class="dv">2019-03-21</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-17" data-line-number="17"> backports     <span class="dv">1</span>.<span class="fl">1.4</span>      <span class="dv">2019-04-10</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-18" data-line-number="18"> cli           <span class="dv">1</span>.<span class="fl">1.0</span>      <span class="dv">2019-03-19</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-19" data-line-number="19"> clipr         <span class="dv">0</span>.<span class="fl">7.0</span>      <span class="dv">2019-07-23</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-20" data-line-number="20"> commonmark    <span class="fl">1.7</span>        <span class="dv">2018-12-01</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-21" data-line-number="21"> crayon        <span class="dv">1</span>.<span class="fl">3.4</span>      <span class="dv">2017-09-16</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-22" data-line-number="22"> desc          <span class="dv">1</span>.<span class="fl">2.0</span>      <span class="dv">2018-05-01</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-23" data-line-number="23"> details     <span class="op">*</span><span class="st"> </span><span class="dv">0</span>.<span class="fl">0.9</span>      <span class="dv">2019-09-10</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-24" data-line-number="24"> digest        <span class="dv">0</span>.<span class="fl">6.20</span>     <span class="dv">2019-07-04</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-25" data-line-number="25"> evaluate      <span class="fl">0.14</span>       <span class="dv">2019-05-28</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-26" data-line-number="26"> fs            <span class="dv">1</span>.<span class="fl">3.1</span>      <span class="dv">2019-05-06</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-27" data-line-number="27"> htmltools     <span class="dv">0</span>.<span class="fl">3.6</span>      <span class="dv">2017-04-28</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-28" data-line-number="28"> httr          <span class="dv">1</span>.<span class="fl">4.1</span>      <span class="dv">2019-08-05</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-29" data-line-number="29"> knitr         <span class="fl">1.24</span>       <span class="dv">2019-08-08</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-30" data-line-number="30"> magrittr      <span class="fl">1.5</span>        <span class="dv">2014-11-22</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-31" data-line-number="31"> MASS          <span class="fl">7.3-51.4</span>   <span class="dv">2019-03-31</span> [<span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb4-32" data-line-number="32"> memoise       <span class="dv">1</span>.<span class="fl">1.0</span>      <span class="dv">2017-04-21</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-33" data-line-number="33"> pkgdown       <span class="dv">1</span>.<span class="dv">1</span>.<span class="fl">0.9000</span> <span class="dv">2019-09-04</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-34" data-line-number="34"> R6            <span class="dv">2</span>.<span class="fl">4.0</span>      <span class="dv">2019-02-14</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-35" data-line-number="35"> Rcpp          <span class="dv">1</span>.<span class="fl">0.2</span>      <span class="dv">2019-07-25</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-36" data-line-number="36"> rlang         <span class="dv">0</span>.<span class="fl">4.0</span>      <span class="dv">2019-06-25</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-37" data-line-number="37"> rmarkdown     <span class="fl">1.15</span>       <span class="dv">2019-08-21</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-38" data-line-number="38"> roxygen2      <span class="dv">6</span>.<span class="fl">1.1</span>      <span class="dv">2018-11-07</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-39" data-line-number="39"> rprojroot     <span class="fl">1.3</span><span class="dv">-2</span>      <span class="dv">2018-01-03</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-40" data-line-number="40"> sessioninfo   <span class="dv">1</span>.<span class="fl">1.1</span>      <span class="dv">2018-11-05</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-41" data-line-number="41"> stringi       <span class="dv">1</span>.<span class="fl">4.3</span>      <span class="dv">2019-03-12</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-42" data-line-number="42"> stringr       <span class="dv">1</span>.<span class="fl">4.0</span>      <span class="dv">2019-02-10</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-43" data-line-number="43"> withr         <span class="dv">2</span>.<span class="fl">1.2</span>      <span class="dv">2018-03-15</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-44" data-line-number="44"> xfun          <span class="fl">0.9</span>        <span class="dv">2019-08-21</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-45" data-line-number="45"> xml2          <span class="dv">1</span>.<span class="fl">2.2</span>      <span class="dv">2019-08-09</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-46" data-line-number="46"> yaml          <span class="dv">2</span>.<span class="fl">2.0</span>      <span class="dv">2018-07-25</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb4-47" data-line-number="47"> source                                      </a>
+<a class="sourceLine" id="cb4-48" data-line-number="48"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-49" data-line-number="49"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-50" data-line-number="50"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-51" data-line-number="51"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-52" data-line-number="52"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-53" data-line-number="53"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-54" data-line-number="54"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-55" data-line-number="55"> local                                       </a>
+<a class="sourceLine" id="cb4-56" data-line-number="56"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-57" data-line-number="57"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-58" data-line-number="58"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-59" data-line-number="59"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-60" data-line-number="60"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-61" data-line-number="61"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-62" data-line-number="62"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-63" data-line-number="63"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-64" data-line-number="64"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-65" data-line-number="65"> <span class="kw">Github</span> (metrumresearchgroup<span class="op">/</span>pkgdown<span class="op">@</span>a5af998)</a>
+<a class="sourceLine" id="cb4-66" data-line-number="66"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-67" data-line-number="67"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-68" data-line-number="68"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-69" data-line-number="69"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-70" data-line-number="70"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-71" data-line-number="71"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-72" data-line-number="72"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-73" data-line-number="73"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-74" data-line-number="74"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-75" data-line-number="75"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-76" data-line-number="76"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-77" data-line-number="77"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-78" data-line-number="78"> <span class="kw">CRAN</span> (R <span class="dv">3</span>.<span class="fl">6.1</span>)                              </a>
+<a class="sourceLine" id="cb4-79" data-line-number="79"></a>
+<a class="sourceLine" id="cb4-80" data-line-number="80">[<span class="dv">1</span>] <span class="op">/</span>home<span class="op">/</span>travis<span class="op">/</span>R<span class="op">/</span>Library</a>
+<a class="sourceLine" id="cb4-81" data-line-number="81">[<span class="dv">2</span>] <span class="op">/</span>usr<span class="op">/</span>local<span class="op">/</span>lib<span class="op">/</span>R<span class="op">/</span>site<span class="op">-</span>library</a>
+<a class="sourceLine" id="cb4-82" data-line-number="82">[<span class="dv">3</span>] <span class="op">/</span>home<span class="op">/</span>travis<span class="op">/</span>R<span class="op">-</span>bin<span class="op">/</span>lib<span class="op">/</span>R<span class="op">/</span>library</a></code></pre></div>
 </details><p><br></p>
 <p>There are a <a href="https://yonicd.github.io/details/articles/objects.html">number of objects</a> that can be placed in a details block other than a character object. An example of a object is a device output such as a plot</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="reference/details.html">details</a></span>(<span class="kw">plot</span>(<span class="dt">x=</span>mtcars<span class="op">$</span>mpg,<span class="dt">y=</span>mtcars<span class="op">$</span>wt), <span class="dt">summary =</span> <span class="st">'My plot'</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="reference/details.html">details</a></span>(<span class="kw">plot</span>(<span class="dt">x=</span>mtcars<span class="op">$</span>mpg,<span class="dt">y=</span>mtcars<span class="op">$</span>wt), <span class="dt">summary =</span> <span class="st">'My plot'</span>)</a></code></pre></div>
 <details closed><p><summary><span title="Click to Expand"> My plot </span> </summary></p>
-<p><img src="https://i.imgur.com/9MedEOW.png"></p>
+<p><img src="https://i.imgur.com/EU7S2FK.png"></p>
 </details><p><br></p>
 </div>
 </div>
