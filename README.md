@@ -10,7 +10,7 @@ status](https://ci.appveyor.com/api/projects/status/github/yonicd/details?branch
 [![Codecov test
 coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/details?branch=master)
 [![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_09_08-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_09_10-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
 
 # details <img src="https://github.com/yonicd/details/raw/media/input/logo.png" align="right" />
@@ -97,7 +97,7 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-09-09                  
+ date     2019-09-10                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version    date       lib
@@ -169,7 +169,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/EI4wocf.png)
+![](https://i.imgur.com/NbsNYeK.png)
 
 </details>
 
@@ -220,3 +220,9 @@ More information can be found in the
   - Customizing the details output
   - What R objects details can handle
   - Using details in Roxygen2
+
+## Code of Conduct
+
+Please note that the ‘details’ project is released with a [Contributor
+Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
+you agree to abide by its terms.

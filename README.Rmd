@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 [![Travis build status](https://travis-ci.org/yonicd/details.svg?branch=master)](https://travis-ci.org/yonicd/details)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/yonicd/details?branch=master&svg=true)](https://ci.appveyor.com/project/yonicd/details)
 [![Codecov test coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/details?branch=master)
-[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_09_08-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
+[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_09_10-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
 
 
@@ -121,3 +121,9 @@ More information can be found in the [articles](https://yonicd.github.io/details
   - Customizing the details output
   - What R objects details can handle
   - Using details in Roxygen2
+
+## Code of Conduct
+
+Please note that the 'details' project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.
