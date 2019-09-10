@@ -11,10 +11,12 @@ coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](h
 Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_09_08-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
 
-# details <img src="https://github.com/yonicd/details/raw/master/input/logo.png" align="right" />
+# details <img src="https://github.com/yonicd/details/raw/media/input/logo.png" align="right" />
 
 Create and customize details blocks for [markdown](#markdown) documents
 and [Roxygen2](#package-documentation) documentation.
+
+![](https://github.com/yonicd/details/raw/media/input/details.gif)
 
 ## Installation
 
@@ -146,7 +148,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/MiMW4A1.png)
+![](https://i.imgur.com/z6Nnv6K.png)
 
 </details>
 
@@ -159,6 +161,8 @@ to overwhelm the user.
 
 To solve this we can use folding blocks in the documentation (which are
 then rendered into pkgdown website automatically)
+
+![](https://github.com/yonicd/details/raw/media/input/folding.gif)
 
 To enable this feature add `Roxygen: list(markdown = TRUE)` to the
 DESCRIPTION file before rendering the roxygen2
