@@ -86,6 +86,7 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#details" class="anchor"></a>details</h1></div>
 <p>Create and customize details blocks for <a href="#markdown">markdown</a> documents and <a href="#package-documentation">Roxygen2</a> documentation.</p>
+<p><img src="https://github.com/yonicd/details/raw/media/input/details.gif"></p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -144,7 +145,7 @@
 <a class="sourceLine" id="cb3-9" data-line-number="9"> collate  en_US.UTF<span class="dv">-8</span>                 </a>
 <a class="sourceLine" id="cb3-10" data-line-number="10"> ctype    en_US.UTF<span class="dv">-8</span>                 </a>
 <a class="sourceLine" id="cb3-11" data-line-number="11"> tz       UTC                         </a>
-<a class="sourceLine" id="cb3-12" data-line-number="12"> date     <span class="dv">2019-09-09</span>                  </a>
+<a class="sourceLine" id="cb3-12" data-line-number="12"> date     <span class="dv">2019-09-10</span>                  </a>
 <a class="sourceLine" id="cb3-13" data-line-number="13"></a>
 <a class="sourceLine" id="cb3-14" data-line-number="14">─ Packages ──────────────────────────────────────────────────────────────</a>
 <a class="sourceLine" id="cb3-15" data-line-number="15"> package     <span class="op">*</span><span class="st"> </span>version    date       lib</a>
@@ -155,7 +156,7 @@
 <a class="sourceLine" id="cb3-20" data-line-number="20"> commonmark    <span class="fl">1.7</span>        <span class="dv">2018-12-01</span> [<span class="dv">1</span>]</a>
 <a class="sourceLine" id="cb3-21" data-line-number="21"> crayon        <span class="dv">1</span>.<span class="fl">3.4</span>      <span class="dv">2017-09-16</span> [<span class="dv">1</span>]</a>
 <a class="sourceLine" id="cb3-22" data-line-number="22"> desc          <span class="dv">1</span>.<span class="fl">2.0</span>      <span class="dv">2018-05-01</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-23" data-line-number="23"> details     <span class="op">*</span><span class="st"> </span><span class="dv">0</span>.<span class="fl">0.9</span>      <span class="dv">2019-09-09</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb3-23" data-line-number="23"> details     <span class="op">*</span><span class="st"> </span><span class="dv">0</span>.<span class="fl">0.9</span>      <span class="dv">2019-09-10</span> [<span class="dv">1</span>]</a>
 <a class="sourceLine" id="cb3-24" data-line-number="24"> digest        <span class="dv">0</span>.<span class="fl">6.20</span>     <span class="dv">2019-07-04</span> [<span class="dv">1</span>]</a>
 <a class="sourceLine" id="cb3-25" data-line-number="25"> evaluate      <span class="fl">0.14</span>       <span class="dv">2019-05-28</span> [<span class="dv">1</span>]</a>
 <a class="sourceLine" id="cb3-26" data-line-number="26"> fs            <span class="dv">1</span>.<span class="fl">3.1</span>      <span class="dv">2019-05-06</span> [<span class="dv">1</span>]</a>
@@ -219,7 +220,7 @@
 <p>There are a <a href="https://yonicd.github.io/details/articles/objects.html">number of objects</a> that can be placed in a details block other than a character object. An example of a object is a device output such as a plot</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="reference/details.html">details</a></span>(<span class="kw">plot</span>(<span class="dt">x=</span>mtcars<span class="op">$</span>mpg,<span class="dt">y=</span>mtcars<span class="op">$</span>wt), <span class="dt">summary =</span> <span class="st">'My plot'</span>)</a></code></pre></div>
 <details closed><p><summary><span title="Click to Expand"> My plot </span> </summary></p>
-<p><img src="https://i.imgur.com/lGHI81Z.png"></p>
+<p><img src="https://i.imgur.com/9MedEOW.png"></p>
 </details><p><br></p>
 </div>
 </div>
@@ -228,6 +229,7 @@
 <a href="#package-documentation" class="anchor"></a>Package Documentation</h2>
 <p>Many times in documentation there is a lot to say, but you do not want to overwhelm the user.</p>
 <p>To solve this we can use folding blocks in the documentation (which are then rendered into pkgdown website automatically)</p>
+<p><img src="https://github.com/yonicd/details/raw/media/input/folding.gif"></p>
 <p>To enable this feature add <code>Roxygen: list(markdown = TRUE)</code> to the DESCRIPTION file before rendering the roxygen2</p>
 <p>You can use this feature by wrapping documentation with the macros</p>
 <pre><code>\foldstart{[SUMMARY TEXT]}
@@ -259,7 +261,7 @@
     <div class="">
 <h2></h2>
 <ul class="list-unstyled">
-<li><img src="https://github.com/yonicd/details/blob/master/input/pkgdown.png?raw=true" alt=""></li>
+<li><img src="https://github.com/yonicd/details/blob/media/input/pkgdown.png?raw=true" alt=""></li>
 </ul>
 </div>
 <div class="links">
@@ -291,7 +293,7 @@
 <ul class="list-unstyled">
 <li><a href="https://travis-ci.org/yonicd/details"><img src="https://travis-ci.org/yonicd/details.svg?branch=master" alt="Travis build status"></a></li>
 <li><a href="https://codecov.io/gh/yonicd/details?branch=master"><img src="https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
-<li><a href="http://tinyurl.com/yyodcwc7"><img src="https://img.shields.io/badge/covrpage-Last_Build_2019_09_09-yellowgreen.svg" alt="Covrpage Summary"></a></li>
+<li><a href="http://tinyurl.com/yyodcwc7"><img src="https://img.shields.io/badge/covrpage-Last_Build_2019_09_10-yellowgreen.svg" alt="Covrpage Summary"></a></li>
 </ul>
 </div>
 </div>
