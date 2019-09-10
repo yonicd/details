@@ -62,7 +62,7 @@ The function `details::details` can handle inputs
 
 ### Output
 
-The function `details::details` can output to result to
+The function `details::details` can output the result to
 
   - console (default)
   - clipboard via [clipr](https://github.com/mdlincoln/clipr)

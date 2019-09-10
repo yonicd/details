@@ -17,7 +17,6 @@ testthat::describe('print clipr',{
 
 testthat::describe('print methods',{
   it('console',{
-    testthat::skip_on_appveyor()
     testthat::expect_output(
       print(details::details('test')),
       regexp = bench_fun('test')
@@ -25,7 +24,6 @@ testthat::describe('print methods',{
   })
   
   it('character',{
-    testthat::skip_on_appveyor()
     testthat::expect_equal(
       unlist(strsplit(bench_fun('test'),'\\n')),
       print(details::details('test',output = 'character'))

@@ -4,11 +4,13 @@ device_check <- function(object,f_png = tempfile(fileext = ".png"), env){
   
   utils::capture.output(withr::with_png(f_png,print(object)))
   
-  env$device <- !is.na(file.size(f_png))
-  
+  env$device <- is_not_blank_png(f_png)
+
   if(env$device){
+    
     env$f_png <- f_png
-    object <- f_png
+    object    <- f_png
+    
   }
   
   object
@@ -52,5 +54,22 @@ imgur_upload <- function (file, key = "9f3460e67f308f6",only_link = TRUE){
     structure(res$link[[1]], XML = res)  
     
   }
+  
+}
+
+is_not_na_png <- function(file){
+  !is.na(file.size(file))
+}
+
+#' @importFrom png readPNG
+is_not_blank_png <- function(file){
+  
+  ret <- is_not_na_png(file)
+  
+  if(ret){
+    ret <- length(unique(unlist(as.list(png::readPNG(file)))))>1  
+  }
+  
+  ret
   
 }

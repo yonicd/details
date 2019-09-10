@@ -3,10 +3,10 @@ Title: Create details section for markdown and roxygen2
 Version: 0.0.9
 Authors@R: person(given = "Jonathan", family = "Sidi", role = c("aut", "cre"),
         email = "yonicd@gmail.com")
-Description: Programatically build a details template to place in a markdown,
-        `Rmarkdown` and `roxygen2` documentation.
+Description: Programmatically build a details template to place in a Markdown,
+        'Rmarkdown' and 'roxygen2' documentation.
 Depends: R (>= 3.2.0)
-Imports: utils, clipr, magrittr, withr, xml2, httr
+Imports: utils, clipr, magrittr, withr, xml2, httr, png
 Suggests: sessioninfo, tibble, knitr, testthat, rmarkdown, covr
 License: MIT + file LICENSE
 URL: https://github.com/yonicd/details

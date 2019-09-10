@@ -60,7 +60,7 @@ The function `details::details` can handle inputs
 
 ### Output
 
-The function `details::details` can output to result to
+The function `details::details` can output the result to
 
   - console (default)
   - clipboard via
@@ -105,13 +105,14 @@ sessioninfo::session_info()%>%
  cli           1.1.0      2019-03-19 [1]
  clipr         0.7.0      2019-07-23 [1]
  crayon        1.3.4      2017-09-16 [1]
- details     * 0.0.9      2019-09-09 [1]
+ details     * 0.0.9      2019-09-10 [1]
  digest        0.6.20     2019-07-04 [1]
  evaluate      0.14       2019-05-28 [1]
  htmltools     0.3.6.9004 2019-09-08 [1]
  httr          1.4.1      2019-08-05 [1]
  knitr         1.23       2019-05-18 [1]
  magrittr      1.5        2014-11-22 [1]
+ png           0.1-7      2013-12-03 [1]
  R6            2.4.0      2019-02-14 [1]
  Rcpp          1.0.2      2019-07-25 [1]
  rlang         0.4.0      2019-06-25 [1]
@@ -132,6 +133,7 @@ sessioninfo::session_info()%>%
  CRAN (R 3.6.0)                    
  CRAN (R 3.6.0)                    
  Github (rstudio/htmltools@840d786)
+ CRAN (R 3.6.0)                    
  CRAN (R 3.6.0)                    
  CRAN (R 3.6.0)                    
  CRAN (R 3.6.0)                    
@@ -167,7 +169,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/lXL7oUN.png)
+![](https://i.imgur.com/EI4wocf.png)
 
 </details>
 

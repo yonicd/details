@@ -10,7 +10,6 @@ testthat::describe('basic',{
        })
   
   it('object',{
-    testthat::skip_on_appveyor()
     testthat::expect_equal(
       print(details::details(mtcars,output = 'character')),
       unlist(strsplit(bench_fun(mtcars),'\\n'))
@@ -18,7 +17,6 @@ testthat::describe('basic',{
   })
   
   it('file',{
-    testthat::skip_on_appveyor()
     testthat::expect_equal(
       print(details::details(object = 'helpers.R',output = 'character')),
       unlist(strsplit(bench_fun(readLines('helpers.R')),'\\n'))
