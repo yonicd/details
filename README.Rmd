@@ -22,7 +22,20 @@ knitr::opts_chunk$set(
 
 # details `r if(knitr::opts_knit$get('rmarkdown.pandoc.to')=='gfm-ascii_identifiers') '<img src="https://github.com/yonicd/details/raw/media/input/logo.png" align="right" />'`
 
-Create and customize details blocks for [markdown](#markdown) documents and [Roxygen2](#package-documentation) documentation.
+Suppose you're opening an issue in GitHub and there's a lot noisey logs that may be useful or you want to add the `sessionInfo()` to the end of the issue.
+
+Rather than wrecking readability, wrapping it in a `<details>` tag is a great solution
+
+```md
+<details>
+ <summary>Summary Goes Here</summary>
+ ...this is hidden, collapsable content...
+</details>
+```
+
+Doing this manually every time is a pain. 
+
+`details` is a package lets you create and customize details blocks for [markdown](#markdown) documents and [Roxygen2](#package-documentation) documentation within `R`.
 
 ![](https://github.com/yonicd/details/raw/media/input/details.gif)
 

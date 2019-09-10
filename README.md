@@ -13,8 +13,25 @@ Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_09_08-brightgreen
 
 # details <img src="https://github.com/yonicd/details/raw/media/input/logo.png" align="right" />
 
-Create and customize details blocks for [markdown](#markdown) documents
-and [Roxygen2](#package-documentation) documentation.
+Suppose you’re opening an issue in GitHub and there’s a lot noisey logs
+that may be useful or you want to add the `sessionInfo()` to the end of
+the issue.
+
+Rather than wrecking readability, wrapping it in a `<details>` tag is a
+great solution
+
+``` md
+<details>
+ <summary>Summary Goes Here</summary>
+ ...this is hidden, collapsable content...
+</details>
+```
+
+Doing this manually every time is a pain.
+
+`details` is a package lets you create and customize details blocks for
+[markdown](#markdown) documents and [Roxygen2](#package-documentation)
+documentation within `R`.
 
 ![](https://github.com/yonicd/details/raw/media/input/details.gif)
 
@@ -148,7 +165,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/z6Nnv6K.png)
+![](https://i.imgur.com/58cU7lA.png)
 
 </details>
 
