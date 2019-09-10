@@ -8,3 +8,5 @@
 ^\.travis\.yml$
 ^codecov\.yml$
 ^input$
+^cran-comments\.md$
+^appveyor\.yml$

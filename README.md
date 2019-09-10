@@ -7,6 +7,8 @@
 status](https://travis-ci.org/yonicd/details.svg?branch=master)](https://travis-ci.org/yonicd/details)
 [![Codecov test
 coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/details?branch=master)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/yonicd/details?branch=master&svg=true)](https://ci.appveyor.com/project/yonicd/details)
 [![Covrpage
 Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_09_08-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
@@ -165,7 +167,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/58cU7lA.png)
+![](https://i.imgur.com/2u7PMRy.png)
 
 </details>
 
