@@ -19,46 +19,45 @@
 #' @examples 
 #' 
 #' #basic
-#'   details::details('test')
+#'  details::details('test')
 #' 
 #' #sessionInfo
-#'   details::details(sessionInfo(),
-#'  summary='sessionInfo')
+#'  details::details(sessionInfo(), summary = 'sessionInfo')
 #' 
 #' #data.frame
-#'   details::details(head(mtcars))
+#'  details::details(head(mtcars))
 #' 
 #' if(interactive()){
 #' 
 #' #plots
 #' 
-#'   details(
-#'   plot(x=mtcars$mpg,y=mtcars$wt),
-#'   summary = 'Plots')
+#'  details(
+#'    plot(x = mtcars$mpg, y = mtcars$wt),
+#'    summary = 'Plots')
 #'  
-#'
 #' }
 #' 
 #' #output options
 #' 
 #' #character
-#'   details::details('test',
-#'   output = 'character')
+#'  details::details('test', output = 'character')
 #' 
 #' #clipboard
 #' if(clipr::clipr_available()){
 #' 
-#' details::details('test',
-#' output = 'clipr')
+#'  details::details('test', output = 'clipr')
 #' 
-#' clipr::read_clip()
+#'  clipr::read_clip()
 #' 
 #' }
 #' 
 #' #file.edit
-#' \dontrun{
-#'   details::details('test',
-#'   output = 'file.edit')
+#' \donttest{
+#' if(interactive()){
+#' 
+#'  details::details('test', output = 'edit')
+#'  
+#' }
 #' }
 #' 
 #' 
