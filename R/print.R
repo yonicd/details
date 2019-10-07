@@ -16,6 +16,9 @@ print.details_console <- function(x,...){
 #' @export
 print.details_clipr <- function(x,...){
   
+  if(!clipr::clipr_available())
+    stop('clipboard is not installed on the system, consider setting output to "edit"')
+  
   clipr::write_clip(x,...)
   
 }
