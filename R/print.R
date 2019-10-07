@@ -24,6 +24,9 @@ print.details_clipr <- function(x,...){
 #' @export
 print.details_edit <- function(x,...){
   
+  if(!interactive())
+    stop('Not an interactive enviornment')
+
   tf <- tempfile(fileext = '.R')
   
   cat(x,file = tf,sep = '\n')
