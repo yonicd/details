@@ -24,8 +24,13 @@ print.details_clipr <- function(x,...){
 #' @export
 print.details_edit <- function(x,...){
   
-  if(!interactive())
-    stop('Not an interactive enviornment')
+  if(interactive()){
+    warning('Not an interactive enviornment, falling back to output = "console"',
+            call. = FALSE)
+    class(x) <- 'details_console'
+    return(print(x))
+  }
+    
 
   tf <- tempfile(fileext = '.R')
   
