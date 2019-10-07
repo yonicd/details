@@ -44,14 +44,11 @@ If the object is a file path, it will automatically it's lines will be read in i
 #data.frame
  details::details(head(mtcars))
 
-if(interactive()){
-
 #plots
-
+\donttest{
  details(
    plot(x = mtcars$mpg, y = mtcars$wt),
    summary = 'Plots')
- 
 }
 
 #output options
@@ -70,11 +67,9 @@ if(clipr::clipr_available()){
 
 #file.edit
 \donttest{
-if(interactive()){
 
  details::details('test', output = 'edit')
  
-}
 }
 
 

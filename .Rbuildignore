@@ -11,3 +11,4 @@
 ^cran-comments\.md$
 ^appveyor\.yml$
 ^CODE_OF_CONDUCT\.md$
+^CRAN-RELEASE$

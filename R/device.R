@@ -23,6 +23,8 @@ device_check <- function(object,f_png = tempfile(fileext = ".png"), env){
 #' @importFrom utils packageVersion
 imgur_upload <- function (file, key = "9f3460e67f308f6",only_link = TRUE){
   
+  check_internet('imgur.com')
+  
   if (!is.character(key)) 
     stop("The Imgur API Key must be a character string!")
   
@@ -72,4 +74,12 @@ is_not_blank_png <- function(file){
   
   ret
   
+}
+
+#' @importFrom httr HEAD timeout
+check_internet <- function(url = 'google.com'){
+  if(inherits(try({
+      httr::HEAD(url,httr::timeout(1))
+    },silent = TRUE),'try-error'))
+    stop('An internet connection was not found')
 }

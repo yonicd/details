@@ -2,7 +2,7 @@ testthat::context('device')
 
 testthat::describe('using device',{
   
-  tf <- file.path(getwd(),'test.png')
+  tf <- file.path(tempdir(),'test.png')
   file.create(tf)
   testenv <- new.env()
     

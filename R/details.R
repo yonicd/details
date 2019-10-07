@@ -27,14 +27,11 @@
 #' #data.frame
 #'  details::details(head(mtcars))
 #' 
-#' if(interactive()){
-#' 
 #' #plots
-#' 
+#' \donttest{
 #'  details(
 #'    plot(x = mtcars$mpg, y = mtcars$wt),
 #'    summary = 'Plots')
-#'  
 #' }
 #' 
 #' #output options
@@ -53,11 +50,9 @@
 #' 
 #' #file.edit
 #' \donttest{
-#' if(interactive()){
 #' 
 #'  details::details('test', output = 'edit')
 #'  
-#' }
 #' }
 #' 
 #' 
