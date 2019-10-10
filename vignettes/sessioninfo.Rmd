@@ -20,7 +20,7 @@ library(details)
 
 One the most basic and popular uses for `details` is to paste the sessioninfo at the bottom of a GitHub issue.
 
-```{r,results='asis'}
+```{r}
 
 sessioninfo::session_info()%>%
   details::details(

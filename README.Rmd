@@ -14,6 +14,8 @@ knitr::opts_chunk$set(
 ```
 
 <!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/details)](https://CRAN.R-project.org/package=details)
+![downloads](http://cranlogs.r-pkg.org/badges/details)
 [![Travis build status](https://travis-ci.org/yonicd/details.svg?branch=master)](https://travis-ci.org/yonicd/details)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/yonicd/details?branch=master&svg=true)](https://ci.appveyor.com/project/yonicd/details)
 [![Codecov test coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/details?branch=master)
@@ -72,7 +74,7 @@ The function `details::details` can output the result to
 
 One the most popular uses for `details` is to paste the sessioninfo at the bottom of a GitHub issue.
 
-```{r,results='asis'}
+```{r}
 library(details)
 
 sessioninfo::session_info()%>%
@@ -81,7 +83,7 @@ sessioninfo::session_info()%>%
 
 There are a [number of objects](https://yonicd.github.io/details/articles/objects.html) that can be placed in a details block other than a character object. An example of a object is a device output such as a plot
 
-```{r,results='asis'}
+```{r}
 details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 ```
 
