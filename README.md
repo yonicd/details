@@ -7,8 +7,6 @@
 status](https://www.r-pkg.org/badges/version/details)](https://CRAN.R-project.org/package=details)
 ![downloads](http://cranlogs.r-pkg.org/badges/details) [![Travis build
 status](https://travis-ci.org/yonicd/details.svg?branch=master)](https://travis-ci.org/yonicd/details)
-[![Travis build
-status](https://travis-ci.org/yonicd/details.svg?branch=master)](https://travis-ci.org/yonicd/details)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/yonicd/details?branch=master&svg=true)](https://ci.appveyor.com/project/yonicd/details)
 [![Codecov test
@@ -173,7 +171,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/F3oGD1w.png)
+![](https://i.imgur.com/eDQXJqF.png)
 
 </details>
 
