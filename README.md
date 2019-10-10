@@ -5,7 +5,8 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/details)](https://CRAN.R-project.org/package=details)
-![downloads](http://cranlogs.r-pkg.org/badges/details) [![Travis build
+[![downloads](http://cranlogs.r-pkg.org/badges/details)](https://CRAN.R-project.org/package=details)
+[![Travis build
 status](https://travis-ci.org/yonicd/details.svg?branch=master)](https://travis-ci.org/yonicd/details)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/yonicd/details?branch=master&svg=true)](https://ci.appveyor.com/project/yonicd/details)
@@ -99,7 +100,7 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-10-09                  
+ date     2019-10-10                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version    date       lib
@@ -171,7 +172,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/eDQXJqF.png)
+![](https://i.imgur.com/msR41HK.png)
 
 </details>
 
