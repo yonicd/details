@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![Travis build status](https://travis-ci.org/yonicd/details.svg?branch=master)](https://travis-ci.org/yonicd/details)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/yonicd/details?branch=master&svg=true)](https://ci.appveyor.com/project/yonicd/details)
 [![Codecov test coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/details?branch=master)
-[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_10_07-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
+[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_10_10-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
 
 

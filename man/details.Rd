@@ -13,13 +13,17 @@ details(object, summary = NULL, tooltip = "Click to Expand",
 
 \item{summary}{character, text to put in summary block, Default: NULL}
 
-\item{tooltip}{character, text for tooltip on the summary, Default: 'Click to Expand'}
+\item{tooltip}{character, text for tooltip on the summary,
+Default: 'Click to Expand'}
 
-\item{open}{logical, is the details open (TRUE) or closed (FALSE), Default: FALSE}
+\item{open}{logical, is the details open (TRUE) or closed (FALSE),
+Default: FALSE}
 
-\item{lang}{character, language of block (for markdown highlighting) Default: 'r'}
+\item{lang}{character, language of block (for markdown highlighting)
+Default: 'r'}
 
-\item{output}{character, where to output the file console (Default), clipboard or R file editor,
+\item{output}{character, where to output the file console (Default),
+clipboard or R file editor,
 Default: c('console','clipr','file.edit','character')}
 }
 \value{
@@ -31,7 +35,11 @@ with summary as optional.
 }
 \details{
 To remove summary or tooltip set them to NULL.
-If the object is a file path, it will automatically it's lines will be read in internally.
+If the object is a file path, it will automatically it's lines will be read
+in internally.
+
+If lang is NULL then the output will not be wrapped in a code block and
+will display the raw output (useful for HTML)
 }
 \examples{
 
