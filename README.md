@@ -13,7 +13,7 @@ status](https://ci.appveyor.com/api/projects/status/github/yonicd/details?branch
 [![Codecov test
 coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/details?branch=master)
 [![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_10_07-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_10_10-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
 
 # details <img src="https://github.com/yonicd/details/raw/media/input/logo.png" align="right" />
@@ -100,7 +100,7 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-10-10                  
+ date     2019-10-11                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version    date       lib
@@ -108,7 +108,7 @@ sessioninfo::session_info()%>%
  cli           1.1.0      2019-03-19 [1]
  clipr         0.7.0      2019-07-23 [1]
  crayon        1.3.4      2017-09-16 [1]
- details     * 0.1.1      2019-10-09 [1]
+ details     * 0.1.1      2019-10-11 [1]
  digest        0.6.21     2019-09-20 [1]
  evaluate      0.14       2019-05-28 [1]
  htmltools     0.3.6.9004 2019-09-08 [1]
@@ -172,7 +172,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/msR41HK.png)
+![](https://i.imgur.com/IzsX9gP.png)
 
 </details>
 

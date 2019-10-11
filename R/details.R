@@ -5,16 +5,28 @@
 #' 
 #' @param object object, object to put in details block
 #' @param summary character, text to put in summary block, Default: NULL
-#' @param tooltip character, text for tooltip on the summary, Default: 'Click to Expand'
-#' @param open logical, is the details open (TRUE) or closed (FALSE), Default: FALSE
-#' @param lang character, language of block (for markdown highlighting) Default: 'r'
-#' @param output character, where to output the file console (Default), clipboard or R file editor,
+#' @param tooltip character, text for tooltip on the summary, 
+#'   Default: 'Click to Expand'
+#' @param open logical, is the details open (TRUE) or closed (FALSE), 
+#'   Default: FALSE
+#' @param lang character, language of block (for markdown highlighting) 
+#'   Default: 'r'
+#' @param output character, where to output the file console (Default), 
+#'  clipboard or R file editor, 
 #'  Default: c('console','clipr','file.edit','character')
 #'
 #' @details 
 #'   To remove summary or tooltip set them to NULL.
-#'   If the object is a file path, it will automatically it's lines will be read in internally.
+#'   If the object is a file path, it will automatically it's lines will be read 
+#'   in internally.
 #'
+#'   If lang is NULL then the output will not be wrapped in a code block and 
+#'   will display the raw output (useful for HTML)
+#'  
+#'   When using details in knitr/rmarkdown documents there is no need to set
+#'   the results to 'asis', there are already predefined print methods for these
+#'   environments.
+#'  
 #' @return character
 #' @examples 
 #' 

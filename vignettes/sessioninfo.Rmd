@@ -20,7 +20,9 @@ library(details)
 
 One the most basic and popular uses for `details` is to paste the sessioninfo at the bottom of a GitHub issue.
 
-```{r,results='asis'}
+> Pro tip: When using details in knitr/rmarkdown documents there is no need to set the knitr chunk options to results='asis', there are already predefined print methods for these environments.
+
+```{r}
 
 sessioninfo::session_info()%>%
   details::details(

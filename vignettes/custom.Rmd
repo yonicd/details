@@ -2,7 +2,7 @@
 title: "Customizing Details"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{custo}
+  %\VignetteIndexEntry{custom}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -24,17 +24,18 @@ You can customize the details output:
  2. [Controlling if it is opened or closed](#open)
  3. [Customizing the Tooltip](#tooltip)
  4. [Setting the highlight language](#language)
+ 5. [Toggling off the language](#raw)
 
 ### Default
 
-```{r,results='asis'}
+```{r}
   R.version %>%
   details::details()
 ```
 
 ### Title
 
-```{r,results='asis'}
+```{r}
 R.version.string %>%
   details::details(
     summary = 'R Version'
@@ -43,7 +44,7 @@ R.version.string %>%
 
 Manipulating the title style
 
-```{r,results='asis'}
+```{r}
 R.version.string %>%
   details::details(
     summary = '<font color="red"> R Version </font>'
@@ -52,7 +53,7 @@ R.version.string %>%
 
 ### Open
 
-```{r,results='asis'}
+```{r}
 R.version.string %>%
   details::details(
     summary = 'Open by default',
@@ -62,7 +63,7 @@ R.version.string %>%
 
 #### Tooltip
 
-```{r,results='asis'}
+```{r}
 R.version.string %>%
   details::details(
     summary = 'Use the current date as the tooltip',
@@ -72,7 +73,7 @@ R.version.string %>%
 
 ### Language
 
-```{r,results='asis'}
+```{r}
 
 readLines(
   'https://raw.githubusercontent.com/metrumresearchgroup/covrpage/master/_pkgdown.yml'
@@ -81,4 +82,17 @@ readLines(
     summary = 'yaml example',
     lang = 'yml'
     )
+```
+
+### Raw
+
+```{r}
+
+details::details(
+'<h1 style="color:blue;">This is a Blue Heading</h1><br>
+<p style="border: 1px solid powderblue;">There is a border around the text</p>',
+summary = 'Raw code example',
+lang = NULL
+)
+
 ```

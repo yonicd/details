@@ -10,7 +10,10 @@ body_details <- function(lang,text){
   
   if(!details_env$device){
     
-    text <- sprintf('```%s\n\n%s\n\n```',lang,text)  
+    text <- sprintf('\n\n%s\n\n',text)
+    
+    if(!is.null(lang))
+      text <- sprintf('```%s%s```',lang,text)
     
   }
     

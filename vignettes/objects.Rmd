@@ -27,14 +27,14 @@ You can wrap print methods of R objects in a `details` environment.
   
 ### data.frame
 
-```{r,results='asis'}
+```{r}
  iris%>%
   details::details(summary = 'data.frame')
 ```
 
 ### tibble
 
-```{r,results='asis'}
+```{r}
  iris%>%
   tibble::as_tibble()%>%
   details::details(summary = 'tibble')
@@ -42,14 +42,14 @@ You can wrap print methods of R objects in a `details` environment.
 
 ## list
 
-```{r,results='asis'}
+```{r}
  list(a = 1,b = head(iris))%>%
   details::details(summary = 'list')
 ```
 
 ## plots
 
-```{r,results='asis'}
+```{r}
 
 details(
   plot(x=mtcars$mpg,y=mtcars$wt),

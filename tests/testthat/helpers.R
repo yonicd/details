@@ -28,10 +28,12 @@ skip_if_no_clipboard <- function() {
 }
 
 
-bench_fun <- function(body){
+bench_fun <- function(body,lang = 'r'){
   
-  body <- details:::capture.print(body)
-  
-  sprintf('<details closed>\n\n```r\n\n%s\n\n```\n\n</details>\n<br>',body)
+  body <- sprintf('\n\n%s\n\n',details:::capture.print(body))
+  if(!is.null(lang)){
+    body <- sprintf('```%s%s```',lang,body)
+  }
+  sprintf('<details closed>\n\n%s\n\n</details>\n<br>',body)
   
 }

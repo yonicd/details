@@ -42,3 +42,19 @@ print.details_edit <- function(x,...){
   utils::file.edit(tf,...)
   
 }
+
+#' @export
+#' @importFrom knitr knit_print
+knit_print.details_console <- function(x,...){
+  res <- capture.output(print(x))
+  class(x) <- 'knit_asis'
+  x
+}
+
+#' @export
+#' @importFrom knitr knit_print
+knit_print.details_character <- function(x,...){
+  res <- capture.output(print(x))
+  class(x) <- 'knit_asis'
+  x
+}
