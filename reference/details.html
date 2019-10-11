@@ -172,6 +172,9 @@ If the object is a file path, it will automatically it's lines will be read
 in internally.</p>
 <p>If lang is NULL then the output will not be wrapped in a code block and
 will display the raw output (useful for HTML)</p>
+<p>When using details in knitr/rmarkdown documents there is no need to set
+the results to 'asis', there are already predefined print methods for these
+environments.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
@@ -257,7 +260,7 @@ will display the raw output (useful for HTML)</p>
    <span class='kw'>summary</span> <span class='kw'>=</span> <span class='st'>'Plots'</span>)</div><div class='output co'>#&gt; &lt;details closed&gt;
 #&gt; &lt;summary&gt; &lt;span title='Click to Expand'&gt; Plots &lt;/span&gt; &lt;/summary&gt;
 #&gt; 
-#&gt; ![](https://i.imgur.com/KvHMdeb.png)
+#&gt; ![](https://i.imgur.com/4Hg39gl.png)
 #&gt; 
 #&gt; &lt;/details&gt;
 #&gt; &lt;br&gt;</div><div class='input'>
