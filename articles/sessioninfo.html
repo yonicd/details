@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">details</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
       </span>
     </div>
 
@@ -90,6 +90,9 @@
     
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(details)</a></code></pre></div>
 <p>One the most basic and popular uses for <code>details</code> is to paste the sessioninfo at the bottom of a GitHub issue.</p>
+<blockquote>
+<p>Pro tip: When using details in knitr/rmarkdown documents there is no need to set the knitr chunk options to results=‘asis’, there are already predefined print methods for these environments.</p>
+</blockquote>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"></a>
 <a class="sourceLine" id="cb2-2" data-line-number="2">sessioninfo<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/sessioninfo/topics/session_info">session_info</a></span>()<span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"><span class="st">  </span>details<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/details/topics/details">details</a></span>(</a>
@@ -108,7 +111,7 @@
 <a class="sourceLine" id="cb3-9" data-line-number="9"> collate  en_US.UTF<span class="dv">-8</span>                 </a>
 <a class="sourceLine" id="cb3-10" data-line-number="10"> ctype    en_US.UTF<span class="dv">-8</span>                 </a>
 <a class="sourceLine" id="cb3-11" data-line-number="11"> tz       UTC                         </a>
-<a class="sourceLine" id="cb3-12" data-line-number="12"> date     <span class="dv">2019-10-10</span>                  </a>
+<a class="sourceLine" id="cb3-12" data-line-number="12"> date     <span class="dv">2019-10-11</span>                  </a>
 <a class="sourceLine" id="cb3-13" data-line-number="13"></a>
 <a class="sourceLine" id="cb3-14" data-line-number="14">─ Packages ──────────────────────────────────────────────────────────────</a>
 <a class="sourceLine" id="cb3-15" data-line-number="15"> package     <span class="op">*</span><span class="st"> </span>version    date       lib</a>
@@ -119,7 +122,7 @@
 <a class="sourceLine" id="cb3-20" data-line-number="20"> commonmark    <span class="fl">1.7</span>        <span class="dv">2018-12-01</span> [<span class="dv">1</span>]</a>
 <a class="sourceLine" id="cb3-21" data-line-number="21"> crayon        <span class="dv">1</span>.<span class="fl">3.4</span>      <span class="dv">2017-09-16</span> [<span class="dv">1</span>]</a>
 <a class="sourceLine" id="cb3-22" data-line-number="22"> desc          <span class="dv">1</span>.<span class="fl">2.0</span>      <span class="dv">2018-05-01</span> [<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb3-23" data-line-number="23"> details     <span class="op">*</span><span class="st"> </span><span class="dv">0</span>.<span class="fl">1.0</span>      <span class="dv">2019-10-10</span> [<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb3-23" data-line-number="23"> details     <span class="op">*</span><span class="st"> </span><span class="dv">0</span>.<span class="fl">1.1</span>      <span class="dv">2019-10-11</span> [<span class="dv">1</span>]</a>
 <a class="sourceLine" id="cb3-24" data-line-number="24"> digest        <span class="dv">0</span>.<span class="fl">6.21</span>     <span class="dv">2019-09-20</span> [<span class="dv">1</span>]</a>
 <a class="sourceLine" id="cb3-25" data-line-number="25"> evaluate      <span class="fl">0.14</span>       <span class="dv">2019-05-28</span> [<span class="dv">1</span>]</a>
 <a class="sourceLine" id="cb3-26" data-line-number="26"> fs            <span class="dv">1</span>.<span class="fl">3.1</span>      <span class="dv">2019-05-06</span> [<span class="dv">1</span>]</a>
