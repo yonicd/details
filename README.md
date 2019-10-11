@@ -172,7 +172,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/1vD0kku.png)
+![](https://i.imgur.com/98GUKab.png)
 
 </details>
 
