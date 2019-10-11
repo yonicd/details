@@ -95,84 +95,45 @@ sessioninfo::session_info()%>%
  version  R version 3.6.1 (2019-07-05)
  os       macOS Mojave 10.14.5        
  system   x86_64, darwin15.6.0        
- ui       RStudio                     
+ ui       X11                         
  language (EN)                        
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-10-10                  
+ date     2019-10-11                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
- ! package     * version    date       lib
-   assertthat    0.2.1      2019-03-21 [1]
-   backports     1.1.5      2019-10-02 [1]
-   callr         3.3.2      2019-09-22 [1]
-   cli           1.1.0      2019-03-19 [1]
-   clipr         0.7.0      2019-07-23 [1]
-   covr        * 3.3.0      2019-08-06 [1]
-   covrpage      0.0.70     2019-07-22 [1]
-   crayon        1.3.4      2017-09-16 [1]
-   curl          4.2        2019-09-24 [1]
-   desc          1.2.0      2019-07-25 [1]
- P details     * 0.1.1      2019-10-11 [?]
-   devtools      2.1.0      2019-07-06 [1]
-   digest        0.6.21     2019-09-20 [1]
-   evaluate      0.14       2019-05-28 [1]
-   fs            1.3.1      2019-05-06 [1]
-   git2r         0.26.1     2019-06-29 [1]
-   glue          1.3.1.9000 2019-09-26 [1]
-   highr         0.8        2019-03-20 [1]
-   htmltools     0.3.6.9004 2019-09-08 [1]
-   httr          1.4.1      2019-08-05 [1]
-   knitr       * 1.25       2019-09-18 [1]
-   lazyeval      0.2.2      2019-03-15 [1]
-   magrittr    * 1.5        2014-11-22 [1]
-   memoise       1.1.0      2017-04-21 [1]
-   mime          0.7        2019-06-11 [1]
-   packrat       0.5.0      2018-11-14 [1]
-   pkgbuild      1.0.5      2019-08-26 [1]
-   pkgload       1.0.2      2018-10-29 [1]
-   png           0.1-7      2013-12-03 [1]
-   praise        1.0.0      2015-08-11 [1]
-   prettyunits   1.0.2      2015-07-13 [1]
-   processx      3.4.1      2019-07-18 [1]
-   ps            1.3.0      2018-12-21 [1]
-   R6            2.4.0      2019-02-14 [1]
-   Rcpp          1.0.2      2019-07-25 [1]
-   remotes       2.1.0      2019-06-24 [1]
-   rex           1.1.2      2017-10-19 [1]
-   rlang         0.4.0      2019-06-25 [1]
-   rmarkdown     1.14       2019-07-12 [1]
-   rprojroot     1.3-2      2018-01-03 [1]
-   rstudioapi    0.10       2019-03-19 [1]
-   sessioninfo   1.1.1      2018-11-05 [1]
-   stringi       1.4.3      2019-03-12 [1]
-   stringr       1.4.0      2019-02-10 [1]
-   testthat    * 2.2.1      2019-07-25 [1]
-   usethis       1.5.1.9000 2019-09-01 [1]
-   whisker       0.4        2019-08-28 [1]
-   withr         2.1.2      2018-03-15 [1]
-   xfun          0.10       2019-10-01 [1]
-   xml2          1.2.2      2019-08-09 [1]
-   yaml          2.2.0      2018-07-25 [1]
+ package     * version    date       lib
+ assertthat    0.2.1      2019-03-21 [1]
+ cli           1.1.0      2019-03-19 [1]
+ clipr         0.7.0      2019-07-23 [1]
+ crayon        1.3.4      2017-09-16 [1]
+ details     * 0.1.1      2019-10-11 [1]
+ digest        0.6.21     2019-09-20 [1]
+ evaluate      0.14       2019-05-28 [1]
+ htmltools     0.3.6.9004 2019-09-08 [1]
+ httr          1.4.1      2019-08-05 [1]
+ knitr         1.25       2019-09-18 [1]
+ magrittr      1.5        2014-11-22 [1]
+ png           0.1-7      2013-12-03 [1]
+ R6            2.4.0      2019-02-14 [1]
+ Rcpp          1.0.2      2019-07-25 [1]
+ rlang         0.4.0      2019-06-25 [1]
+ rmarkdown     1.14       2019-07-12 [1]
+ sessioninfo   1.1.1      2018-11-05 [1]
+ stringi       1.4.3      2019-03-12 [1]
+ stringr       1.4.0      2019-02-10 [1]
+ withr         2.1.2      2018-03-15 [1]
+ xfun          0.10       2019-10-01 [1]
+ xml2          1.2.2      2019-08-09 [1]
+ yaml          2.2.0      2018-07-25 [1]
  source                            
  CRAN (R 3.6.0)                    
  CRAN (R 3.6.0)                    
  CRAN (R 3.6.0)                    
  CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
  local                             
  CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- Github (r-lib/desc@c860e7b)       
- local                             
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- Github (tidyverse/glue@71eeddf)   
  CRAN (R 3.6.0)                    
  Github (rstudio/htmltools@840d786)
  CRAN (R 3.6.0)                    
@@ -190,27 +151,8 @@ sessioninfo::session_info()%>%
  CRAN (R 3.6.0)                    
  CRAN (R 3.6.0)                    
  CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- Github (r-lib/usethis@4377307)    
- CRAN (R 3.6.1)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
 
 [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
-
- P ── Loaded and on-disk path mismatch.
 ```
 
 </details>
@@ -230,7 +172,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/kLVkhJ4.png)
+![](https://i.imgur.com/IzsX9gP.png)
 
 </details>
 
