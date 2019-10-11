@@ -24,6 +24,7 @@ You can customize the details output:
  2. [Controlling if it is opened or closed](#open)
  3. [Customizing the Tooltip](#tooltip)
  4. [Setting the highlight language](#language)
+ 5. [Toggling off the language](#raw)
 
 ### Default
 
@@ -81,4 +82,17 @@ readLines(
     summary = 'yaml example',
     lang = 'yml'
     )
+```
+
+### Raw
+
+```{r}
+
+details::details(
+'<h1 style="color:blue;">This is a Blue Heading</h1><br>
+<p style="border: 1px solid powderblue;">There is a border around the text</p>',
+summary = 'Raw code example',
+lang = NULL
+)
+
 ```
