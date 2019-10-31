@@ -1,6 +1,6 @@
 Package: details
 Title: Create Details HTML Tag for Markdown and Package Documentation
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: person(given = "Jonathan", family = "Sidi", role = c("aut", "cre"),
         email = "yonicd@gmail.com")
 Description: Create a details HTML tag around R objects to place in a 
