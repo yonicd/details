@@ -14,7 +14,7 @@
 #' @param output character, where to output the file console (Default), 
 #'  clipboard or R file editor, 
 #'  Default: c('console','clipr','file.edit','character')
-#'
+#' @seealso [use_details][details::use_details]
 #' @details 
 #'   To remove summary or tooltip set them to NULL.
 #'   If the object is a file path, it will automatically it's lines will be read 

@@ -21,6 +21,7 @@ testthat::describe('using device',{
   })
   
   it('device upload',{
+    testthat::skip_on_cran()
     testthat::expect_true(grepl('imgur',imgur_upload(testenv$f_png)))
   })
   
