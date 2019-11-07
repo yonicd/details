@@ -49,7 +49,7 @@ You can wrap print methods of R objects in a `details` environment.
 
 ## plots
 
-```{r}
+```{r,eval = httr::status_code(httr::HEAD('imgur.com',httr::timeout(1)))==200L}
 
 details(
   plot(x=mtcars$mpg,y=mtcars$wt),
