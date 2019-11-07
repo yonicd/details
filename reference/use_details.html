@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>re-export magrittr pipe operators — %&gt;% • details</title>
+<title>Use details macros — use_details • details</title>
 
 <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 
@@ -34,8 +34,12 @@
 
 
 
-<meta property="og:title" content="re-export magrittr pipe operators — %&gt;%" />
-<meta property="og:description" content="re-export magrittr pipe operators" />
+<meta property="og:title" content="Use details macros — use_details" />
+<meta property="og:description" content="Call this to import the details Rd macro into your package.
+The RdMacros field of the DESCRIPTION file is updated so you can use the
+\foldstart{} and \foldend{} macro in your documentation.
+" />
+<meta property="og:description" content="See the Package Documentation vignette of the details package." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -113,22 +117,48 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>re-export magrittr pipe operators</h1>
-    <small class="dont-index">Source: <a href='https://github.com/yonicd/details/blob/master/R/utils.R'><code>R/utils.R</code></a></small>
-    <div class="hidden name"><code>pipe.Rd</code></div>
+    <h1>Use details macros</h1>
+    <small class="dont-index">Source: <a href='https://github.com/yonicd/details/blob/master/R/use.R'><code>R/use.R</code></a></small>
+    <div class="hidden name"><code>use_details.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>re-export magrittr pipe operators</p>
+    <p>Call this to import the details Rd macro into your package.</p><ul>
+<li><p>The RdMacros field of the DESCRIPTION file is updated so you can use the
+<code>\foldstart{}</code> and <code>\foldend{}</code> macro in your documentation.</p></li>
+</ul>
+    <p>See the <a href='https://yonicd.github.io/details/articles/documentation.html'>Package Documentation</a> vignette of the details package.</p>
     </div>
 
+    <pre class="usage"><span class='fu'>use_details</span>(<span class='kw'>desc_path</span> <span class='kw'>=</span> <span class='st'>"./DESCRIPTION"</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>desc_path</th>
+      <td><p>character, path to description file to check/edit, Default = './DESCRIPTION'</p></td>
+    </tr>
+    </table>
 
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>This will append three elements to the DESCRIPTION file</p><ul>
+<li><p>Imports: details</p></li>
+<li><p>RdMacros: details</p></li>
+<li><p>Roxygen: list(markdown = TRUE)</p></li>
+</ul>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><a href='details.html'>details</a></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#see-also">See also</a></li>
     </ul>
 
   </div>

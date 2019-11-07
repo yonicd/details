@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">details</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -80,7 +80,7 @@
     <div class="page-header toc-ignore">
       <h1>Tests and Coverage</h1>
             
-            <h4 class="date">11 October, 2019 11:42:59</h4>
+            <h4 class="date">07 November, 2019 13:21:53</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/yonicd/details/blob/master/vignettes/tests_and_coverage.Rmd"><code>vignettes/tests_and_coverage.Rmd</code></a></small>
       <div class="hidden name"><code>tests_and_coverage.Rmd</code></div>
@@ -103,7 +103,7 @@
 <tbody>
 <tr class="odd">
 <td align="left">details</td>
-<td align="center">78.30</td>
+<td align="center">85.35</td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/R/print.R">R/print.R</a></td>
@@ -115,7 +115,7 @@
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/R/read.R">R/read.R</a></td>
-<td align="center">88.89</td>
+<td align="center">90.91</td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/R/build.R">R/build.R</a></td>
@@ -131,6 +131,10 @@
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/R/parts.R">R/parts.R</a></td>
+<td align="center">100.00</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/R/use.R">R/use.R</a></td>
 <td align="center">100.00</td>
 </tr>
 </tbody>
@@ -154,8 +158,8 @@
 <tbody>
 <tr class="odd">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-basic.R">test-basic.R</a></td>
-<td align="right">4</td>
-<td align="right">0.048</td>
+<td align="right">5</td>
+<td align="right">0.135</td>
 <td align="right">0</td>
 <td align="right">0</td>
 <td align="right">0</td>
@@ -164,7 +168,7 @@
 <tr class="even">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-collapse.R">test-collapse.R</a></td>
 <td align="right">3</td>
-<td align="right">0.003</td>
+<td align="right">0.073</td>
 <td align="right">0</td>
 <td align="right">0</td>
 <td align="right">0</td>
@@ -173,16 +177,25 @@
 <tr class="odd">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-device.R">test-device.R</a></td>
 <td align="right">3</td>
-<td align="right">0.865</td>
+<td align="right">0.748</td>
 <td align="right">0</td>
 <td align="right">0</td>
 <td align="right">0</td>
 <td align="right">0</td>
 </tr>
 <tr class="even">
+<td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-use.R">test-use.R</a></td>
+<td align="right">8</td>
+<td align="right">0.089</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-utils.R">test-utils.R</a></td>
 <td align="right">5</td>
-<td align="right">0.002</td>
+<td align="right">0.005</td>
 <td align="right">0</td>
 <td align="right">0</td>
 <td align="right">0</td>
@@ -207,7 +220,7 @@
 <td align="left">basic: empty</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.030</td>
+<td align="right">0.112</td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-basic.R#L13_L16">test-basic.R</a></td>
@@ -215,7 +228,7 @@
 <td align="left">basic: object</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.012</td>
+<td align="right">0.013</td>
 </tr>
 <tr class="odd">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-basic.R#L20_L23">test-basic.R</a></td>
@@ -223,17 +236,25 @@
 <td align="left">basic: file</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.003</td>
+<td align="right">0.004</td>
 </tr>
 <tr class="even">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-basic.R#L27_L30">test-basic.R</a></td>
+<td align="left">basic</td>
+<td align="left">basic: non file singleton</td>
+<td align="left">PASS</td>
+<td align="right">1</td>
+<td align="right">0.003</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-basic.R#L34_L37">test-basic.R</a></td>
 <td align="left">basic</td>
 <td align="left">basic: no lang</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
 <td align="right">0.003</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-collapse.R#L6_L9">test-collapse.R</a></td>
 <td align="left">fold</td>
 <td align="left">fold methods: close</td>
@@ -241,31 +262,31 @@
 <td align="right">1</td>
 <td align="right">0.001</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-collapse.R#L13_L16">test-collapse.R</a></td>
 <td align="left">fold</td>
 <td align="left">fold methods: open default</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.001</td>
+<td align="right">0.070</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-collapse.R#L20_L23">test-collapse.R</a></td>
 <td align="left">fold</td>
 <td align="left">fold methods: open with summary</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.001</td>
+<td align="right">0.002</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-device.R#L16">test-device.R</a></td>
 <td align="left">device</td>
 <td align="left">using device: device flag</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.001</td>
+<td align="right">0.002</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-device.R#L20">test-device.R</a></td>
 <td align="left">device</td>
 <td align="left">using device: device png</td>
@@ -273,15 +294,79 @@
 <td align="right">1</td>
 <td align="right">0.001</td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-device.R#L24">test-device.R</a></td>
+<tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-device.R#L25">test-device.R</a></td>
 <td align="left">device</td>
 <td align="left">using device: device upload</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.863</td>
+<td align="right">0.745</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-use.R#L8_L10">test-use.R</a></td>
+<td align="left">use details</td>
+<td align="left">bad path: imports</td>
+<td align="left">PASS</td>
+<td align="right">1</td>
+<td align="right">0.048</td>
 </tr>
 <tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-use.R#L20_L23">test-use.R</a></td>
+<td align="left">use details</td>
+<td align="left">default: imports</td>
+<td align="left">PASS</td>
+<td align="right">1</td>
+<td align="right">0.007</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-use.R#L27_L30">test-use.R</a></td>
+<td align="left">use details</td>
+<td align="left">default: RdMacros</td>
+<td align="left">PASS</td>
+<td align="right">1</td>
+<td align="right">0.006</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-use.R#L35_L38">test-use.R</a></td>
+<td align="left">use details</td>
+<td align="left">default: Roxygen</td>
+<td align="left">PASS</td>
+<td align="right">1</td>
+<td align="right">0.006</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-use.R#L50_L53">test-use.R</a></td>
+<td align="left">use details</td>
+<td align="left">single fields: imports</td>
+<td align="left">PASS</td>
+<td align="right">1</td>
+<td align="right">0.006</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-use.R#L61_L64">test-use.R</a></td>
+<td align="left">use details</td>
+<td align="left">single fields: RdMacros</td>
+<td align="left">PASS</td>
+<td align="right">1</td>
+<td align="right">0.006</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-use.R#L72_L75">test-use.R</a></td>
+<td align="left">use details</td>
+<td align="left">single fields: Roxygen</td>
+<td align="left">PASS</td>
+<td align="right">1</td>
+<td align="right">0.005</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-use.R#L83_L86">test-use.R</a></td>
+<td align="left">use details</td>
+<td align="left">single fields: Roxygen FALSE</td>
+<td align="left">PASS</td>
+<td align="right">1</td>
+<td align="right">0.005</td>
+</tr>
+<tr class="even">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-utils.R#L6_L9">test-utils.R</a></td>
 <td align="left">utilities</td>
 <td align="left">utilities: tooltip default</td>
@@ -289,7 +374,7 @@
 <td align="right">1</td>
 <td align="right">0.001</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-utils.R#L13_L16">test-utils.R</a></td>
 <td align="left">utilities</td>
 <td align="left">utilities: tooltip with text</td>
@@ -297,29 +382,29 @@
 <td align="right">1</td>
 <td align="right">0.001</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-utils.R#L21_L24">test-utils.R</a></td>
 <td align="left">utilities</td>
 <td align="left">utilities: summary default</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.000</td>
+<td align="right">0.001</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-utils.R#L28_L31">test-utils.R</a></td>
 <td align="left">utilities</td>
 <td align="left">utilities: state open</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.000</td>
+<td align="right">0.001</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://github.com/yonicd/details/tree/HEAD/tests/testthat/test-utils.R#L35_L38">test-utils.R</a></td>
 <td align="left">utilities</td>
 <td align="left">utilities: state closed</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.000</td>
+<td align="right">0.001</td>
 </tr>
 </tbody>
 </table></details><details><p><summary> Session Info </summary></p>
@@ -338,7 +423,7 @@
 <tr class="even">
 <td align="left">Platform</td>
 <td align="left">x86_64-pc-linux-gnu (64-bit)</td>
-<td><a href="https://travis-ci.org/yonicd/details/jobs/596557627" target="_blank"><span title="Built on Travis"><img src="https://github.com/metrumresearchgroup/covrpage/blob/master/inst/logo/travis.png?raw=true"></span></a></td>
+<td><a href="https://travis-ci.org/yonicd/details/jobs/608727091" target="_blank"><span title="Built on Travis"><img src="https://github.com/metrumresearchgroup/covrpage/blob/master/inst/logo/travis.png?raw=true"></span></a></td>
 </tr>
 <tr class="odd">
 <td align="left">Running</td>
@@ -365,11 +450,11 @@
 <tbody>
 <tr class="odd">
 <td align="left">testthat</td>
-<td align="left">2.2.1</td>
+<td align="left">2.3.0</td>
 </tr>
 <tr class="even">
 <td align="left">covr</td>
-<td align="left">3.3.1</td>
+<td align="left">3.3.2</td>
 </tr>
 <tr class="odd">
 <td align="left">covrpage</td>
