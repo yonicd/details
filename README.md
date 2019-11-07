@@ -42,6 +42,14 @@ documentation within `R`.
 
 ## Installation
 
+### CRAN
+
+``` r
+install.packages("details")
+```
+
+### Dev
+
 ``` r
 remotes::install_github("yonicd/details")
 ```
@@ -100,57 +108,36 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-10-11                  
+ date     2019-11-04                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
- package     * version    date       lib
- assertthat    0.2.1      2019-03-21 [1]
- cli           1.1.0      2019-03-19 [1]
- clipr         0.7.0      2019-07-23 [1]
- crayon        1.3.4      2017-09-16 [1]
- details     * 0.1.1      2019-10-11 [1]
- digest        0.6.21     2019-09-20 [1]
- evaluate      0.14       2019-05-28 [1]
- htmltools     0.3.6.9004 2019-09-08 [1]
- httr          1.4.1      2019-08-05 [1]
- knitr         1.25       2019-09-18 [1]
- magrittr      1.5        2014-11-22 [1]
- png           0.1-7      2013-12-03 [1]
- R6            2.4.0      2019-02-14 [1]
- Rcpp          1.0.2      2019-07-25 [1]
- rlang         0.4.0      2019-06-25 [1]
- rmarkdown     1.14       2019-07-12 [1]
- sessioninfo   1.1.1      2018-11-05 [1]
- stringi       1.4.3      2019-03-12 [1]
- stringr       1.4.0      2019-02-10 [1]
- withr         2.1.2      2018-03-15 [1]
- xfun          0.10       2019-10-01 [1]
- xml2          1.2.2      2019-08-09 [1]
- yaml          2.2.0      2018-07-25 [1]
- source                            
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- local                             
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- Github (rstudio/htmltools@840d786)
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
- CRAN (R 3.6.0)                    
+ package     * version date       lib source                     
+ assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.6.0)             
+ backports     1.1.5   2019-10-02 [1] CRAN (R 3.6.0)             
+ cli           1.1.0   2019-03-19 [1] CRAN (R 3.6.0)             
+ clipr         0.7.0   2019-07-23 [1] CRAN (R 3.6.0)             
+ crayon        1.3.4   2017-09-16 [1] CRAN (R 3.6.0)             
+ desc          1.2.0   2019-07-25 [1] Github (r-lib/desc@c860e7b)
+ details     * 0.1.2   2019-11-04 [1] local                      
+ digest        0.6.21  2019-09-20 [1] CRAN (R 3.6.0)             
+ evaluate      0.14    2019-05-28 [1] CRAN (R 3.6.0)             
+ htmltools     0.4.0   2019-10-04 [1] CRAN (R 3.6.0)             
+ httr          1.4.1   2019-08-05 [1] CRAN (R 3.6.0)             
+ knitr         1.25    2019-09-18 [1] CRAN (R 3.6.0)             
+ magrittr      1.5     2014-11-22 [1] CRAN (R 3.6.0)             
+ png           0.1-7   2013-12-03 [1] CRAN (R 3.6.0)             
+ R6            2.4.0   2019-02-14 [1] CRAN (R 3.6.0)             
+ Rcpp          1.0.2   2019-07-25 [1] CRAN (R 3.6.0)             
+ rlang         0.4.0   2019-06-25 [1] CRAN (R 3.6.0)             
+ rmarkdown     1.14    2019-07-12 [1] CRAN (R 3.6.0)             
+ rprojroot     1.3-2   2018-01-03 [1] CRAN (R 3.6.0)             
+ sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.6.0)             
+ stringi       1.4.3   2019-03-12 [1] CRAN (R 3.6.0)             
+ stringr       1.4.0   2019-02-10 [1] CRAN (R 3.6.0)             
+ withr         2.1.2   2018-03-15 [1] CRAN (R 3.6.0)             
+ xfun          0.10    2019-10-01 [1] CRAN (R 3.6.0)             
+ xml2          1.2.2   2019-08-09 [1] CRAN (R 3.6.0)             
+ yaml          2.2.0   2018-07-25 [1] CRAN (R 3.6.0)             
 
 [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
 ```
@@ -172,7 +159,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/98GUKab.png)
+![](https://i.imgur.com/SWCaZ0T.png)
 
 </details>
 
@@ -188,8 +175,22 @@ then rendered into pkgdown website automatically)
 
 ![](https://github.com/yonicd/details/raw/media/input/folding.gif)
 
-To enable this feature add `Roxygen: list(markdown = TRUE)` to the
-DESCRIPTION file before rendering the roxygen2
+### Setup
+
+To make it easy to set up the DESCRIPTION file of your package so you
+can use `details` macros run the following :
+
+``` r
+use_details('PATH_TO_DESCRIPTION_FILE')
+```
+
+This will append three elements to the DESCRIPTION file
+
+  - Imports: details
+  - RdMacros: details
+  - Roxygen: list(markdown = TRUE)
+
+### Usage
 
 You can use this feature by wrapping documentation with the macros
 

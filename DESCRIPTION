@@ -1,18 +1,38 @@
 Package: details
-Title: Create Details HTML Tag for Markdown and Package Documentation
-Version: 0.1.1
-Authors@R: person(given = "Jonathan", family = "Sidi", role = c("aut", "cre"),
-        email = "yonicd@gmail.com")
-Description: Create a details HTML tag around R objects to place in a 
-        Markdown, 'Rmarkdown' and 'roxygen2' documentation.
-Depends: R (>= 3.2.0)
-Imports: utils, clipr, magrittr, withr, knitr, xml2, httr, png
-Suggests: sessioninfo, tibble, testthat, rmarkdown, covr
+Title: Create Details HTML Tag for Markdown and Package
+    Documentation
+Version: 0.1.2
+Authors@R: 
+    person(given = "Jonathan",
+           family = "Sidi",
+           role = c("aut", "cre"),
+           email = "yonicd@gmail.com")
+Description: Create a details HTML tag around R objects to place
+    in a Markdown, 'Rmarkdown' and 'roxygen2' documentation.
 License: MIT + file LICENSE
 URL: https://github.com/yonicd/details
 BugReports: https://github.com/yonicd/details/issues
+Depends: 
+    R (>= 3.2.0)
+Imports: 
+    clipr,
+    desc,
+    httr,
+    knitr,
+    magrittr,
+    png,
+    utils,
+    withr,
+    xml2
+Suggests: 
+    covr,
+    rmarkdown,
+    sessioninfo,
+    testthat,
+    tibble
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
 LazyData: false
-RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE)
-VignetteBuilder: knitr
+RoxygenNote: 6.1.1

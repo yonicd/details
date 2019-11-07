@@ -19,12 +19,17 @@ capture.print <- function(obj){
 }
 
 read_text <- function(text){
+
+  if(!inherits(text,'character')||length(text)>1)
+    return(text)
   
-  if(length(text)==1 & !details_env$device){
+  if(!details_env$device){
     if(file.exists(text)){
       text <- readLines(text,warn = FALSE)
-    }    
+    }
   }
   
   text
 }
+
+

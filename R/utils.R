@@ -6,5 +6,5 @@
 #' @export
 NULL
 
-details_env <- new.env()
+details_env        <- new.env()
 details_env$device <- FALSE

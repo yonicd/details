@@ -44,9 +44,18 @@ Doing this manually every time is a pain.
 
 ## Installation
 
+### CRAN
+
+``` r
+install.packages("details")
+```
+
+### Dev
+
 ``` r
 remotes::install_github("yonicd/details")
 ```
+
 ## Markdown
 
 ### Input
@@ -95,7 +104,22 @@ To solve this we can use folding blocks in the documentation (which are then ren
 
 ![](https://github.com/yonicd/details/raw/media/input/folding.gif)
 
-To enable this feature add `Roxygen: list(markdown = TRUE)` to the DESCRIPTION file before rendering the roxygen2
+
+### Setup
+
+To make it easy to set up the DESCRIPTION file of your package so you can use `details` macros run the following :
+
+``` r
+use_details('PATH_TO_DESCRIPTION_FILE')
+```
+
+This will append three elements to the DESCRIPTION file
+
+  - Imports: details
+  - RdMacros: details
+  - Roxygen: list(markdown = TRUE)
+
+### Usage
 
 You can use this feature by wrapping documentation with the macros
  

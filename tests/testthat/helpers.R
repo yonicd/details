@@ -37,3 +37,19 @@ bench_fun <- function(body,lang = 'r'){
   sprintf('<details closed>\n\n%s\n\n</details>\n<br>',body)
   
 }
+
+scratch_desc <- function(path = tempdir()){
+  
+  f <- file.path(path,'DESCRIPTION')
+  
+  if(file.exists(f))
+    unlink(f,force = TRUE)
+  
+  file.create(f)
+  
+  d <- desc::desc('!new')
+  
+  d$write(file = f)
+
+  f
+}
