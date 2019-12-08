@@ -134,9 +134,9 @@ You can use this feature by wrapping documentation with the macros
 \foldend
 ```
 
-The `SUMMARY_TEXT` is optional, where the folded block will have a header of `r fontawesome::fa("caret-right")` __your text__.
+The `SUMMARY_TEXT` is optional, where the folded block will have a header of <svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 192 512"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> __SUMMARY TEXT__.
 
-The default will display `r fontawesome::fa("caret-right")` __details__. 
+The default will display <svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 192 512"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> __details__. 
 
 These folded blocks can be inserted anywhere in the documentation, eg `@description`, `@param`, `@details`, `@return`, ....
 
