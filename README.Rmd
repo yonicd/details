@@ -16,8 +16,9 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/details)](https://CRAN.R-project.org/package=details)
 [![downloads](http://cranlogs.r-pkg.org/badges/details)](https://CRAN.R-project.org/package=details)
-[![Travis build status](https://travis-ci.org/yonicd/details.svg?branch=master)](https://travis-ci.org/yonicd/details)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/yonicd/details?branch=master&svg=true)](https://ci.appveyor.com/project/yonicd/details)
+[![R-win build status](https://github.com/yonicd/details/workflows/R-win/badge.svg)](https://github.com/yonicd/details)
+[![R-mac build status](https://github.com/yonicd/details/workflows/R-mac/badge.svg)](https://github.com/yonicd/details)
+[![R-linux build status](https://github.com/yonicd/details/workflows/R-linux/badge.svg)](https://github.com/yonicd/details)
 [![Codecov test coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/details?branch=master)
 [![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_10_10-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
