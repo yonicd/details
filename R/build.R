@@ -1,10 +1,10 @@
 build_details <- function(text = '', summary = '', state = 'open', 
-                          lang = 'r', output = 'console'){
+                          lang = 'r', output = 'console',...){
   
   structure(
     paste(
     start_details(state,summary),
-    body_details(lang,capture.print(text)),
+    body_details(lang,capture.print(text,...)),
     end_details(),
     sep='\n\n'),
     class = sprintf('details_%s',output)

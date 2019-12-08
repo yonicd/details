@@ -4,12 +4,14 @@
 \alias{details}
 \title{Create HTML DOM Details}
 \usage{
-details(object, summary = NULL, tooltip = "Click to Expand",
+details(object, ..., summary = NULL, tooltip = "Click to Expand",
   open = FALSE, lang = "r", output = c("console", "clipr", "edit",
   "character"))
 }
 \arguments{
 \item{object}{object, object to put in details block}
+
+\item{\dots}{arguments to pass to print method of the object}
 
 \item{summary}{character, text to put in summary block, Default: NULL}
 
@@ -44,6 +46,8 @@ will display the raw output (useful for HTML)
 When using details in knitr/rmarkdown documents there is no need to set
 the results to 'asis', there are already predefined print methods for these
 environments.
+
+\dots is passed to objects that do not invoke an image device.
 }
 \examples{
 

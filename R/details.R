@@ -4,6 +4,7 @@
 #'  with summary as optional.
 #' 
 #' @param object object, object to put in details block
+#' @param \dots arguments to pass to print method of the object
 #' @param summary character, text to put in summary block, Default: NULL
 #' @param tooltip character, text for tooltip on the summary, 
 #'   Default: 'Click to Expand'
@@ -26,6 +27,8 @@
 #'   When using details in knitr/rmarkdown documents there is no need to set
 #'   the results to 'asis', there are already predefined print methods for these
 #'   environments.
+#'  
+#'  \dots is passed to objects that do not invoke an image device. 
 #'  
 #' @return character
 #' @examples 
@@ -73,11 +76,13 @@
 #' @importFrom clipr read_clip clipr_available
 #' @export
 details <- function(object, 
+                    ...,
                     summary = NULL, 
                     tooltip = 'Click to Expand', 
                     open    = FALSE, 
                     lang    = 'r',
-                    output  = c('console','clipr','edit','character')){
+                    output  = c('console','clipr','edit','character')
+                    ){
   
   on.exit({
     unlink(details_env$f_png)
@@ -90,7 +95,7 @@ details <- function(object,
                 summary = build_summary(summary,tooltip), 
                 state   = build_state(open), 
                 lang    = lang,
-                output  = match.arg(output,c('console','clipr','edit','character'))
-               )
+                output  = match.arg(output,c('console','clipr','edit','character')),
+                ...)
   
 }
