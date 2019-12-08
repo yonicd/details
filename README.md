@@ -6,10 +6,12 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/details)](https://CRAN.R-project.org/package=details)
 [![downloads](http://cranlogs.r-pkg.org/badges/details)](https://CRAN.R-project.org/package=details)
-[![Travis build
-status](https://travis-ci.org/yonicd/details.svg?branch=master)](https://travis-ci.org/yonicd/details)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/yonicd/details?branch=master&svg=true)](https://ci.appveyor.com/project/yonicd/details)
+[![R-win build
+status](https://github.com/yonicd/details/workflows/R-win/badge.svg)](https://github.com/yonicd/details)
+[![R-mac build
+status](https://github.com/yonicd/details/workflows/R-mac/badge.svg)](https://github.com/yonicd/details)
+[![R-linux build
+status](https://github.com/yonicd/details/workflows/R-linux/badge.svg)](https://github.com/yonicd/details)
 [![Codecov test
 coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/details?branch=master)
 [![Covrpage
@@ -108,7 +110,7 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-11-04                  
+ date     2019-12-08                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version date       lib source                     
@@ -117,18 +119,18 @@ sessioninfo::session_info()%>%
  cli           1.1.0   2019-03-19 [1] CRAN (R 3.6.0)             
  clipr         0.7.0   2019-07-23 [1] CRAN (R 3.6.0)             
  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.6.0)             
- desc          1.2.0   2019-07-25 [1] Github (r-lib/desc@c860e7b)
- details     * 0.1.2   2019-11-04 [1] local                      
- digest        0.6.21  2019-09-20 [1] CRAN (R 3.6.0)             
+ desc          1.2.0   2019-12-01 [1] Github (r-lib/desc@61205f6)
+ details     * 0.1.3   2019-12-08 [1] local                      
+ digest        0.6.23  2019-11-23 [1] CRAN (R 3.6.0)             
  evaluate      0.14    2019-05-28 [1] CRAN (R 3.6.0)             
  htmltools     0.4.0   2019-10-04 [1] CRAN (R 3.6.0)             
  httr          1.4.1   2019-08-05 [1] CRAN (R 3.6.0)             
  knitr         1.25    2019-09-18 [1] CRAN (R 3.6.0)             
  magrittr      1.5     2014-11-22 [1] CRAN (R 3.6.0)             
  png           0.1-7   2013-12-03 [1] CRAN (R 3.6.0)             
- R6            2.4.0   2019-02-14 [1] CRAN (R 3.6.0)             
- Rcpp          1.0.2   2019-07-25 [1] CRAN (R 3.6.0)             
- rlang         0.4.0   2019-06-25 [1] CRAN (R 3.6.0)             
+ R6            2.4.1   2019-11-12 [1] CRAN (R 3.6.0)             
+ Rcpp          1.0.3   2019-11-08 [1] CRAN (R 3.6.1)             
+ rlang         0.4.2   2019-11-23 [1] CRAN (R 3.6.0)             
  rmarkdown     1.14    2019-07-12 [1] CRAN (R 3.6.0)             
  rprojroot     1.3-2   2018-01-03 [1] CRAN (R 3.6.0)             
  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.6.0)             
@@ -159,7 +161,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/SWCaZ0T.png)
+![](https://i.imgur.com/WDn8sX7.png)
 
 </details>
 

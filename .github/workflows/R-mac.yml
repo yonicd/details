@@ -1,0 +1,62 @@
+on:
+  push:
+    branches: master
+
+name: R-mac
+  
+jobs:
+  check:
+    runs-on: ${{ matrix.config.os }}
+    name: ${{ matrix.config.os }} (${{ matrix.config.r }})
+
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+        - { os: macOS-latest, r: '3.6', args: "--no-manual"}
+
+    env:
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+      CRAN: ${{ matrix.config.cran }}
+      
+    steps:
+      - uses: actions/checkout@master
+      
+      - uses: r-lib/actions/setup-tinytex@master
+        if: contains(matrix.config.args, 'no-manual') == false
+
+      - uses: r-lib/actions/setup-pandoc@master
+
+      - uses: r-lib/actions/setup-r@master
+        with:
+          r-version: ${{ matrix.config.r }}
+
+      - name: Cache R packages
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-r-${{ matrix.config.r }}-${{ hashFiles('DESCRIPTION') }}
+      
+      - name: Install dependencies
+        run: Rscript -e "install.packages('remotes')" -e "remotes::install_deps(dependencies = TRUE)" -e "remotes::install_cran('rcmdcheck')"
+                  
+      - name: Check
+        run: Rscript -e "rcmdcheck::rcmdcheck(args = '${{ matrix.config.args }}', error_on = 'warning', check_dir = 'check')"
+
+      - name: covr
+        run: |
+          Rscript -e 'remotes::install_github("r-lib/covr@gh-actions")' \
+                  -e 'covr::codecov(token = "${{secrets.CODECOV_TOKEN}}")'
+
+      - name: Install package
+        run: R CMD INSTALL .
+        
+      - name: covrpage
+        run: |
+          Rscript -e 'remotes::install_github("metrumresearchgroup/covrpage@actions")' \
+                  -e 'covrpage::covrpage_ci()'
+
+      - name: Deploy package
+        run: |
+          Rscript -e 'remotes::install_github("metrumresearchgroup/pkgdown")' \
+                  -e "pkgdown:::deploy_local(new_process = FALSE, remote_url = 'https://x-access-token:${{secrets.GITHUB_PAT}}@github.com/${{github.repository}}.git')"          
