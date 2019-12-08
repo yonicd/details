@@ -1,5 +1,5 @@
 #' @importFrom utils capture.output
-capture.print <- function(obj){
+capture.print <- function(obj,...){
   
   if(details_env$device){
     
@@ -9,7 +9,7 @@ capture.print <- function(obj){
 
     if(!inherits(obj,'character')){
       
-      obj <- utils::capture.output(print(obj))  
+      obj <- utils::capture.output(print(obj,...))  
       
     }
         

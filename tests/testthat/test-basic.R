@@ -15,6 +15,13 @@ testthat::describe('basic',{
       unlist(strsplit(bench_fun(mtcars),'\\n'))
     )
   })
+  
+  it('dots',{
+    testthat::expect_equal(
+      print(details::details(mtcars,output = 'character',row.names = FALSE)),
+      unlist(strsplit(bench_fun(mtcars,row.names = FALSE),'\\n'))
+    )
+  })
 
   it('file',{
     testthat::expect_equal(
