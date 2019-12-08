@@ -1,10 +1,5 @@
 pandoc: '2.2'
-pkgdown: 1.1.0.9000
-pkgdown_sha: a5af998a70078bf67fc2da191d706582a6c24126
-articles:
-  custom: custom.html
-  documentation: documentation.html
-  objects: objects.html
-  sessioninfo: sessioninfo.html
-  tests_and_coverage: tests_and_coverage.html
+pkgdown: 1.4.1.9000
+pkgdown_sha: 08d56fc764f959e14840670e58df9f05177ef487
+articles: []
 

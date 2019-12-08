@@ -8,24 +8,25 @@
 
 <title>Create HTML DOM Details — details • details</title>
 
-<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha256-PbSmjxuVAzJ6FPvNYsrXygfGhNJYyZ2GktDbkMBqQZg=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/v4-shims.min.css" integrity="sha256-A6jcAdwFD48VMjlI3GDxUd+eCQa7/KWy6G9oe/ovaPA=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js" integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -43,12 +44,14 @@ with summary as optional." />
 
 
 <!-- mathjax -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
 
 
   </head>
@@ -67,7 +70,7 @@ with summary as optional." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">details</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.3</span>
       </span>
     </div>
 
@@ -75,7 +78,7 @@ with summary as optional." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -92,7 +95,7 @@ with summary as optional." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/yonicd/details">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -109,6 +112,7 @@ with summary as optional." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -124,8 +128,8 @@ with summary as optional." />
 with summary as optional.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>details</span>(<span class='no'>object</span>, <span class='kw'>summary</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tooltip</span> <span class='kw'>=</span> <span class='st'>"Click to Expand"</span>,
-  <span class='kw'>open</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"r"</span>, <span class='kw'>output</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"console"</span>, <span class='st'>"clipr"</span>, <span class='st'>"edit"</span>,
+    <pre class="usage"><span class='fu'>details</span>(<span class='no'>object</span>, <span class='no'>...</span>, <span class='kw'>summary</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tooltip</span> <span class='kw'>=</span> <span class='st'>"Click to Expand"</span>,
+  <span class='kw'>open</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"r"</span>, <span class='kw'>output</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"console"</span>, <span class='st'>"clipr"</span>, <span class='st'>"edit"</span>,
   <span class='st'>"character"</span>))</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -134,6 +138,10 @@ with summary as optional.</p>
     <tr>
       <th>object</th>
       <td><p>object, object to put in details block</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>arguments to pass to print method of the object</p></td>
     </tr>
     <tr>
       <th>summary</th>
@@ -175,14 +183,15 @@ will display the raw output (useful for HTML)</p>
 <p>When using details in knitr/rmarkdown documents there is no need to set
 the results to 'asis', there are already predefined print methods for these
 environments.</p>
+<p>... is passed to objects that do not invoke an image device.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><a href='use_details.html'>use_details</a></p></div>
+    <div class='dont-index'><p>use_details</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
 <span class='co'>#basic</span>
- <span class='kw pkg'>details</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/details/topics/details'>details</a></span>(<span class='st'>'test'</span>)</div><div class='output co'>#&gt; &lt;details closed&gt;
+ <span class='kw pkg'>details</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/details/man/details.html'>details</a></span>(<span class='st'>'test'</span>)</div><div class='output co'>#&gt; &lt;details closed&gt;
 #&gt; 
 #&gt; ```r
 #&gt; 
@@ -193,7 +202,7 @@ environments.</p>
 #&gt; &lt;/details&gt;
 #&gt; &lt;br&gt;</div><div class='input'>
 <span class='co'>#sessionInfo</span>
- <span class='kw pkg'>details</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/details/topics/details'>details</a></span>(<span class='fu'>sessionInfo</span>(), <span class='kw'>summary</span> <span class='kw'>=</span> <span class='st'>'sessionInfo'</span>)</div><div class='output co'>#&gt; &lt;details closed&gt;
+ <span class='kw pkg'>details</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/details/man/details.html'>details</a></span>(<span class='fu'><a href='https://rdrr.io/r/utils/sessionInfo.html'>sessionInfo</a></span>(), <span class='kw'>summary</span> <span class='kw'>=</span> <span class='st'>'sessionInfo'</span>)</div><div class='output co'>#&gt; &lt;details closed&gt;
 #&gt; &lt;summary&gt; &lt;span title='Click to Expand'&gt; sessionInfo &lt;/span&gt; &lt;/summary&gt;
 #&gt; 
 #&gt; ```r
@@ -218,30 +227,26 @@ environments.</p>
 #&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     
 #&gt; 
 #&gt; other attached packages:
-#&gt; [1] details_0.1.2  testthat_2.3.0
+#&gt; [1] details_0.1.3
 #&gt; 
 #&gt; loaded via a namespace (and not attached):
-#&gt;  [1] Rcpp_1.0.2         pillar_1.4.2       compiler_3.6.1     remotes_2.1.0     
-#&gt;  [5] prettyunits_1.0.2  tools_3.6.1        highlight_0.4.7.2  pkgload_1.0.2     
-#&gt;  [9] pkgbuild_1.0.6     digest_0.6.22      memoise_1.1.0      evaluate_0.14     
-#&gt; [13] tibble_2.1.3       pkgconfig_2.0.3    png_0.1-7          rlang_0.4.1       
-#&gt; [17] cli_1.1.0          rstudioapi_0.10    commonmark_1.7     curl_4.2          
-#&gt; [21] yaml_2.2.0         pkgdown_1.1.0.9000 xfun_0.10          withr_2.1.2       
-#&gt; [25] httr_1.4.1         stringr_1.4.0      roxygen2_6.1.1     xml2_1.2.2        
-#&gt; [29] knitr_1.25         devtools_2.1.0     desc_1.2.0         fs_1.3.1          
-#&gt; [33] rprojroot_1.3-2    glue_1.3.1         R6_2.4.0           processx_3.4.1    
-#&gt; [37] rmarkdown_1.16     sessioninfo_1.1.1  purrr_0.3.2        callr_3.3.2       
-#&gt; [41] clipr_0.7.0        magrittr_1.5       rematch2_2.1.0     whisker_0.4       
-#&gt; [45] ps_1.3.0           backports_1.1.5    clisymbols_1.2.0   htmltools_0.4.0   
-#&gt; [49] MASS_7.3-51.4      usethis_1.5.1      assertthat_0.2.1   stringi_1.4.3     
-#&gt; [53] crayon_1.3.4      
+#&gt;  [1] Rcpp_1.0.3         rstudioapi_0.10    rematch2_2.1.0     knitr_1.26        
+#&gt;  [5] xml2_1.2.2         whisker_0.4        magrittr_1.5       MASS_7.3-51.4     
+#&gt;  [9] R6_2.4.1           rlang_0.4.2        httr_1.4.1         tools_3.6.1       
+#&gt; [13] xfun_0.11          png_0.1-7          cli_1.1.0          withr_2.1.2       
+#&gt; [17] clipr_0.7.0        htmltools_0.4.0    yaml_2.2.0         assertthat_0.2.1  
+#&gt; [21] rprojroot_1.3-2    digest_0.6.23      tibble_2.1.3       pkgdown_1.4.1.9000
+#&gt; [25] crayon_1.3.4       purrr_0.3.3        fs_1.3.1           curl_4.3          
+#&gt; [29] memoise_1.1.0      evaluate_0.14      rmarkdown_1.18     pillar_1.4.2      
+#&gt; [33] compiler_3.6.1     desc_1.2.0         backports_1.1.5    highlight_0.4.7.3 
+#&gt; [37] pkgconfig_2.0.3   
 #&gt; 
 #&gt; ```
 #&gt; 
 #&gt; &lt;/details&gt;
 #&gt; &lt;br&gt;</div><div class='input'>
 <span class='co'>#data.frame</span>
- <span class='kw pkg'>details</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/details/topics/details'>details</a></span>(<span class='fu'>head</span>(<span class='no'>mtcars</span>))</div><div class='output co'>#&gt; &lt;details closed&gt;
+ <span class='kw pkg'>details</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/details/man/details.html'>details</a></span>(<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>mtcars</span>))</div><div class='output co'>#&gt; &lt;details closed&gt;
 #&gt; 
 #&gt; ```r
 #&gt; 
@@ -257,33 +262,37 @@ environments.</p>
 #&gt; 
 #&gt; &lt;/details&gt;
 #&gt; &lt;br&gt;</div><div class='input'>
-#plots
-</div><div class='input'> <span class='fu'>details</span>(
-   <span class='fu'>plot</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>mtcars</span>$<span class='no'>mpg</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>mtcars</span>$<span class='no'>wt</span>),
+<span class='co'>#plots</span>
+<span class='co'># \donttest{</span>
+ <span class='fu'>details</span>(
+   <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='no'>mtcars</span>$<span class='no'>mpg</span>, <span class='kw'>y</span> <span class='kw'>=</span> <span class='no'>mtcars</span>$<span class='no'>wt</span>),
    <span class='kw'>summary</span> <span class='kw'>=</span> <span class='st'>'Plots'</span>)</div><div class='output co'>#&gt; &lt;details closed&gt;
 #&gt; &lt;summary&gt; &lt;span title='Click to Expand'&gt; Plots &lt;/span&gt; &lt;/summary&gt;
 #&gt; 
-#&gt; ![](https://i.imgur.com/YD77S5G.png)
+#&gt; ![](https://i.imgur.com/VT6gksB.png)
 #&gt; 
 #&gt; &lt;/details&gt;
-#&gt; &lt;br&gt;</div><div class='input'>
+#&gt; &lt;br&gt;</div><div class='input'><span class='co'># }</span>
+
 <span class='co'>#output options</span>
 
 <span class='co'>#character</span>
- <span class='kw pkg'>details</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/details/topics/details'>details</a></span>(<span class='st'>'test'</span>, <span class='kw'>output</span> <span class='kw'>=</span> <span class='st'>'character'</span>)</div><div class='output co'>#&gt;  [1] "&lt;details closed&gt;" ""                 "```r"             ""                
+ <span class='kw pkg'>details</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/details/man/details.html'>details</a></span>(<span class='st'>'test'</span>, <span class='kw'>output</span> <span class='kw'>=</span> <span class='st'>'character'</span>)</div><div class='output co'>#&gt;  [1] "&lt;details closed&gt;" ""                 "```r"             ""                
 #&gt;  [5] "test"             ""                 "```"              ""                
 #&gt;  [9] "&lt;/details&gt;"       "&lt;br&gt;"            </div><div class='input'>
 <span class='co'>#clipboard</span>
-<span class='kw'>if</span>(<span class='kw pkg'>clipr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/clipr/topics/clipr_available'>clipr_available</a></span>()){
+<span class='kw'>if</span>(<span class='kw pkg'>clipr</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/clipr/man/clipr_available.html'>clipr_available</a></span>()){
 
- <span class='kw pkg'>details</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/details/topics/details'>details</a></span>(<span class='st'>'test'</span>, <span class='kw'>output</span> <span class='kw'>=</span> <span class='st'>'clipr'</span>)
+ <span class='kw pkg'>details</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/details/man/details.html'>details</a></span>(<span class='st'>'test'</span>, <span class='kw'>output</span> <span class='kw'>=</span> <span class='st'>'clipr'</span>)
 
- <span class='kw pkg'>clipr</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/clipr/topics/read_clip'>read_clip</a></span>()
+ <span class='kw pkg'>clipr</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/clipr/man/read_clip.html'>read_clip</a></span>()
 
 }
 
-<span class='co'>#file.edit</span></div><div class='input'>
- <span class='kw pkg'>details</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/details/topics/details'>details</a></span>(<span class='st'>'test'</span>, <span class='kw'>output</span> <span class='kw'>=</span> <span class='st'>'edit'</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: Not an interactive enviornment, falling back to output = "console"</span></div><div class='output co'>#&gt; &lt;details closed&gt;
+<span class='co'>#file.edit</span>
+<span class='co'># \donttest{</span>
+
+ <span class='kw pkg'>details</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/details/man/details.html'>details</a></span>(<span class='st'>'test'</span>, <span class='kw'>output</span> <span class='kw'>=</span> <span class='st'>'edit'</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: Not an interactive enviornment, falling back to output = "console"</span></div><div class='output co'>#&gt; &lt;details closed&gt;
 #&gt; 
 #&gt; ```r
 #&gt; 
@@ -293,7 +302,8 @@ environments.</p>
 #&gt; 
 #&gt; &lt;/details&gt;
 #&gt; &lt;br&gt;</div><div class='input'> 
-</div><div class='input'>
+# }
+
 
 
 </div></pre>
@@ -311,13 +321,14 @@ environments.</p>
   </div>
 </div>
 
+
       <footer>
       <div class="copyright">
   <p>Developed by Jonathan Sidi.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.9000.</p>
 </div>
 
       </footer>
@@ -325,6 +336,8 @@ environments.</p>
 
   
 
+
   </body>
 </html>
+
 
