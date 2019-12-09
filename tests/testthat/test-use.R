@@ -4,7 +4,7 @@ f <- scratch_desc(tempdir())
 
 testthat::describe('bad path',{
   
-  it('imports',{
+  it('suggests',{
     testthat::expect_error(
       use_details('ABC'),regexp = 'invalid path'
       )
@@ -16,9 +16,9 @@ testthat::describe('default',{
   
   use_details(f)
   
-  it('imports',{
+  it('suggests',{
     testthat::expect_equal(
-      desc::desc_get_field('Imports',file = f),
+      desc::desc_get_field('Suggests',file = f),
       'details'
     )
   })
@@ -42,13 +42,13 @@ testthat::describe('default',{
 
 testthat::describe('single fields',{
   
-  desc::desc_set(Imports='',file = f)
+  desc::desc_set(Suggests='',file = f)
   
   use_details(f)
   
-  it('imports',{
+  it('suggests',{
     testthat::expect_equal(
-      desc::desc_get_field('Imports',file = f),
+      desc::desc_get_field('Suggests',file = f),
       'details'
     )
   })
@@ -86,6 +86,26 @@ testthat::describe('single fields',{
     )
   })  
   
+})
+
+unlink(f,force = TRUE)
+
+f <- scratch_desc(tempdir())
+
+testthat::describe('import',{
+  
+  desc::desc_set_dep('details',type = 'Imports',file = f)
+  
+  use_details(desc_path = f)
+
+  it('suggests empty',{
+    testthat::expect_equal(desc::desc_get_field(key = 'Imports',file = f),'details')
+  })
+  
+  it('suggests empty',{
+    testthat::expect_error(desc::desc_get_field(key = 'Suggests',file = f),regexp = 'not found')
+  })
+
 })
 
 unlink(f,force = TRUE)

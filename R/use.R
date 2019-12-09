@@ -9,7 +9,7 @@
 #' @details 
 #' This will append three elements to the DESCRIPTION file
 #' 
-#' - Imports: details
+#' - Suggests: details
 #' - RdMacros: details
 #' - Roxygen: list(markdown = TRUE)
 #' @seealso [details][details::details]
@@ -19,36 +19,19 @@ use_details <- function(desc_path = './DESCRIPTION'){
   if(!file.exists(desc_path))
     stop('invalid path to DESCRIPTION file')
   
-  set_details_imports(desc_path)
+  set_details_suggests(desc_path)
   set_details_macros(desc_path)
   set_details_roxy(desc_path)
   
   invisible()
 }
 
-#' @importFrom desc desc_has_fields desc_get_field desc_set
-set_details_imports <- function(desc_path, pkg = 'details'){
+#' @importFrom desc desc_has_dep desc_set_dep
+set_details_suggests <- function(desc_path, pkg = 'details'){
   
-  if(desc::desc_has_fields("Imports", file = desc_path)){
-    
-    imports <- desc::desc_get_field("Imports", file = desc_path)
-    imports <- gsub('\\n|\\s+','',imports)
-    imports <- strsplit(imports, ",")[[1]]
-    
-  }else{
-    
-    imports <- character()
-    
-  }
+  if(!desc::desc_has_dep(pkg, type = 'Imports', file = desc_path))
+    desc::desc_set_dep(pkg, type = 'Suggests', file = desc_path)
   
-  if (!pkg %in% imports) {
-    imports <- c(imports, pkg)
-    imports <- paste0("    ", imports, collapse = ",\n")
-    desc::desc_set(
-      Imports = imports,
-      file = desc_path, 
-      normalize = TRUE)
-  }
 }
 
 #' @importFrom desc desc_has_fields desc_get_field desc_set

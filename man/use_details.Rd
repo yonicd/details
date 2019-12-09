@@ -21,7 +21,7 @@ See the \href{https://yonicd.github.io/details/articles/documentation.html}{Pack
 \details{
 This will append three elements to the DESCRIPTION file
 \itemize{
-\item Imports: details
+\item Suggests: details
 \item RdMacros: details
 \item Roxygen: list(markdown = TRUE)
 }
