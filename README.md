@@ -110,7 +110,7 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2019-12-08                  
+ date     2019-12-09                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version date       lib source                     
@@ -120,7 +120,7 @@ sessioninfo::session_info()%>%
  clipr         0.7.0   2019-07-23 [1] CRAN (R 3.6.0)             
  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.6.0)             
  desc          1.2.0   2019-12-01 [1] Github (r-lib/desc@61205f6)
- details     * 0.1.3   2019-12-08 [1] local                      
+ details     * 0.1.3   2019-12-09 [1] local                      
  digest        0.6.23  2019-11-23 [1] CRAN (R 3.6.0)             
  evaluate      0.14    2019-05-28 [1] CRAN (R 3.6.0)             
  htmltools     0.4.0   2019-10-04 [1] CRAN (R 3.6.0)             
@@ -161,7 +161,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/HPx0fgi.png)
+![](https://i.imgur.com/EAFgDSE.png)
 
 </details>
 
@@ -188,7 +188,7 @@ use_details('PATH_TO_DESCRIPTION_FILE')
 
 This will append three elements to the DESCRIPTION file
 
-  - Imports: details
+  - Suggests: details (if not already in Imports)
   - RdMacros: details
   - Roxygen: list(markdown = TRUE)
 

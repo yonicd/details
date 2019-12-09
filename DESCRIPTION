@@ -24,7 +24,7 @@ Imports:
     utils,
     withr,
     xml2
-Suggests: 
+Suggests:
     covr,
     rmarkdown,
     sessioninfo,

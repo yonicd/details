@@ -22,6 +22,7 @@ reference:
   - title: 'Functions'
     contents: 
       - details
+      - use_details
       - has_concept("fold")
 
 articles:
