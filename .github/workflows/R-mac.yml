@@ -1,6 +1,8 @@
 on:
-  push:
-    branches: master
+  push
+  pull_request:
+    branches:
+      - master
 
 name: R-mac
   
@@ -52,11 +54,13 @@ jobs:
         run: R CMD INSTALL .
         
       - name: covrpage
+        if: github.ref == 'refs/heads/master'
         run: |
           Rscript -e 'remotes::install_github("metrumresearchgroup/covrpage@actions")' \
                   -e 'covrpage::covrpage_ci()'
 
       - name: Deploy package
+        if: github.ref == 'refs/heads/master'
         run: |
           Rscript -e 'remotes::install_github("metrumresearchgroup/pkgdown")' \
                   -e "pkgdown:::deploy_local(new_process = FALSE, remote_url = 'https://x-access-token:${{secrets.GITHUB_PAT}}@github.com/${{github.repository}}.git')"          
