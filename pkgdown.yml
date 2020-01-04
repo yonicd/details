@@ -4,6 +4,7 @@ pkgdown_sha: 08d56fc764f959e14840670e58df9f05177ef487
 articles:
   custom: custom.html
   documentation: documentation.html
+  engine: engine.html
   objects: objects.html
   sessioninfo: sessioninfo.html
   tests_and_coverage: tests_and_coverage.html
