@@ -8,8 +8,10 @@ eng_detail <- function (options) {
   
   options$details.lang <- options$details.lang %n% 'r'
   options$details.summary <- options$details.summary %n% NULL
-  options$details.tooltip <- options$details.tooltip %n% NULL
   options$details.open <- options$details.open %n% FALSE
+  
+  if(!'details.tooltip'%in%names(options))
+    options$details.tooltip <- 'Click to Open'
   
   code <- details::details(eval(parse(text = options$code)),
                            lang = options$details.lang,
