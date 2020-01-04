@@ -1,0 +1,154 @@
+---
+title: "Knitr Chunk Engine"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Details Knitr Chunk Engine}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r}
+library(details)
+```
+
+# r chunk engine
+
+Using `details` in a standard `r` chunk is simple. There is a built in print method that handles all the different types of outputs. These methods are shown in the other vignettes. It basically looks like this:
+
+```{r}
+details::details({
+  x <- 1
+  x * 2
+},summary = 'click to see eval')
+```
+
+This is nice but leaves a lot of busy work if you want to hide the use of `details` in the output.
+
+One chunk to show the code with `eval` set to FALSE
+
+```{r,eval = FALSE}
+  x <- 1
+  x * 2
+```
+
+Another chunk with `echo` set to `FALSE` to create the `details` output
+
+```{r,echo = FALSE}
+details::details({
+  x <- 1
+  x * 2
+},summary = 'click to see eval')
+```
+
+When you have multiple chunks in the document it can get very cumbersome and maintance instensive.
+
+# details chunk engine
+
+To solve this problem there is now a `details` chunk engine that will take care of all that work for you.
+
+We add a few chunk options to control the `details` output:
+
+|Option|Default|
+|:-|:-:|
+|details.lang|'r'|
+|details.summary|NULL|
+|details.tooltip|'Click to Open'|
+|details.open|FALSE|
+
+Lets take the same example, this time we will use the `details` engine
+
+## Default
+
+we evaluate the following chunk
+
+````markdown
+`r ''````{details}
+x <- 1
+x * 2
+```
+````
+
+By Default echo = `TRUE` will act just like a regular chunk echo and print put what goes into the `details` call.
+
+### Output
+
+```{details}
+x <- 1
+x * 2
+```
+
+## Open without Echo
+
+````markdown
+`r ''````{details, echo = FALSE, details.summary = 'open to see eval'}
+x <- 1
+x * 2
+```
+````
+
+We can set echo = `FALSE` and only return the details output
+
+### Output
+
+```{details, echo = FALSE, details.summary = 'open to see eval'}
+x <- 1
+x * 2
+```
+
+## Open with Echo
+
+We can set the details block to be open by setting the details.open to `TRUE`
+
+````markdown
+`r ''````{details,details.summary = 'click to hide eval',details.open = TRUE}
+x <- 1
+x * 2
+```
+````
+
+### Output
+
+```{details,details.summary = 'click to hide eval',details.open = TRUE}
+x <- 1
+x * 2
+```
+
+## Tooltip
+
+We can remove the tooltip by setting `details.tooltip` to NULL
+
+````markdown
+`r ''````{details,details.summary = 'click to see eval',details.tooltip = NULL}
+x <- 1
+x * 2
+```
+````
+
+### Output
+
+```{details,details.summary = 'click to see eval',details.tooltip = NULL}
+x <- 1
+x * 2
+```
+
+## file contents with no highlighting
+
+We can print out the contents of a file by putting the path in the chunk and control the highlighting language with `details.lang`
+
+````markdown
+`r ''````{details,echo = FALSE, details.lang = '',details.summary = 'open to see contents'}
+"../DESCRIPTION"
+```
+````
+### Output
+
+```{details,echo = FALSE, details.lang = '',details.summary = 'open to see contents'}
+'../DESCRIPTION'
+```

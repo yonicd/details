@@ -8,7 +8,7 @@ output: github_document
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "man/figures/README-",
+  fig.path = "man/figures",
   out.width = "100%"
 )
 ```
@@ -20,11 +20,11 @@ knitr::opts_chunk$set(
 [![R-mac build status](https://github.com/yonicd/details/workflows/R-mac/badge.svg)](https://github.com/yonicd/details)
 [![R-linux build status](https://github.com/yonicd/details/workflows/R-linux/badge.svg)](https://github.com/yonicd/details)
 [![Codecov test coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/details?branch=master)
-[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_10_10-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
+[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2020_01_04-yellowgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
 
 
-# details `r if(knitr::opts_knit$get('rmarkdown.pandoc.to')=='gfm-ascii_identifiers') '<img src="https://github.com/yonicd/details/raw/media/input/logo.png" align="right" />'`
+# details <img src="man/figures/logo.png" align="right" class="logo" style="height:150px;"/>
 
 Suppose you're opening an issue in GitHub and there's a lot noisey logs that may be useful or you want to add the `sessionInfo()` to the end of the issue.
 
@@ -89,6 +89,18 @@ library(details)
 
 sessioninfo::session_info()%>%
   details::details(summary = 'current session info')
+```
+
+You can also use the `knitr` chunk engine that is shipped with `details` to created outputs in `Rmarkdown` documents.
+
+````markdown
+`r ''````{details, echo = FALSE, details.summary = 'current session info'}
+sessioninfo::session_info()
+```
+````
+
+```{details, echo = FALSE, details.summary = 'current session info'}
+sessioninfo::session_info()
 ```
 
 There are a [number of objects](https://yonicd.github.io/details/articles/objects.html) that can be placed in a details block other than a character object. An example of a object is a device output such as a plot
