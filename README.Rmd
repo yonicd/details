@@ -8,7 +8,7 @@ output: github_document
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "man/figures/README-",
+  fig.path = "man/figures",
   out.width = "100%"
 )
 ```
@@ -24,7 +24,7 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 
-# details <img src="https://github.com/yonicd/details/raw/media/input/logo.png" align="right" class="logo"/>
+# details <img src="man/figures/logo.png" align="right" class="logo" style="height:150px;"/>
 
 Suppose you're opening an issue in GitHub and there's a lot noisey logs that may be useful or you want to add the `sessionInfo()` to the end of the issue.
 

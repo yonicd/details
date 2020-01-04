@@ -18,7 +18,7 @@ coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](h
 Summary](https://img.shields.io/badge/covrpage-Last_Build_2020_01_04-yellowgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
 
-# details <img src="https://github.com/yonicd/details/raw/media/input/logo.png" align="right" class="logo"/>
+# details <img src="man/figures/logo.png" align="right" class="logo" style="height:150px;"/>
 
 Suppose you’re opening an issue in GitHub and there’s a lot noisey logs
 that may be useful or you want to add the `sessionInfo()` to the end of
@@ -225,7 +225,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/XDr7piT.png)
+![](https://i.imgur.com/u3xBQSd.png)
 
 </details>
 
