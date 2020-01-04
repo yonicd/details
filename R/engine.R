@@ -28,9 +28,9 @@ eng_detail <- function (options) {
   get('eng_asis',envir = asNamespace('knitr'))(options)
 }
 
-
+#' @importFrom stats setNames
 register_eng_detail = function(envs, engine) {
-  knitr::knit_engines$set(setNames(lapply(envs, function(env) {
+  knitr::knit_engines$set(stats::setNames(lapply(envs, function(env) {
     function(options) {
       options$type = env
       engine(options)

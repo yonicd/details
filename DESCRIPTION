@@ -21,6 +21,7 @@ Imports:
     knitr,
     magrittr,
     png,
+    stats,
     utils,
     withr,
     xml2
