@@ -13,3 +13,4 @@
 ^appveyor\.yml$
 ^CODE_OF_CONDUCT\.md$
 ^CRAN-RELEASE$
+^data-raw$
