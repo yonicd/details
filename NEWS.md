@@ -1,3 +1,7 @@
+# details 0.1.4
+
+* add knitr chunk engine to run details in rmarkdown
+
 # details 0.1.3
 
 * add dots to the details function to pass arguments to the object print method
