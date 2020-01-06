@@ -3,7 +3,8 @@ capture.print <- function(obj,...){
   
   if(details_env$device){
     
-    obj <- sprintf('![](%s)',imgur_upload(obj))
+    if(details_env$imgur)
+      obj <- sprintf('![](%s)',imgur_upload(obj))
     
   }else{
 

@@ -15,6 +15,7 @@
 #' @param output character, where to output the file console (Default), 
 #'  clipboard or R file editor, 
 #'  Default: c('console','clipr','file.edit','character')
+#' @param imgur logical, upload device outputs to imgur, Default: TRUE
 #' @seealso [use_details][details::use_details]
 #' @details 
 #'   To remove summary or tooltip set them to NULL.
@@ -81,21 +82,33 @@ details <- function(object,
                     tooltip = 'Click to Expand', 
                     open    = FALSE, 
                     lang    = 'r',
-                    output  = c('console','clipr','edit','character')
+                    output  = c('console','clipr','edit','character'),
+                    imgur = TRUE
                     ){
   
   on.exit({
-    unlink(details_env$f_png)
+    
+    if(details_env$imgur)
+      unlink(details_env$f_png)
+    
     details_env$device <- FALSE
+    details_env$imgur <- TRUE
     },add = TRUE)
 
+  details_env$imgur <- imgur
+  
   object <- device_check(object,env = details_env)
+  
+  output <- match.arg(output,c('console','clipr','edit','character'))
+  
+  if(!details_env$imgur)
+    output <- 'image'
   
   build_details(text    = read_text(object), 
                 summary = build_summary(summary,tooltip), 
                 state   = build_state(open), 
                 lang    = lang,
-                output  = match.arg(output,c('console','clipr','edit','character')),
+                output  = output,
                 ...)
   
 }

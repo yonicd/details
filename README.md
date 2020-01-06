@@ -110,7 +110,7 @@ sessioninfo::session_info()%>%
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2020-01-04                  
+ date     2020-01-06                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version date       lib source                     
@@ -120,7 +120,7 @@ sessioninfo::session_info()%>%
  clipr         0.7.0   2019-07-23 [1] CRAN (R 3.6.0)             
  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.6.0)             
  desc          1.2.0   2019-12-01 [1] Github (r-lib/desc@61205f6)
- details     * 0.1.4   2020-01-04 [1] local                      
+ details     * 0.1.4   2020-01-06 [1] local                      
  digest        0.6.23  2019-11-23 [1] CRAN (R 3.6.0)             
  evaluate      0.14    2019-05-28 [1] CRAN (R 3.6.0)             
  htmltools     0.4.0   2019-10-04 [1] CRAN (R 3.6.0)             
@@ -174,7 +174,7 @@ sessioninfo::session_info()
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2020-01-04                  
+ date     2020-01-06                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
  package     * version date       lib source                     
@@ -184,7 +184,7 @@ sessioninfo::session_info()
  clipr         0.7.0   2019-07-23 [1] CRAN (R 3.6.0)             
  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.6.0)             
  desc          1.2.0   2019-12-01 [1] Github (r-lib/desc@61205f6)
- details     * 0.1.4   2020-01-04 [1] local                      
+ details     * 0.1.4   2020-01-06 [1] local                      
  digest        0.6.23  2019-11-23 [1] CRAN (R 3.6.0)             
  evaluate      0.14    2019-05-28 [1] CRAN (R 3.6.0)             
  htmltools     0.4.0   2019-10-04 [1] CRAN (R 3.6.0)             
@@ -225,7 +225,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/u3xBQSd.png)
+![](https://i.imgur.com/k5dWPMQ.png)
 
 </details>
 
@@ -289,6 +289,7 @@ More information can be found in the
     Community Sites.
   - Customizing the details output
   - What R objects details can handle
+  - Using the details knitr chunk engine
   - Using details in Roxygen2
 
 ## Code of Conduct

@@ -2,13 +2,16 @@
   if (is.null(x)) y else x  
 }
 
+#' @importFrom utils getFromNamespace
 eng_detail <- function (options) {
+  
   type <- options$type %n% "details"
   options$type <- 'r'
   
   options$details.lang <- options$details.lang %n% 'r'
   options$details.summary <- options$details.summary %n% NULL
   options$details.open <- options$details.open %n% FALSE
+  options$details.imgur <- options$details.imgur %n% FALSE
   
   if(!'details.tooltip'%in%names(options))
     options$details.tooltip <- 'Click to Open'
@@ -18,7 +21,32 @@ eng_detail <- function (options) {
                            tooltip = options$details.tooltip,
                            summary = options$details.summary,
                            open = options$details.open,
+                           imgur = options$details.imgur,
                            output = 'character')
+  
+  if(length(attr(code,'file'))>0){
+    
+    # wrap_path <- utils::getFromNamespace('wrap.knit_image_paths','knitr')
+    # 
+    # code <- gsub(attr(code,'file'), wrap_path(attr(code,'file')),code)
+    
+    this <- attr(code,'file')
+    
+    wrap_path <- utils::getFromNamespace('wrap.knit_image_paths','knitr')
+    plot_counter <- utils::getFromNamespace("plot_counter", "knitr")
+    in_base_dir <- utils::getFromNamespace("in_base_dir", "knitr")
+    
+    tmp <- knitr::fig_path('png', number = plot_counter())
+    
+    in_base_dir({
+      dir.create(dirname(tmp), showWarnings = FALSE, recursive = TRUE)
+      file.copy(this,tmp)
+    })
+    
+    code <- gsub(this,wrap_path(tmp),code)
+    
+  }
+    
   if(options$echo){
     echo_code <- sprintf('```r\n%s\n```',paste0(options$code,collapse = '\n'))
     options$code <- paste0(c(echo_code,code),collapse = '\n')
@@ -27,7 +55,7 @@ eng_detail <- function (options) {
     options$echo <- TRUE
   }
   
-  get('eng_asis',envir = asNamespace('knitr'))(options)
+  utils::getFromNamespace('eng_asis','knitr')(options)
 }
 
 #' @importFrom stats setNames

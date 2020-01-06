@@ -6,7 +6,7 @@
 \usage{
 details(object, ..., summary = NULL, tooltip = "Click to Expand",
   open = FALSE, lang = "r", output = c("console", "clipr", "edit",
-  "character"))
+  "character"), imgur = TRUE)
 }
 \arguments{
 \item{object}{object, object to put in details block}
@@ -27,6 +27,8 @@ Default: 'r'}
 \item{output}{character, where to output the file console (Default),
 clipboard or R file editor,
 Default: c('console','clipr','file.edit','character')}
+
+\item{imgur}{logical, upload device outputs to imgur, Default: TRUE}
 }
 \value{
 character

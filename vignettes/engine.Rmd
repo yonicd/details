@@ -61,6 +61,7 @@ We add a few chunk options to control the `details` output:
 |details.summary|NULL|
 |details.tooltip|'Click to Open'|
 |details.open|FALSE|
+|details.imgur|FALSE|
 
 Lets take the same example, this time we will use the `details` engine
 
@@ -84,7 +85,7 @@ x <- 1
 x * 2
 ```
 
-## Open without Echo
+## Without Echo
 
 ````markdown
 `r ''````{details, echo = FALSE, details.summary = 'open to see eval'}
@@ -147,8 +148,24 @@ We can print out the contents of a file by putting the path in the chunk and con
 "../DESCRIPTION"
 ```
 ````
+
 ### Output
 
 ```{details,echo = FALSE, details.lang = '',details.summary = 'open to see contents'}
 '../DESCRIPTION'
+```
+
+## Figures
+
+
+````markdown
+`r ''````{details}
+plot(1:10,1:10)
+```
+````
+
+### Output
+
+```{details}
+plot(1:10,1:10)
 ```

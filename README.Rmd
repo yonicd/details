@@ -159,6 +159,7 @@ More information can be found in the [articles](https://yonicd.github.io/details
   - Creating a sessioninfo to paste into Github, Stackoverflow or Community Sites. 
   - Customizing the details output
   - What R objects details can handle
+  - Using the details knitr chunk engine
   - Using details in Roxygen2
 
 ## Code of Conduct

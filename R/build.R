@@ -7,6 +7,7 @@ build_details <- function(text = '', summary = '', state = 'open',
     body_details(lang,capture.print(text,...)),
     end_details(),
     sep='\n\n'),
+    file = details_env$f_png,
     class = sprintf('details_%s',output)
   )
   
