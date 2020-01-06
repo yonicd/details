@@ -1,6 +1,6 @@
-# details 0.1.4
+# details 0.2.0
 
-* add knitr chunk engine to run details in rmarkdown
+* add knitr chunk engine to run details in RMarkdown
 
 # details 0.1.3
 
