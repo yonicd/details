@@ -138,7 +138,7 @@ with summary as optional.</p>
 
     <pre class="usage"><span class='fu'>details</span>(<span class='no'>object</span>, <span class='no'>...</span>, <span class='kw'>summary</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>tooltip</span> <span class='kw'>=</span> <span class='st'>"Click to Expand"</span>,
   <span class='kw'>open</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>lang</span> <span class='kw'>=</span> <span class='st'>"r"</span>, <span class='kw'>output</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"console"</span>, <span class='st'>"clipr"</span>, <span class='st'>"edit"</span>,
-  <span class='st'>"character"</span>))</pre>
+  <span class='st'>"character"</span>), <span class='kw'>imgur</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -175,6 +175,10 @@ Default: 'r'</p></td>
       <td><p>character, where to output the file console (Default),
 clipboard or R file editor,
 Default: c('console','clipr','file.edit','character')</p></td>
+    </tr>
+    <tr>
+      <th>imgur</th>
+      <td><p>logical, upload device outputs to imgur, Default: TRUE</p></td>
     </tr>
     </table>
 
@@ -233,18 +237,18 @@ environments.</p>
 #&gt; [1] details_0.1.4
 #&gt; 
 #&gt; loaded via a namespace (and not attached):
-#&gt;  [1] Rcpp_1.0.3         compiler_3.6.2     pillar_1.4.3       prettyunits_1.0.2 
-#&gt;  [5] remotes_2.1.0      tools_3.6.2        highlight_0.5.0    digest_0.6.23     
-#&gt;  [9] pkgbuild_1.0.6     jsonlite_1.6       memoise_1.1.0      evaluate_0.14     
-#&gt; [13] tibble_2.1.3       png_0.1-7          pkgconfig_2.0.3    rlang_0.4.2       
-#&gt; [17] rstudioapi_0.10    cli_2.0.0          curl_4.3           yaml_2.2.0        
-#&gt; [21] pkgdown_1.4.1.9000 xfun_0.11          xml2_1.2.2         withr_2.1.2       
-#&gt; [25] httr_1.4.1         knitr_1.26         askpass_1.1        desc_1.2.0        
-#&gt; [29] fs_1.3.1           rprojroot_1.3-2    glue_1.3.1         R6_2.4.1          
-#&gt; [33] processx_3.4.1     fansi_0.4.0        rmarkdown_2.0      whisker_0.4       
-#&gt; [37] callr_3.4.0        purrr_0.3.3        clipr_0.7.0        magrittr_1.5      
-#&gt; [41] rematch2_2.1.0     backports_1.1.5    ps_1.3.0           htmltools_0.4.0   
-#&gt; [45] MASS_7.3-51.4      assertthat_0.2.1   openssl_1.4.1      crayon_1.3.4      
+#&gt;  [1] Rcpp_1.0.3         compiler_3.6.2     pillar_1.4.3       remotes_2.1.0     
+#&gt;  [5] tools_3.6.2        highlight_0.5.0    digest_0.6.23      jsonlite_1.6      
+#&gt;  [9] memoise_1.1.0      evaluate_0.14      tibble_2.1.3       pkgconfig_2.0.3   
+#&gt; [13] png_0.1-7          rlang_0.4.2        cli_2.0.0          rstudioapi_0.10   
+#&gt; [17] curl_4.3           yaml_2.2.0         pkgdown_1.4.1.9000 xfun_0.11         
+#&gt; [21] withr_2.1.2        httr_1.4.1         knitr_1.26         xml2_1.2.2        
+#&gt; [25] desc_1.2.0         fs_1.3.1           askpass_1.1        rprojroot_1.3-2   
+#&gt; [29] glue_1.3.1         R6_2.4.1           processx_3.4.1     fansi_0.4.0       
+#&gt; [33] rmarkdown_2.0      whisker_0.4        purrr_0.3.3        clipr_0.7.0       
+#&gt; [37] magrittr_1.5       rematch2_2.1.0     backports_1.1.5    ps_1.3.0          
+#&gt; [41] htmltools_0.4.0    MASS_7.3-51.4      assertthat_0.2.1   openssl_1.4.1     
+#&gt; [45] crayon_1.3.4      
 #&gt; 
 #&gt; ```
 #&gt; 
@@ -274,7 +278,7 @@ environments.</p>
    <span class='kw'>summary</span> <span class='kw'>=</span> <span class='st'>'Plots'</span>)</div><div class='output co'>#&gt; &lt;details closed&gt;
 #&gt; &lt;summary&gt; &lt;span title='Click to Expand'&gt; Plots &lt;/span&gt; &lt;/summary&gt;
 #&gt; 
-#&gt; ![](https://i.imgur.com/lXrPyuR.png)
+#&gt; ![](https://i.imgur.com/lsDOZtv.png)
 #&gt; 
 #&gt; &lt;/details&gt;
 #&gt; &lt;br&gt;</div><div class='input'><span class='co'># }</span>
