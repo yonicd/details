@@ -3,10 +3,14 @@
 }
 
 #' @importFrom utils getFromNamespace
+#' @importFrom knitr engine_output
+#' @importFrom grid grid.raster
+#' @importFrom png readPNG
 eng_detail <- function (options) {
   
   type <- options$type %n% "details"
   options$type <- 'r'
+  options$results <- 'asis'
   
   options$details.lang <- options$details.lang %n% 'r'
   options$details.summary <- options$details.summary %n% NULL
@@ -26,10 +30,6 @@ eng_detail <- function (options) {
   
   if(length(attr(code,'file'))>0){
     
-    # wrap_path <- utils::getFromNamespace('wrap.knit_image_paths','knitr')
-    # 
-    # code <- gsub(attr(code,'file'), wrap_path(attr(code,'file')),code)
-    
     this <- attr(code,'file')
     
     wrap_path <- utils::getFromNamespace('wrap.knit_image_paths','knitr')
@@ -38,6 +38,8 @@ eng_detail <- function (options) {
     
     tmp <- knitr::fig_path('png', number = plot_counter())
     
+    if(!grepl('^-',tmp)){
+      
     in_base_dir({
       dir.create(dirname(tmp), showWarnings = FALSE, recursive = TRUE)
       file.copy(this,tmp)
@@ -45,17 +47,18 @@ eng_detail <- function (options) {
     
     code <- gsub(this,wrap_path(tmp),code)
     
+    }else{
+      
+      grid::grid.raster(png::readPNG(this))
+      
+    }
+    
   }
     
-  if(options$echo){
-    echo_code <- sprintf('```r\n%s\n```',paste0(options$code,collapse = '\n'))
-    options$code <- paste0(c(echo_code,code),collapse = '\n')
-  }else{
-    options$code <- paste0(code,collapse = '\n')  
-    options$echo <- TRUE
-  }
-  
-  utils::getFromNamespace('eng_asis','knitr')(options)
+  output_code <- paste0(code,collapse = '\n') 
+
+  knitr::engine_output(options,code = options$code,out = output_code)
+
 }
 
 #' @importFrom stats setNames

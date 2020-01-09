@@ -17,6 +17,7 @@ Depends:
 Imports: 
     clipr,
     desc,
+    grid,
     httr,
     knitr,
     magrittr,
