@@ -15,7 +15,7 @@ status](https://github.com/yonicd/details/workflows/R-linux/badge.svg)](https://
 [![Codecov test
 coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/details?branch=master)
 [![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2020_01_11-brightgreen.svg)](http://tinyurl.com/yyodcwc7)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2020_01_11-yellowgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
 
 # details <img src="man/figures/logo.png" align="right" class="logo" style="height:150px;"/>
@@ -113,71 +113,80 @@ sessioninfo::session_info()%>%
  date     2020-01-11                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
- ! package     * version    date       lib
-   assertthat    0.2.1      2019-03-21 [1]
-   backports     1.1.5      2019-10-02 [1]
-   callr         3.3.2      2019-09-22 [1]
-   cli           2.0.0      2019-12-09 [1]
-   clipr         0.7.0      2019-07-23 [1]
-   covr        * 3.3.0      2019-08-06 [1]
-   covrpage      0.0.70     2019-12-05 [1]
-   crayon        1.3.4      2017-09-16 [1]
-   crosstalk     1.0.0      2016-12-21 [1]
-   curl          4.3        2019-12-02 [1]
-   desc          1.2.0      2019-12-01 [1]
- P details     * 0.2.0      2020-01-11 [?]
-   devtools      2.2.1      2019-09-24 [1]
-   digest        0.6.23     2019-11-23 [1]
-   DT            0.8        2019-08-07 [1]
-   ellipsis      0.3.0      2019-09-20 [1]
-   evaluate      0.14       2019-05-28 [1]
-   fansi         0.4.0      2018-10-05 [1]
-   fastmap       1.0.0      2019-07-28 [1]
-   fs            1.3.1      2019-05-06 [1]
-   git2r         0.26.1     2019-06-29 [1]
-   glue          1.3.1.9000 2020-01-07 [1]
-   highr         0.8        2019-03-20 [1]
-   htmltools     0.4.0      2019-10-04 [1]
-   htmlwidgets   1.5.1      2019-10-08 [1]
-   httpuv        1.5.2      2019-09-11 [1]
-   httr          1.4.1      2019-08-05 [1]
-   jsonlite      1.6        2018-12-07 [1]
-   knitr       * 1.25       2019-09-18 [1]
-   later         1.0.0      2019-10-04 [1]
-   lazyeval      0.2.2      2019-03-15 [1]
-   magrittr    * 1.5        2014-11-22 [1]
-   memoise       1.1.0      2017-04-21 [1]
-   mime          0.7        2019-06-11 [1]
-   packrat       0.5.0      2018-11-14 [1]
-   pkgbuild      1.0.6      2019-10-09 [1]
-   pkgload       1.0.2      2018-10-29 [1]
-   png           0.1-7      2013-12-03 [1]
-   prettyunits   1.0.2      2015-07-13 [1]
-   processx      3.4.1      2019-07-18 [1]
-   promises      1.1.0      2019-10-04 [1]
-   ps            1.3.0      2018-12-21 [1]
-   R6            2.4.1      2019-11-12 [1]
-   Rcpp          1.0.3      2019-11-08 [1]
-   remotes       2.1.0      2019-06-24 [1]
-   rex           1.1.2      2017-10-19 [1]
-   rlang         0.4.2      2019-11-23 [1]
-   rmarkdown     2.0        2019-12-12 [1]
-   rprojroot     1.3-2      2018-01-03 [1]
-   rstudioapi    0.10       2019-03-19 [1]
-   sessioninfo   1.1.1      2018-11-05 [1]
-   shiny         1.4.0      2019-10-10 [1]
-   stringi       1.4.3      2019-03-12 [1]
-   stringr       1.4.0      2019-02-10 [1]
-   testthat    * 2.2.1      2019-07-25 [1]
-   usethis       1.5.1.9000 2019-09-01 [1]
-   vcs           0.1.2      2019-08-22 [1]
-   whisker       0.4        2019-08-28 [1]
-   withr         2.1.2      2018-03-15 [1]
-   xfun          0.10       2019-10-01 [1]
-   xml2          1.2.2      2019-08-09 [1]
-   xtable        1.8-4      2019-04-21 [1]
-   yaml          2.2.0      2018-07-25 [1]
+ !  package     * version    date       lib
+    assertthat    0.2.1      2019-03-21 [1]
+    backports     1.1.5      2019-10-02 [1]
+    brew          1.0-6      2011-04-13 [1]
+    callr         3.3.2      2019-09-22 [1]
+    cli           2.0.0      2019-12-09 [1]
+    clipr         0.7.0      2019-07-23 [1]
+    covr        * 3.3.0      2019-08-06 [1]
+    covrpage      0.0.70     2019-12-05 [1]
+    crayon        1.3.4      2017-09-16 [1]
+    crosstalk     1.0.0      2016-12-21 [1]
+    curl          4.3        2019-12-02 [1]
+    desc          1.2.0      2019-12-01 [1]
+ VP details     * 0.2.1      2020-01-11 [?]
+    devtools      2.2.1      2019-09-24 [1]
+    digest        0.6.23     2019-11-23 [1]
+    DT            0.8        2019-08-07 [1]
+    ellipsis      0.3.0      2019-09-20 [1]
+    evaluate      0.14       2019-05-28 [1]
+    fansi         0.4.0      2018-10-05 [1]
+    fastmap       1.0.0      2019-07-28 [1]
+    fs            1.3.1      2019-05-06 [1]
+    git2r         0.26.1     2019-06-29 [1]
+    glue          1.3.1.9000 2020-01-07 [1]
+    highr         0.8        2019-03-20 [1]
+    htmltools     0.4.0      2019-10-04 [1]
+    htmlwidgets   1.5.1      2019-10-08 [1]
+    httpuv        1.5.2      2019-09-11 [1]
+    httr          1.4.1      2019-08-05 [1]
+    jsonlite      1.6        2018-12-07 [1]
+    knitr       * 1.25       2019-09-18 [1]
+    later         1.0.0      2019-10-04 [1]
+    lazyeval      0.2.2      2019-03-15 [1]
+    magrittr    * 1.5        2014-11-22 [1]
+    memoise       1.1.0      2017-04-21 [1]
+    mime          0.7        2019-06-11 [1]
+    packrat       0.5.0      2018-11-14 [1]
+    pillar        1.4.3      2019-12-20 [1]
+    pkgbuild      1.0.6      2019-10-09 [1]
+    pkgconfig     2.0.3      2019-09-22 [1]
+    pkgload       1.0.2      2018-10-29 [1]
+    png           0.1-7      2013-12-03 [1]
+    praise        1.0.0      2015-08-11 [1]
+    prettyunits   1.0.2      2015-07-13 [1]
+    processx      3.4.1      2019-07-18 [1]
+    promises      1.1.0      2019-10-04 [1]
+    ps            1.3.0      2018-12-21 [1]
+    R6            2.4.1      2019-11-12 [1]
+    Rcpp          1.0.3      2019-11-08 [1]
+    rematch2      2.1.0      2019-07-11 [1]
+    remotes       2.1.0      2019-06-24 [1]
+    rex           1.1.2      2017-10-19 [1]
+    rlang         0.4.2      2019-11-23 [1]
+    rmarkdown     2.0        2019-12-12 [1]
+    rprojroot     1.3-2      2018-01-03 [1]
+    rstudioapi    0.10       2019-03-19 [1]
+    sessioninfo   1.1.1      2018-11-05 [1]
+    shiny         1.4.0      2019-10-10 [1]
+    sinew         0.3.9005   2020-01-01 [1]
+    sos           2.0-0      2017-07-03 [1]
+    stringi       1.4.3      2019-03-12 [1]
+    stringr       1.4.0      2019-02-10 [1]
+    testthat    * 2.2.1      2019-07-25 [1]
+    tibble        2.1.3      2019-06-06 [1]
+    usethis       1.5.1.9000 2019-09-01 [1]
+    vcs           0.1.2      2019-08-22 [1]
+    whisker       0.4        2019-08-28 [1]
+    withr         2.1.2      2018-03-15 [1]
+    xfun          0.10       2019-10-01 [1]
+    xml2          1.2.2      2019-08-09 [1]
+    xtable        1.8-4      2019-04-21 [1]
+    yaml          2.2.0      2018-07-25 [1]
  source                                  
+ CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
@@ -213,13 +222,6 @@ sessioninfo::session_info()%>%
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
- CRAN (R 3.6.1)                          
- CRAN (R 3.6.0)                          
- CRAN (R 3.6.0)                          
- CRAN (R 3.6.0)                          
- CRAN (R 3.6.0)                          
- CRAN (R 3.6.0)                          
- CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.1)                          
  CRAN (R 3.6.0)                          
@@ -228,6 +230,20 @@ sessioninfo::session_info()%>%
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.1)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ local                                   
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
@@ -244,6 +260,7 @@ sessioninfo::session_info()%>%
 
 [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
 
+ V ── Loaded and on-disk version mismatch.
  P ── Loaded and on-disk path mismatch.
 ```
 
@@ -280,71 +297,80 @@ sessioninfo::session_info()
  date     2020-01-11                  
 
 ─ Packages ──────────────────────────────────────────────────────────────
- ! package     * version    date       lib
-   assertthat    0.2.1      2019-03-21 [1]
-   backports     1.1.5      2019-10-02 [1]
-   callr         3.3.2      2019-09-22 [1]
-   cli           2.0.0      2019-12-09 [1]
-   clipr         0.7.0      2019-07-23 [1]
-   covr        * 3.3.0      2019-08-06 [1]
-   covrpage      0.0.70     2019-12-05 [1]
-   crayon        1.3.4      2017-09-16 [1]
-   crosstalk     1.0.0      2016-12-21 [1]
-   curl          4.3        2019-12-02 [1]
-   desc          1.2.0      2019-12-01 [1]
- P details     * 0.2.0      2020-01-11 [?]
-   devtools      2.2.1      2019-09-24 [1]
-   digest        0.6.23     2019-11-23 [1]
-   DT            0.8        2019-08-07 [1]
-   ellipsis      0.3.0      2019-09-20 [1]
-   evaluate      0.14       2019-05-28 [1]
-   fansi         0.4.0      2018-10-05 [1]
-   fastmap       1.0.0      2019-07-28 [1]
-   fs            1.3.1      2019-05-06 [1]
-   git2r         0.26.1     2019-06-29 [1]
-   glue          1.3.1.9000 2020-01-07 [1]
-   highr         0.8        2019-03-20 [1]
-   htmltools     0.4.0      2019-10-04 [1]
-   htmlwidgets   1.5.1      2019-10-08 [1]
-   httpuv        1.5.2      2019-09-11 [1]
-   httr          1.4.1      2019-08-05 [1]
-   jsonlite      1.6        2018-12-07 [1]
-   knitr       * 1.25       2019-09-18 [1]
-   later         1.0.0      2019-10-04 [1]
-   lazyeval      0.2.2      2019-03-15 [1]
-   magrittr    * 1.5        2014-11-22 [1]
-   memoise       1.1.0      2017-04-21 [1]
-   mime          0.7        2019-06-11 [1]
-   packrat       0.5.0      2018-11-14 [1]
-   pkgbuild      1.0.6      2019-10-09 [1]
-   pkgload       1.0.2      2018-10-29 [1]
-   png           0.1-7      2013-12-03 [1]
-   prettyunits   1.0.2      2015-07-13 [1]
-   processx      3.4.1      2019-07-18 [1]
-   promises      1.1.0      2019-10-04 [1]
-   ps            1.3.0      2018-12-21 [1]
-   R6            2.4.1      2019-11-12 [1]
-   Rcpp          1.0.3      2019-11-08 [1]
-   remotes       2.1.0      2019-06-24 [1]
-   rex           1.1.2      2017-10-19 [1]
-   rlang         0.4.2      2019-11-23 [1]
-   rmarkdown     2.0        2019-12-12 [1]
-   rprojroot     1.3-2      2018-01-03 [1]
-   rstudioapi    0.10       2019-03-19 [1]
-   sessioninfo   1.1.1      2018-11-05 [1]
-   shiny         1.4.0      2019-10-10 [1]
-   stringi       1.4.3      2019-03-12 [1]
-   stringr       1.4.0      2019-02-10 [1]
-   testthat    * 2.2.1      2019-07-25 [1]
-   usethis       1.5.1.9000 2019-09-01 [1]
-   vcs           0.1.2      2019-08-22 [1]
-   whisker       0.4        2019-08-28 [1]
-   withr         2.1.2      2018-03-15 [1]
-   xfun          0.10       2019-10-01 [1]
-   xml2          1.2.2      2019-08-09 [1]
-   xtable        1.8-4      2019-04-21 [1]
-   yaml          2.2.0      2018-07-25 [1]
+ !  package     * version    date       lib
+    assertthat    0.2.1      2019-03-21 [1]
+    backports     1.1.5      2019-10-02 [1]
+    brew          1.0-6      2011-04-13 [1]
+    callr         3.3.2      2019-09-22 [1]
+    cli           2.0.0      2019-12-09 [1]
+    clipr         0.7.0      2019-07-23 [1]
+    covr        * 3.3.0      2019-08-06 [1]
+    covrpage      0.0.70     2019-12-05 [1]
+    crayon        1.3.4      2017-09-16 [1]
+    crosstalk     1.0.0      2016-12-21 [1]
+    curl          4.3        2019-12-02 [1]
+    desc          1.2.0      2019-12-01 [1]
+ VP details     * 0.2.1      2020-01-11 [?]
+    devtools      2.2.1      2019-09-24 [1]
+    digest        0.6.23     2019-11-23 [1]
+    DT            0.8        2019-08-07 [1]
+    ellipsis      0.3.0      2019-09-20 [1]
+    evaluate      0.14       2019-05-28 [1]
+    fansi         0.4.0      2018-10-05 [1]
+    fastmap       1.0.0      2019-07-28 [1]
+    fs            1.3.1      2019-05-06 [1]
+    git2r         0.26.1     2019-06-29 [1]
+    glue          1.3.1.9000 2020-01-07 [1]
+    highr         0.8        2019-03-20 [1]
+    htmltools     0.4.0      2019-10-04 [1]
+    htmlwidgets   1.5.1      2019-10-08 [1]
+    httpuv        1.5.2      2019-09-11 [1]
+    httr          1.4.1      2019-08-05 [1]
+    jsonlite      1.6        2018-12-07 [1]
+    knitr       * 1.25       2019-09-18 [1]
+    later         1.0.0      2019-10-04 [1]
+    lazyeval      0.2.2      2019-03-15 [1]
+    magrittr    * 1.5        2014-11-22 [1]
+    memoise       1.1.0      2017-04-21 [1]
+    mime          0.7        2019-06-11 [1]
+    packrat       0.5.0      2018-11-14 [1]
+    pillar        1.4.3      2019-12-20 [1]
+    pkgbuild      1.0.6      2019-10-09 [1]
+    pkgconfig     2.0.3      2019-09-22 [1]
+    pkgload       1.0.2      2018-10-29 [1]
+    png           0.1-7      2013-12-03 [1]
+    praise        1.0.0      2015-08-11 [1]
+    prettyunits   1.0.2      2015-07-13 [1]
+    processx      3.4.1      2019-07-18 [1]
+    promises      1.1.0      2019-10-04 [1]
+    ps            1.3.0      2018-12-21 [1]
+    R6            2.4.1      2019-11-12 [1]
+    Rcpp          1.0.3      2019-11-08 [1]
+    rematch2      2.1.0      2019-07-11 [1]
+    remotes       2.1.0      2019-06-24 [1]
+    rex           1.1.2      2017-10-19 [1]
+    rlang         0.4.2      2019-11-23 [1]
+    rmarkdown     2.0        2019-12-12 [1]
+    rprojroot     1.3-2      2018-01-03 [1]
+    rstudioapi    0.10       2019-03-19 [1]
+    sessioninfo   1.1.1      2018-11-05 [1]
+    shiny         1.4.0      2019-10-10 [1]
+    sinew         0.3.9005   2020-01-01 [1]
+    sos           2.0-0      2017-07-03 [1]
+    stringi       1.4.3      2019-03-12 [1]
+    stringr       1.4.0      2019-02-10 [1]
+    testthat    * 2.2.1      2019-07-25 [1]
+    tibble        2.1.3      2019-06-06 [1]
+    usethis       1.5.1.9000 2019-09-01 [1]
+    vcs           0.1.2      2019-08-22 [1]
+    whisker       0.4        2019-08-28 [1]
+    withr         2.1.2      2018-03-15 [1]
+    xfun          0.10       2019-10-01 [1]
+    xml2          1.2.2      2019-08-09 [1]
+    xtable        1.8-4      2019-04-21 [1]
+    yaml          2.2.0      2018-07-25 [1]
  source                                  
+ CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
@@ -380,13 +406,6 @@ sessioninfo::session_info()
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
- CRAN (R 3.6.1)                          
- CRAN (R 3.6.0)                          
- CRAN (R 3.6.0)                          
- CRAN (R 3.6.0)                          
- CRAN (R 3.6.0)                          
- CRAN (R 3.6.0)                          
- CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.1)                          
  CRAN (R 3.6.0)                          
@@ -395,6 +414,20 @@ sessioninfo::session_info()
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.1)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ CRAN (R 3.6.0)                          
+ local                                   
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
  CRAN (R 3.6.0)                          
@@ -411,6 +444,7 @@ sessioninfo::session_info()
 
 [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
 
+ V ── Loaded and on-disk version mismatch.
  P ── Loaded and on-disk path mismatch.
 ```
 
@@ -431,7 +465,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 
 <summary> <span title="Click to Expand"> My plot </span> </summary>
 
-![](https://i.imgur.com/2paZWVk.png)
+![](https://i.imgur.com/kJuOWdW.png)
 
 </details>
 
