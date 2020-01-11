@@ -19,18 +19,17 @@ use_details <- function(desc_path = './DESCRIPTION'){
   if(!file.exists(desc_path))
     stop('invalid path to DESCRIPTION file')
   
-  set_details_suggests(desc_path)
+  set_details_imports(desc_path)
   set_details_macros(desc_path)
   set_details_roxy(desc_path)
   
   invisible()
 }
 
-#' @importFrom desc desc_has_dep desc_set_dep
-set_details_suggests <- function(desc_path, pkg = 'details'){
+#' @importFrom desc desc_set_dep
+set_details_imports <- function(desc_path, pkg = 'details'){
   
-  if(!desc::desc_has_dep(pkg, type = 'Imports', file = desc_path))
-    desc::desc_set_dep(pkg, type = 'Suggests', file = desc_path)
+    desc::desc_set_dep(pkg, type = 'Imports', file = desc_path)
   
 }
 
@@ -91,6 +90,7 @@ set_details_roxy <- function(desc_path){
 }
 
 list2char <- function(x){
-  inner <- paste0(sapply(names(x),function(id) sprintf('%s = %s',id,x[[id]])),collapse = ', ')
+  fields <- sapply(names(x), function(id){ sprintf('%s = %s',id,x[[id]]) })
+  inner <- paste0(fields, collapse = ', ')
   sprintf('list(%s)',inner)
 }

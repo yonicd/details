@@ -3,7 +3,7 @@
 }
 
 #' @importFrom utils getFromNamespace
-#' @importFrom knitr engine_output
+#' @importFrom knitr fig_path engine_output
 #' @importFrom grid grid.raster
 #' @importFrom png readPNG
 eng_detail <- function (options) {
@@ -20,13 +20,13 @@ eng_detail <- function (options) {
   if(!'details.tooltip'%in%names(options))
     options$details.tooltip <- 'Click to Open'
   
-  code <- details::details(eval(parse(text = options$code)),
-                           lang = options$details.lang,
-                           tooltip = options$details.tooltip,
-                           summary = options$details.summary,
-                           open = options$details.open,
-                           imgur = options$details.imgur,
-                           output = 'character')
+  code <- details(eval(parse(text = options$code)),
+                  lang = options$details.lang,
+                  tooltip = options$details.tooltip,
+                  summary = options$details.summary,
+                  open = options$details.open,
+                  imgur = options$details.imgur,
+                  output = 'character')
   
   if(length(attr(code,'file'))>0){
     
