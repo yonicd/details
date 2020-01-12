@@ -49,10 +49,13 @@ You can wrap print methods of R objects in a `details` environment.
 
 ## plots
 
-```{r,eval = httr::status_code(httr::HEAD('imgur.com',httr::timeout(1)))==200L}
+Plots can be rendered and uploaded to [imgur](https://imgur.com) (default) or read in from a local path. In this example we use a local path in order to abuse the host site. 
+
+```{r}
 
 details(
   plot(x=mtcars$mpg,y=mtcars$wt),
-  summary = 'plots')
+  summary = 'plots',
+  imgur = FALSE)
 
 ```

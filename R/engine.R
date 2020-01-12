@@ -4,7 +4,7 @@
 
 #' @importFrom utils getFromNamespace
 #' @importFrom knitr fig_path engine_output
-#' @importFrom grid grid.raster
+#' @importFrom grid grid.raster convertUnit unit
 #' @importFrom png readPNG
 eng_detail <- function (options) {
   
@@ -16,6 +16,20 @@ eng_detail <- function (options) {
   options$details.summary <- options$details.summary %n% NULL
   options$details.open <- options$details.open %n% FALSE
   options$details.imgur <- options$details.imgur %n% FALSE
+  
+  if(!is.null(options$fig.dim)){
+    options$fig.width <- options$fig.dim[1]
+    options$fig.height <- options$fig.dim[2]
+  }
+  
+  if(!is.null(options$fig.width)){
+    options$fig.width <- grid::convertUnit(grid::unit(options$fig.width,units = 'in'),unitTo = 'npc')
+  }
+  
+  if(!is.null(options$fig.height)){
+    options$fig.height <- grid::convertUnit(grid::unit(options$fig.height,units = 'in'),unitTo = 'npc')
+  }
+  
   
   if(!'details.tooltip'%in%names(options))
     options$details.tooltip <- 'Click to Open'
@@ -44,12 +58,13 @@ eng_detail <- function (options) {
       dir.create(dirname(tmp), showWarnings = FALSE, recursive = TRUE)
       file.copy(this,tmp)
     })
-    
+
     code <- gsub(this,wrap_path(tmp),code)
     
     }else{
       
-      grid::grid.raster(png::readPNG(this))
+      img <- png::readPNG(this,info = TRUE)
+      grid::grid.raster(img, width = options$fig.width, height = options$fig.height)
       
     }
     

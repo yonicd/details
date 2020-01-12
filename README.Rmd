@@ -128,7 +128,7 @@ use_details('PATH_TO_DESCRIPTION_FILE')
 
 This will append three elements to the DESCRIPTION file
 
-  - Suggests: details (if not already in Imports)
+  - Imports: details
   - RdMacros: details
   - Roxygen: list(markdown = TRUE)
 

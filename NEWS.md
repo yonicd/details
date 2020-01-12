@@ -1,3 +1,8 @@
+# details 0.2.1
+
+* replace `details::use_details` action to add details to Imports instead of Suggests in DESCRIPTION file
+* add fig.width, fig.height fig.dim chunk option control for interactive details engine use
+
 # details 0.2.0
 
 * add knitr chunk engine to run details in RMarkdown
