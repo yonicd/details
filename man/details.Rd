@@ -6,7 +6,7 @@
 \usage{
 details(object, ..., summary = NULL, tooltip = "Click to Expand",
   open = FALSE, lang = "r", output = c("console", "clipr", "edit",
-  "character"), imgur = TRUE)
+  "character"), imgur = TRUE, comment = NA)
 }
 \arguments{
 \item{object}{object, object to put in details block}
@@ -29,6 +29,8 @@ clipboard or R file editor,
 Default: c('console','clipr','file.edit','character')}
 
 \item{imgur}{logical, upload device outputs to imgur, Default: TRUE}
+
+\item{comment}{character, the prefix to be put before source code output, Default: NA}
 }
 \value{
 character
