@@ -1,5 +1,5 @@
 #' @importFrom utils capture.output
-capture.print <- function(obj,...){
+capture.print <- function(obj,comment = NA,...){
   
   if(details_env$device){
     
@@ -15,6 +15,9 @@ capture.print <- function(obj,...){
     }
         
   }
+  
+  if(!is.na(comment))
+    obj <- paste0(comment,' ',obj)
   
   paste0(obj,collapse = '\n')
 }

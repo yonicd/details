@@ -16,6 +16,7 @@ eng_detail <- function (options) {
   options$details.summary <- options$details.summary %n% NULL
   options$details.open <- options$details.open %n% FALSE
   options$details.imgur <- options$details.imgur %n% FALSE
+  options$details.comment <- options$details.comment %n% NA
   
   if(!is.null(options$fig.dim)){
     options$fig.width <- options$fig.dim[1]
@@ -40,6 +41,7 @@ eng_detail <- function (options) {
                   summary = options$details.summary,
                   open = options$details.open,
                   imgur = options$details.imgur,
+                  comment = options$details.comment,
                   output = 'character')
   
   if(length(attr(code,'file'))>0){
