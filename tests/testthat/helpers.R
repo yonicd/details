@@ -31,7 +31,7 @@ skip_if_no_clipboard <- function() {
 bench_fun <- function(body,lang = 'r',...){
   
   body <- sprintf('\n\n%s\n\n',details:::capture.print(body,...))
-  if(!is.null(lang)){
+  if(!grepl('^none$',lang)){
     body <- sprintf('```%s%s```',lang,body)
   }
   sprintf('<details closed>\n\n%s\n\n</details>\n<br>',body)

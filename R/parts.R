@@ -12,7 +12,12 @@ body_details <- function(lang,text){
     
     text <- sprintf('\n\n%s\n\n',text)
     
-    if(!is.null(lang))
+    if(is.null(lang)){
+      message("NULL is being deprecated for this feature, please use 'none'")
+      lang <- 'none'
+    }
+      
+    if(!grepl('^none$',lang))
       text <- sprintf('```%s%s```',lang,text)
     
   }

@@ -29,20 +29,20 @@ before rendering the \code{roxygen2}:
 
 # With title
 
- "#' \\foldstart{This is an example}
+ "#' \foldstart{This is an example}
  
   #' DOCUMENTATION
  
-  #' \\foldend"
+  #' \foldend"
 
 
 # With no title
 
- "#' \\foldstart{}
+ "#' \foldstart{}
  
   #' DOCUMENTATION
  
-  #' \\foldend"
+  #' \foldend"
  
 }
 \concept{fold}

@@ -39,8 +39,8 @@ testthat::describe('basic',{
     
   it('no lang',{
     testthat::expect_equal(
-      print(details::details(object = 'helpers.R',output = 'character',lang = NULL)),
-      unlist(strsplit(bench_fun(readLines('helpers.R'),lang = NULL),'\\n'))
+      print(details::details(object = 'helpers.R',output = 'character',lang = 'none')),
+      unlist(strsplit(bench_fun(readLines('helpers.R'),lang = 'none'),'\\n'))
     )
   })
   
