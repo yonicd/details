@@ -1,6 +1,6 @@
 #' @title Create HTML DOM Details
 #' 
-#' @description Create HTLM DOM Details block for Markdown documents
+#' @description Create HTML DOM Details block for Markdown documents
 #'  with summary as optional.
 #' 
 #' @param object object, object to put in details block
