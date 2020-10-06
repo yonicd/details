@@ -36,7 +36,7 @@ Default: c('console','clipr','file.edit','character')}
 character
 }
 \description{
-Create HTLM DOM Details block for Markdown documents
+Create HTML DOM Details block for Markdown documents
 with summary as optional.
 }
 \details{
