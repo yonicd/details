@@ -2,7 +2,7 @@
 title: "Basics with sessionInfo"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{sessioninfo}
+  %\VignetteIndexEntry{Basics with sessionInfo}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

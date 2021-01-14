@@ -1,7 +1,7 @@
 Package: details
 Title: Create Details HTML Tag for Markdown and Package
     Documentation
-Version: 0.2.1
+Version: 0.2.2
 Authors@R: 
     person(given = "Jonathan",
            family = "Sidi",
@@ -37,4 +37,4 @@ VignetteBuilder:
 Encoding: UTF-8
 LazyData: false
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1

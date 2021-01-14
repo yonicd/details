@@ -2,7 +2,7 @@
 title: "Customizing Details"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{custom}
+  %\VignetteIndexEntry{Customizing Details}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -92,7 +92,7 @@ details::details(
 '<h1 style="color:blue;">This is a Blue Heading</h1><br>
 <p style="border: 1px solid powderblue;">There is a border around the text</p>',
 summary = 'Raw code example',
-lang = NULL
+lang = 'none'
 )
 
 ```

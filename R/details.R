@@ -23,7 +23,7 @@
 #'   If the object is a file path, it will automatically it's lines will be read 
 #'   in internally.
 #'
-#'   If lang is NULL then the output will not be wrapped in a code block and 
+#'   If lang is 'none' then the output will not be wrapped in a code block and 
 #'   will display the raw output (useful for HTML)
 #'  
 #'   When using details in knitr/rmarkdown documents there is no need to set

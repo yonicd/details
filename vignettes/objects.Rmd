@@ -2,7 +2,7 @@
 title: "Special Details"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{objects}
+  %\VignetteIndexEntry{Special Details}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -24,6 +24,7 @@ You can wrap print methods of R objects in a `details` environment.
   1. [tibble](#tibble)
   1. [list](#list)
   1. [plots](#plots)
+  1. [tables](#tables)
   
 ### data.frame
 
@@ -58,4 +59,16 @@ details(
   summary = 'plots',
   imgur = FALSE)
 
+```
+
+## tables
+
+Tables can be wrapped in a details block by setting the `lang` to 'none'
+
+```{r}
+iris%>%head()%>%knitr::kable()%>%
+  details(
+    summary = 'tables',
+    lang = 'none'
+)
 ```

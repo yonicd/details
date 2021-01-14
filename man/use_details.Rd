@@ -13,7 +13,7 @@ use_details(desc_path = "./DESCRIPTION")
 Call this to import the details Rd macro into your package.
 \itemize{
 \item The RdMacros field of the DESCRIPTION file is updated so you can use the
-\code{\\foldstart{}} and \code{\\foldend{}} macro in your documentation.
+\verb{\\\\foldstart\{\}} and \verb{\\\\foldend\{\}} macro in your documentation.
 }
 
 See the \href{https://yonicd.github.io/details/articles/documentation.html}{Package Documentation} vignette of the details package.
@@ -27,5 +27,5 @@ This will append three elements to the DESCRIPTION file
 }
 }
 \seealso{
-\link[details:details]{details}
+\link[=details]{details}
 }
