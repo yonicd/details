@@ -1,10 +1,10 @@
 build_details <- function(text = '', summary = '', state = 'open', 
-                          lang = 'r', output = 'console',...){
+                          lang = 'r', output = 'console', comment = NA, ...){
   
   structure(
     paste(
     start_details(state,summary),
-    body_details(lang,capture.print(text,...)),
+    body_details(lang,capture.print(text,comment,...)),
     end_details(),
     sep='\n\n'),
     file = details_env$f_png,

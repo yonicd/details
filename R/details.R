@@ -1,6 +1,6 @@
 #' @title Create HTML DOM Details
 #' 
-#' @description Create HTLM DOM Details block for Markdown documents
+#' @description Create HTML DOM Details block for Markdown documents
 #'  with summary as optional.
 #' 
 #' @param object object, object to put in details block
@@ -16,6 +16,7 @@
 #'  clipboard or R file editor, 
 #'  Default: c('console','clipr','file.edit','character')
 #' @param imgur logical, upload device outputs to imgur, Default: TRUE
+#' @param comment character, the prefix to be put before source code output, Default: NA 
 #' @seealso [use_details][details::use_details]
 #' @details 
 #'   To remove summary or tooltip set them to NULL.
@@ -83,7 +84,8 @@ details <- function(object,
                     open    = FALSE, 
                     lang    = 'r',
                     output  = c('console','clipr','edit','character'),
-                    imgur = TRUE
+                    imgur = TRUE,
+                    comment = NA
                     ){
   
   on.exit({
@@ -109,6 +111,7 @@ details <- function(object,
                 state   = build_state(open), 
                 lang    = lang,
                 output  = output,
+                comment = comment,
                 ...)
   
 }
