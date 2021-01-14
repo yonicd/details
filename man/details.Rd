@@ -101,5 +101,5 @@ if(clipr::clipr_available()){
 
 }
 \seealso{
-\link[details:use_details]{use_details}
+\link[=use_details]{use_details}
 }

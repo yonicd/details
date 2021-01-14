@@ -2,7 +2,7 @@
 title: "Special Details"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{objects}
+  %\VignetteIndexEntry{Special Details}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

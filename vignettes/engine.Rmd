@@ -2,7 +2,7 @@
 title: "Knitr Chunk Engine"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Details Knitr Chunk Engine}
+  %\VignetteIndexEntry{Knitr Chunk Engine}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

@@ -27,5 +27,5 @@ This will append three elements to the DESCRIPTION file
 }
 }
 \seealso{
-\link[details:details]{details}
+\link[=details]{details}
 }

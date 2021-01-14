@@ -1,6 +1,5 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
 <!-- badges: start -->
 
 [![CRAN
@@ -62,23 +61,22 @@ remotes::install_github("yonicd/details")
 
 The function `details::details` can handle inputs
 
-  - R object with supported classes:
-      - `character`
-      - `data.frame`
-      - `tibble`
-      - `list`
-      - `device` (eg plots)
-  - File paths will be identified internally and the lines will be read
+-   R object with supported classes:
+    -   `character`
+    -   `data.frame`
+    -   `tibble`
+    -   `list`
+    -   `device` (eg plots)
+-   File paths will be identified internally and the lines will be read
     in automatically.
 
 ### Output
 
 The function `details::details` can output the result to
 
-  - console (default)
-  - clipboard via
-    [clipr](https://github.com/mdlincoln/clipr)
-  - [file.editor](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/file.edit.html)
+-   console (default)
+-   clipboard via [clipr](https://github.com/mdlincoln/clipr)
+-   [file.editor](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/file.edit.html)
     useful when clipr not available
 
 ### Examples
@@ -94,54 +92,51 @@ sessioninfo::session_info()%>%
 ```
 
 <details closed>
-
-<summary> <span title="Click to Expand"> current session info </span>
+<summary>
+<span title="Click to Expand"> current session info </span>
 </summary>
 
 ``` r
-
-─ Session info ──────────────────────────────────────────────────────────
+─ Session info ───────────────────────────────────────────────────────────────
  setting  value                       
- version  R version 3.6.1 (2019-07-05)
- os       macOS Mojave 10.14.5        
+ version  R version 3.6.3 (2020-02-29)
+ os       macOS Catalina 10.15.7      
  system   x86_64, darwin15.6.0        
  ui       X11                         
  language (EN)                        
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2020-01-12                  
+ date     2021-01-13                  
 
-─ Packages ──────────────────────────────────────────────────────────────
- package     * version    date       lib source                         
- assertthat    0.2.1      2019-03-21 [1] CRAN (R 3.6.0)                 
- backports     1.1.5      2019-10-02 [1] CRAN (R 3.6.0)                 
- cli           2.0.0      2019-12-09 [1] CRAN (R 3.6.0)                 
- clipr         0.7.0      2019-07-23 [1] CRAN (R 3.6.0)                 
- crayon        1.3.4      2017-09-16 [1] CRAN (R 3.6.0)                 
- desc          1.2.0      2019-12-01 [1] Github (r-lib/desc@61205f6)    
- details     * 0.2.1      2020-01-12 [1] local                          
- digest        0.6.23     2019-11-23 [1] CRAN (R 3.6.0)                 
- evaluate      0.14       2019-05-28 [1] CRAN (R 3.6.0)                 
- fansi         0.4.0      2018-10-05 [1] CRAN (R 3.6.0)                 
- glue          1.3.1.9000 2020-01-07 [1] Github (tidyverse/glue@b9ffe6c)
- htmltools     0.4.0      2019-10-04 [1] CRAN (R 3.6.0)                 
- httr          1.4.1      2019-08-05 [1] CRAN (R 3.6.0)                 
- knitr         1.25       2019-09-18 [1] CRAN (R 3.6.0)                 
- magrittr      1.5        2014-11-22 [1] CRAN (R 3.6.0)                 
- png           0.1-7      2013-12-03 [1] CRAN (R 3.6.0)                 
- R6            2.4.1      2019-11-12 [1] CRAN (R 3.6.0)                 
- Rcpp          1.0.3      2019-11-08 [1] CRAN (R 3.6.1)                 
- rlang         0.4.2      2019-11-23 [1] CRAN (R 3.6.0)                 
- rmarkdown     2.0        2019-12-12 [1] CRAN (R 3.6.0)                 
- rprojroot     1.3-2      2018-01-03 [1] CRAN (R 3.6.0)                 
- sessioninfo   1.1.1      2018-11-05 [1] CRAN (R 3.6.0)                 
- stringi       1.4.3      2019-03-12 [1] CRAN (R 3.6.0)                 
- stringr       1.4.0      2019-02-10 [1] CRAN (R 3.6.0)                 
- withr         2.1.2      2018-03-15 [1] CRAN (R 3.6.0)                 
- xfun          0.10       2019-10-01 [1] CRAN (R 3.6.0)                 
- xml2          1.2.2      2019-08-09 [1] CRAN (R 3.6.0)                 
- yaml          2.2.0      2018-07-25 [1] CRAN (R 3.6.0)                 
+─ Packages ───────────────────────────────────────────────────────────────────
+ package     * version    date       lib source                          
+ assertthat    0.2.1      2019-03-21 [1] CRAN (R 3.6.0)                  
+ cli           2.2.0      2020-11-20 [1] CRAN (R 3.6.2)                  
+ clipr         0.7.1      2020-10-08 [1] CRAN (R 3.6.2)                  
+ crayon        1.3.4      2017-09-16 [1] CRAN (R 3.6.0)                  
+ desc          1.2.0.9000 2020-09-28 [1] Github (r-lib/desc@c175259)     
+ details     * 0.2.2      2021-01-14 [1] local                           
+ digest        0.6.27     2020-10-24 [1] CRAN (R 3.6.2)                  
+ evaluate      0.14       2019-05-28 [1] CRAN (R 3.6.0)                  
+ fansi         0.4.1      2020-01-08 [1] CRAN (R 3.6.0)                  
+ glue          1.4.2      2020-08-27 [1] CRAN (R 3.6.2)                  
+ htmltools     0.5.0      2020-06-16 [1] CRAN (R 3.6.2)                  
+ httr          1.4.2      2020-07-20 [1] CRAN (R 3.6.2)                  
+ knitr         1.30       2020-09-22 [1] CRAN (R 3.6.2)                  
+ magrittr      2.0.1      2020-11-17 [1] CRAN (R 3.6.2)                  
+ png           0.1-7      2013-12-03 [1] CRAN (R 3.6.0)                  
+ R6            2.5.0      2020-10-28 [1] CRAN (R 3.6.2)                  
+ rlang         0.4.9      2020-11-26 [1] CRAN (R 3.6.2)                  
+ rmarkdown     2.5        2020-10-21 [1] CRAN (R 3.6.3)                  
+ rprojroot     2.0.2      2020-11-25 [1] Github (r-lib/rprojroot@5bafca9)
+ sessioninfo   1.1.1      2018-11-05 [1] CRAN (R 3.6.0)                  
+ stringi       1.5.3      2020-09-09 [1] CRAN (R 3.6.2)                  
+ stringr       1.4.0      2019-02-10 [1] CRAN (R 3.6.0)                  
+ withr         2.3.0      2020-09-22 [1] CRAN (R 3.6.2)                  
+ xfun          0.19       2020-10-30 [1] CRAN (R 3.6.2)                  
+ xml2          1.3.2      2020-04-23 [1] CRAN (R 3.6.2)                  
+ yaml          2.2.1      2020-02-01 [1] CRAN (R 3.6.0)                  
 
 [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
 ```
@@ -160,54 +155,51 @@ sessioninfo::session_info()
 ````
 
 <details closed>
-
-<summary> <span title="Click to Open"> current session info </span>
+<summary>
+<span title="Click to Open"> current session info </span>
 </summary>
 
 ``` r
-
-─ Session info ──────────────────────────────────────────────────────────
+─ Session info ───────────────────────────────────────────────────────────────
  setting  value                       
- version  R version 3.6.1 (2019-07-05)
- os       macOS Mojave 10.14.5        
+ version  R version 3.6.3 (2020-02-29)
+ os       macOS Catalina 10.15.7      
  system   x86_64, darwin15.6.0        
  ui       X11                         
  language (EN)                        
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2020-01-12                  
+ date     2021-01-13                  
 
-─ Packages ──────────────────────────────────────────────────────────────
- package     * version    date       lib source                         
- assertthat    0.2.1      2019-03-21 [1] CRAN (R 3.6.0)                 
- backports     1.1.5      2019-10-02 [1] CRAN (R 3.6.0)                 
- cli           2.0.0      2019-12-09 [1] CRAN (R 3.6.0)                 
- clipr         0.7.0      2019-07-23 [1] CRAN (R 3.6.0)                 
- crayon        1.3.4      2017-09-16 [1] CRAN (R 3.6.0)                 
- desc          1.2.0      2019-12-01 [1] Github (r-lib/desc@61205f6)    
- details     * 0.2.1      2020-01-12 [1] local                          
- digest        0.6.23     2019-11-23 [1] CRAN (R 3.6.0)                 
- evaluate      0.14       2019-05-28 [1] CRAN (R 3.6.0)                 
- fansi         0.4.0      2018-10-05 [1] CRAN (R 3.6.0)                 
- glue          1.3.1.9000 2020-01-07 [1] Github (tidyverse/glue@b9ffe6c)
- htmltools     0.4.0      2019-10-04 [1] CRAN (R 3.6.0)                 
- httr          1.4.1      2019-08-05 [1] CRAN (R 3.6.0)                 
- knitr         1.25       2019-09-18 [1] CRAN (R 3.6.0)                 
- magrittr      1.5        2014-11-22 [1] CRAN (R 3.6.0)                 
- png           0.1-7      2013-12-03 [1] CRAN (R 3.6.0)                 
- R6            2.4.1      2019-11-12 [1] CRAN (R 3.6.0)                 
- Rcpp          1.0.3      2019-11-08 [1] CRAN (R 3.6.1)                 
- rlang         0.4.2      2019-11-23 [1] CRAN (R 3.6.0)                 
- rmarkdown     2.0        2019-12-12 [1] CRAN (R 3.6.0)                 
- rprojroot     1.3-2      2018-01-03 [1] CRAN (R 3.6.0)                 
- sessioninfo   1.1.1      2018-11-05 [1] CRAN (R 3.6.0)                 
- stringi       1.4.3      2019-03-12 [1] CRAN (R 3.6.0)                 
- stringr       1.4.0      2019-02-10 [1] CRAN (R 3.6.0)                 
- withr         2.1.2      2018-03-15 [1] CRAN (R 3.6.0)                 
- xfun          0.10       2019-10-01 [1] CRAN (R 3.6.0)                 
- xml2          1.2.2      2019-08-09 [1] CRAN (R 3.6.0)                 
- yaml          2.2.0      2018-07-25 [1] CRAN (R 3.6.0)                 
+─ Packages ───────────────────────────────────────────────────────────────────
+ package     * version    date       lib source                          
+ assertthat    0.2.1      2019-03-21 [1] CRAN (R 3.6.0)                  
+ cli           2.2.0      2020-11-20 [1] CRAN (R 3.6.2)                  
+ clipr         0.7.1      2020-10-08 [1] CRAN (R 3.6.2)                  
+ crayon        1.3.4      2017-09-16 [1] CRAN (R 3.6.0)                  
+ desc          1.2.0.9000 2020-09-28 [1] Github (r-lib/desc@c175259)     
+ details     * 0.2.2      2021-01-14 [1] local                           
+ digest        0.6.27     2020-10-24 [1] CRAN (R 3.6.2)                  
+ evaluate      0.14       2019-05-28 [1] CRAN (R 3.6.0)                  
+ fansi         0.4.1      2020-01-08 [1] CRAN (R 3.6.0)                  
+ glue          1.4.2      2020-08-27 [1] CRAN (R 3.6.2)                  
+ htmltools     0.5.0      2020-06-16 [1] CRAN (R 3.6.2)                  
+ httr          1.4.2      2020-07-20 [1] CRAN (R 3.6.2)                  
+ knitr         1.30       2020-09-22 [1] CRAN (R 3.6.2)                  
+ magrittr      2.0.1      2020-11-17 [1] CRAN (R 3.6.2)                  
+ png           0.1-7      2013-12-03 [1] CRAN (R 3.6.0)                  
+ R6            2.5.0      2020-10-28 [1] CRAN (R 3.6.2)                  
+ rlang         0.4.9      2020-11-26 [1] CRAN (R 3.6.2)                  
+ rmarkdown     2.5        2020-10-21 [1] CRAN (R 3.6.3)                  
+ rprojroot     2.0.2      2020-11-25 [1] Github (r-lib/rprojroot@5bafca9)
+ sessioninfo   1.1.1      2018-11-05 [1] CRAN (R 3.6.0)                  
+ stringi       1.5.3      2020-09-09 [1] CRAN (R 3.6.2)                  
+ stringr       1.4.0      2019-02-10 [1] CRAN (R 3.6.0)                  
+ withr         2.3.0      2020-09-22 [1] CRAN (R 3.6.2)                  
+ xfun          0.19       2020-10-30 [1] CRAN (R 3.6.2)                  
+ xml2          1.3.2      2020-04-23 [1] CRAN (R 3.6.2)                  
+ yaml          2.2.1      2020-02-01 [1] CRAN (R 3.6.0)                  
 
 [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
 ```
@@ -226,10 +218,11 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 ```
 
 <details closed>
+<summary>
+<span title="Click to Expand"> My plot </span>
+</summary>
 
-<summary> <span title="Click to Expand"> My plot </span> </summary>
-
-![](https://i.imgur.com/QUmWvK3.png)
+![](https://i.imgur.com/zAdu7zb.png)
 
 </details>
 
@@ -256,20 +249,20 @@ use_details('PATH_TO_DESCRIPTION_FILE')
 
 This will append three elements to the DESCRIPTION file
 
-  - Imports: details
-  - RdMacros: details
-  - Roxygen: list(markdown = TRUE)
+-   Imports: details
+-   RdMacros: details
+-   Roxygen: list(markdown = TRUE)
 
 ### Usage
 
 You can use this feature by wrapping documentation with the macros
 
     \foldstart{[SUMMARY TEXT]}
-    
+
     #' DOCUMENTATION
     #' ...
     #' DOCUMENTATION
-    
+
     \foldend
 
 The `SUMMARY_TEXT` is optional, where the folded block will have a
@@ -289,12 +282,12 @@ These folded blocks can be inserted anywhere in the documentation, eg
 More information can be found in the
 [articles](https://yonicd.github.io/details/) of the package site.
 
-  - Creating a sessioninfo to paste into Github, Stackoverflow or
+-   Creating a sessioninfo to paste into Github, Stackoverflow or
     Community Sites.
-  - Customizing the details output
-  - What R objects details can handle
-  - Using the details knitr chunk engine
-  - Using details in Roxygen2
+-   Customizing the details output
+-   What R objects details can handle
+-   Using the details knitr chunk engine
+-   Using details in Roxygen2
 
 ## Code of Conduct
 
