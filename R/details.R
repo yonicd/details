@@ -83,7 +83,7 @@ details <- function(object,
                     tooltip = 'Click to Expand', 
                     open    = FALSE, 
                     lang    = 'r',
-                    output  = c('console','clipr','edit','character'),
+                    output  = c('console','clipr','edit','character','html'),
                     imgur = TRUE,
                     comment = NA
                     ){
@@ -101,10 +101,14 @@ details <- function(object,
   
   object <- device_check(object,env = details_env)
   
-  output <- match.arg(output,c('console','clipr','edit','character'))
+  output <- match.arg(output,c('console','clipr','edit','character','html'))
   
   if(!details_env$imgur)
     output <- 'image'
+  
+  if(output=='html'){
+    lang <- 'none'
+  }
   
   build_details(text    = read_text(object), 
                 summary = build_summary(summary,tooltip), 

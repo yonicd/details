@@ -11,7 +11,7 @@ details(
   tooltip = "Click to Expand",
   open = FALSE,
   lang = "r",
-  output = c("console", "clipr", "edit", "character"),
+  output = c("console", "clipr", "edit", "character", "html"),
   imgur = TRUE,
   comment = NA
 )

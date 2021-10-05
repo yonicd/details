@@ -19,6 +19,7 @@ Imports:
     desc,
     grid,
     httr,
+    htmltools,
     knitr,
     magrittr,
     png,
