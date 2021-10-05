@@ -60,7 +60,7 @@ knit_print.details_character <- function(x,...){
 }
 
 #' @export
-#' @importFrom knitr knit_print fig_path
+#' @importFrom knitr knit_print fig_path sew
 #' @importFrom utils getFromNamespace
 knit_print.details_image <- function (x, ...){
 
@@ -71,18 +71,18 @@ if (!length(attr(x,'file')))
 
   this <- attr(x,'file')
   
-  wrap_path <- utils::getFromNamespace('wrap.knit_image_paths','knitr')
   plot_counter <- utils::getFromNamespace("plot_counter", "knitr")
   in_base_dir <- utils::getFromNamespace("in_base_dir", "knitr")
   
   tmp <- knitr::fig_path('png', number = plot_counter())
+  tmp <- structure(tmp,class = c('knit_image_paths',class(tmp)))
   
   in_base_dir({
     dir.create(dirname(tmp), showWarnings = FALSE, recursive = TRUE)
     file.copy(this,tmp)
   })
   
-  x <- gsub(this,wrap_path(tmp),x)
+  x <- gsub(this,knitr::sew(tmp),x)
   
   knitr::asis_output(x)
   
