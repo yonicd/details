@@ -3,7 +3,7 @@
 }
 
 #' @importFrom utils getFromNamespace
-#' @importFrom knitr fig_path engine_output
+#' @importFrom knitr fig_path engine_output sew
 #' @importFrom grid grid.raster convertUnit unit
 #' @importFrom png readPNG
 eng_detail <- function (options) {
@@ -48,11 +48,11 @@ eng_detail <- function (options) {
     
     this <- attr(code,'file')
     
-    wrap_path <- utils::getFromNamespace('wrap.knit_image_paths','knitr')
     plot_counter <- utils::getFromNamespace("plot_counter", "knitr")
     in_base_dir <- utils::getFromNamespace("in_base_dir", "knitr")
     
     tmp <- knitr::fig_path('png', number = plot_counter())
+    tmp <- structure(tmp,class = c('knit_image_paths',class(tmp)))
     
     if(!grepl('^-',tmp)){
       
@@ -61,7 +61,7 @@ eng_detail <- function (options) {
       file.copy(this,tmp)
     })
 
-    code <- gsub(this,wrap_path(tmp),code)
+    code <- gsub(this,knitr::sew(tmp),code)
     
     }else{
       
