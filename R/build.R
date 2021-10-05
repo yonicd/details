@@ -1,7 +1,8 @@
+#' @importFrom htmltools HTML
 build_details <- function(text = '', summary = '', state = 'open', 
                           lang = 'r', output = 'console', comment = NA, ...){
   
-  structure(
+  ret <- structure(
     paste(
     start_details(state,summary),
     body_details(lang,capture.print(text,comment,...)),
@@ -11,6 +12,11 @@ build_details <- function(text = '', summary = '', state = 'open',
     class = sprintf('details_%s',output)
   )
   
+  if(output=='html'){
+    ret <- htmltools::HTML(ret)
+  }
+    
+  ret
 }
 
 build_tooltip <- function(txt = '',tooltip = NULL){

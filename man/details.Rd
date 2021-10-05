@@ -4,9 +4,17 @@
 \alias{details}
 \title{Create HTML DOM Details}
 \usage{
-details(object, ..., summary = NULL, tooltip = "Click to Expand",
-  open = FALSE, lang = "r", output = c("console", "clipr", "edit",
-  "character"), imgur = TRUE, comment = NA)
+details(
+  object,
+  ...,
+  summary = NULL,
+  tooltip = "Click to Expand",
+  open = FALSE,
+  lang = "r",
+  output = c("console", "clipr", "edit", "character", "html"),
+  imgur = TRUE,
+  comment = NA
+)
 }
 \arguments{
 \item{object}{object, object to put in details block}
@@ -44,7 +52,7 @@ To remove summary or tooltip set them to NULL.
 If the object is a file path, it will automatically it's lines will be read
 in internally.
 
-If lang is NULL then the output will not be wrapped in a code block and
+If lang is 'none' then the output will not be wrapped in a code block and
 will display the raw output (useful for HTML)
 
 When using details in knitr/rmarkdown documents there is no need to set
@@ -96,5 +104,5 @@ if(clipr::clipr_available()){
 
 }
 \seealso{
-\link[details:use_details]{use_details}
+\link[=use_details]{use_details}
 }
