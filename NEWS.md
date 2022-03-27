@@ -1,3 +1,6 @@
+# details 0.3.0
+* Replace knitr::wrap with knitr::sew
+
 # details 0.2.1
 
 * replace `details::use_details` action to add details to Imports instead of Suggests in DESCRIPTION file
