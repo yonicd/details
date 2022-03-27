@@ -12,7 +12,7 @@ status](https://github.com/yonicd/details/workflows/R-mac/badge.svg)](https://gi
 [![R-linux build
 status](https://github.com/yonicd/details/workflows/R-linux/badge.svg)](https://github.com/yonicd/details)
 [![Codecov test
-coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/details?branch=master)
+coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://app.codecov.io/gh/yonicd/details?branch=master)
 [![Covrpage
 Summary](https://img.shields.io/badge/covrpage-Last_Build_2021_01_13-yellowgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
@@ -97,77 +97,47 @@ sessioninfo::session_info()%>%
 </summary>
 
 ``` r
-─ Session info ────────────────────────────────────────────────────────────
+─ Session info ───────────────────────────────────────────────────────────────
  setting  value                       
- version  R version 3.6.3 (2020-02-29)
- os       macOS Catalina 10.15.7      
- system   x86_64, darwin15.6.0        
- ui       RStudio                     
+ version  R version 4.1.0 (2021-05-18)
+ os       macOS Big Sur 10.16         
+ system   x86_64, darwin17.0          
+ ui       X11                         
  language (EN)                        
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2021-01-13                  
+ date     2022-03-27                  
 
-─ Packages ────────────────────────────────────────────────────────────────
- package     * version    date       lib source                          
- assertthat    0.2.1      2019-03-21 [1] CRAN (R 3.6.0)                  
- callr         3.5.1      2020-10-13 [1] CRAN (R 3.6.2)                  
- cli           2.2.0      2020-11-20 [1] CRAN (R 3.6.2)                  
- clipr         0.7.1      2020-10-08 [1] CRAN (R 3.6.2)                  
- covr        * 3.5.0      2020-03-06 [1] CRAN (R 3.6.0)                  
- covrpage      0.1        2020-12-12 [1] local                           
- crayon        1.3.4      2017-09-16 [1] CRAN (R 3.6.0)                  
- curl          4.3        2019-12-02 [1] CRAN (R 3.6.0)                  
- desc          1.2.0.9000 2020-09-28 [1] Github (r-lib/desc@c175259)     
- details     * 0.2.2      2021-01-14 [1] local                           
- diffobj       0.3.2      2020-10-05 [1] CRAN (R 3.6.2)                  
- digest        0.6.27     2020-10-24 [1] CRAN (R 3.6.2)                  
- ellipsis      0.3.1      2020-05-15 [1] CRAN (R 3.6.2)                  
- evaluate      0.14       2019-05-28 [1] CRAN (R 3.6.0)                  
- fansi         0.4.1      2020-01-08 [1] CRAN (R 3.6.0)                  
- fs            1.5.0      2020-07-31 [1] CRAN (R 3.6.2)                  
- git2r         0.27.1     2020-05-03 [1] CRAN (R 3.6.2)                  
- glue          1.4.2      2020-08-27 [1] CRAN (R 3.6.2)                  
- highr         0.8        2019-03-20 [1] CRAN (R 3.6.0)                  
- htmltools     0.5.0      2020-06-16 [1] CRAN (R 3.6.2)                  
- httr          1.4.2      2020-07-20 [1] CRAN (R 3.6.2)                  
- knitr       * 1.30       2020-09-22 [1] CRAN (R 3.6.2)                  
- lazyeval      0.2.2      2019-03-15 [1] CRAN (R 3.6.0)                  
- lifecycle     0.2.0      2020-03-06 [1] CRAN (R 3.6.0)                  
- magrittr    * 2.0.1      2020-11-17 [1] CRAN (R 3.6.2)                  
- MASS          7.3-51.5   2019-12-20 [1] CRAN (R 3.6.3)                  
- memoise       1.1.0      2017-04-21 [1] CRAN (R 3.6.0)                  
- pillar        1.4.7      2020-11-20 [1] CRAN (R 3.6.2)                  
- pkgconfig     2.0.3      2019-09-22 [1] CRAN (R 3.6.0)                  
- pkgdown       1.4.1      2019-09-15 [1] CRAN (R 3.6.0)                  
- png           0.1-7      2013-12-03 [1] CRAN (R 3.6.0)                  
- processx      3.4.5      2020-11-30 [1] CRAN (R 3.6.2)                  
- ps            1.5.0      2020-12-05 [1] CRAN (R 3.6.2)                  
- purrr         0.3.4      2020-04-17 [1] CRAN (R 3.6.2)                  
- R6            2.5.0      2020-10-28 [1] CRAN (R 3.6.2)                  
- rematch2      2.1.2      2020-05-01 [1] CRAN (R 3.6.2)                  
- remotes       2.2.0      2020-07-21 [1] CRAN (R 3.6.2)                  
- rex           1.1.2      2017-10-19 [1] CRAN (R 3.6.0)                  
- rlang         0.4.9      2020-11-26 [1] CRAN (R 3.6.2)                  
- rmarkdown     2.5        2020-10-21 [1] CRAN (R 3.6.3)                  
- rprojroot     2.0.2      2020-11-25 [1] Github (r-lib/rprojroot@5bafca9)
- rsconnect     0.8.16     2019-12-13 [1] CRAN (R 3.6.2)                  
- rstudioapi    0.13       2020-11-12 [1] CRAN (R 3.6.2)                  
- sessioninfo   1.1.1      2018-11-05 [1] CRAN (R 3.6.0)                  
- stringi       1.5.3      2020-09-09 [1] CRAN (R 3.6.2)                  
- stringr       1.4.0      2019-02-10 [1] CRAN (R 3.6.0)                  
- testthat    * 3.0.0      2020-10-31 [1] CRAN (R 3.6.2)                  
- tibble        3.0.4      2020-10-12 [1] CRAN (R 3.6.2)                  
- vctrs         0.3.5      2020-11-17 [1] CRAN (R 3.6.2)                  
- waldo         0.2.3      2020-11-09 [1] CRAN (R 3.6.2)                  
- whisker       0.4        2019-08-28 [1] CRAN (R 3.6.1)                  
- withr         2.3.0      2020-09-22 [1] CRAN (R 3.6.2)                  
- xfun          0.19       2020-10-30 [1] CRAN (R 3.6.2)                  
- xml2          1.3.2      2020-04-23 [1] CRAN (R 3.6.2)                  
- yaml          2.2.1      2020-02-01 [1] CRAN (R 3.6.0)                  
+─ Packages ───────────────────────────────────────────────────────────────────
+ package     * version date       lib source            
+ cli           3.2.0   2022-02-14 [1] standard (@3.2.0) 
+ clipr         0.7.1   2020-10-08 [1] standard (@0.7.1) 
+ desc          1.4.1   2022-03-06 [1] standard (@1.4.1) 
+ details     * 0.2.1   2020-01-12 [1] standard (@0.2.1) 
+ digest        0.6.27  2020-10-24 [1] standard (@0.6.27)
+ evaluate      0.14    2019-05-28 [1] standard (@0.14)  
+ fastmap       1.1.0   2021-01-25 [1] standard (@1.1.0) 
+ htmltools     0.5.2   2021-08-25 [1] standard (@0.5.2) 
+ httr          1.4.2   2020-07-20 [1] standard (@1.4.2) 
+ knitr         1.37    2021-12-16 [1] standard (@1.37)  
+ magrittr      2.0.1   2020-11-17 [1] standard (@2.0.1) 
+ png           0.1-7   2013-12-03 [1] standard (@0.1-7) 
+ R6            2.5.0   2020-10-28 [1] standard (@2.5.0) 
+ rlang         0.4.11  2021-04-30 [1] standard (@0.4.11)
+ rmarkdown     2.13    2022-03-10 [1] standard (@2.13)  
+ rprojroot     2.0.2   2020-11-15 [1] standard (@2.0.2) 
+ rstudioapi    0.13    2020-11-12 [1] standard (@0.13)  
+ sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 4.1.0)    
+ stringi       1.7.6   2021-11-29 [1] standard (@1.7.6) 
+ stringr       1.4.0   2019-02-10 [1] standard (@1.4.0) 
+ withr         2.5.0   2022-03-03 [1] standard (@2.5.0) 
+ xfun          0.30    2022-03-02 [1] standard (@0.30)  
+ xml2          1.3.2   2020-04-23 [1] standard (@1.3.2) 
+ yaml          2.3.5   2022-02-21 [1] standard (@2.3.5) 
 
-[1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
+[1] /Users/yonis/Library/R/x86_64/4.1/library
+[2] /Library/Frameworks/R.framework/Versions/4.1/Resources/library
 ```
 
 </details>
@@ -189,77 +159,47 @@ sessioninfo::session_info()
 </summary>
 
 ``` r
-─ Session info ────────────────────────────────────────────────────────────
+─ Session info ───────────────────────────────────────────────────────────────
  setting  value                       
- version  R version 3.6.3 (2020-02-29)
- os       macOS Catalina 10.15.7      
- system   x86_64, darwin15.6.0        
- ui       RStudio                     
+ version  R version 4.1.0 (2021-05-18)
+ os       macOS Big Sur 10.16         
+ system   x86_64, darwin17.0          
+ ui       X11                         
  language (EN)                        
  collate  en_US.UTF-8                 
  ctype    en_US.UTF-8                 
  tz       America/New_York            
- date     2021-01-13                  
+ date     2022-03-27                  
 
-─ Packages ────────────────────────────────────────────────────────────────
- package     * version    date       lib source                          
- assertthat    0.2.1      2019-03-21 [1] CRAN (R 3.6.0)                  
- callr         3.5.1      2020-10-13 [1] CRAN (R 3.6.2)                  
- cli           2.2.0      2020-11-20 [1] CRAN (R 3.6.2)                  
- clipr         0.7.1      2020-10-08 [1] CRAN (R 3.6.2)                  
- covr        * 3.5.0      2020-03-06 [1] CRAN (R 3.6.0)                  
- covrpage      0.1        2020-12-12 [1] local                           
- crayon        1.3.4      2017-09-16 [1] CRAN (R 3.6.0)                  
- curl          4.3        2019-12-02 [1] CRAN (R 3.6.0)                  
- desc          1.2.0.9000 2020-09-28 [1] Github (r-lib/desc@c175259)     
- details     * 0.2.2      2021-01-14 [1] local                           
- diffobj       0.3.2      2020-10-05 [1] CRAN (R 3.6.2)                  
- digest        0.6.27     2020-10-24 [1] CRAN (R 3.6.2)                  
- ellipsis      0.3.1      2020-05-15 [1] CRAN (R 3.6.2)                  
- evaluate      0.14       2019-05-28 [1] CRAN (R 3.6.0)                  
- fansi         0.4.1      2020-01-08 [1] CRAN (R 3.6.0)                  
- fs            1.5.0      2020-07-31 [1] CRAN (R 3.6.2)                  
- git2r         0.27.1     2020-05-03 [1] CRAN (R 3.6.2)                  
- glue          1.4.2      2020-08-27 [1] CRAN (R 3.6.2)                  
- highr         0.8        2019-03-20 [1] CRAN (R 3.6.0)                  
- htmltools     0.5.0      2020-06-16 [1] CRAN (R 3.6.2)                  
- httr          1.4.2      2020-07-20 [1] CRAN (R 3.6.2)                  
- knitr       * 1.30       2020-09-22 [1] CRAN (R 3.6.2)                  
- lazyeval      0.2.2      2019-03-15 [1] CRAN (R 3.6.0)                  
- lifecycle     0.2.0      2020-03-06 [1] CRAN (R 3.6.0)                  
- magrittr    * 2.0.1      2020-11-17 [1] CRAN (R 3.6.2)                  
- MASS          7.3-51.5   2019-12-20 [1] CRAN (R 3.6.3)                  
- memoise       1.1.0      2017-04-21 [1] CRAN (R 3.6.0)                  
- pillar        1.4.7      2020-11-20 [1] CRAN (R 3.6.2)                  
- pkgconfig     2.0.3      2019-09-22 [1] CRAN (R 3.6.0)                  
- pkgdown       1.4.1      2019-09-15 [1] CRAN (R 3.6.0)                  
- png           0.1-7      2013-12-03 [1] CRAN (R 3.6.0)                  
- processx      3.4.5      2020-11-30 [1] CRAN (R 3.6.2)                  
- ps            1.5.0      2020-12-05 [1] CRAN (R 3.6.2)                  
- purrr         0.3.4      2020-04-17 [1] CRAN (R 3.6.2)                  
- R6            2.5.0      2020-10-28 [1] CRAN (R 3.6.2)                  
- rematch2      2.1.2      2020-05-01 [1] CRAN (R 3.6.2)                  
- remotes       2.2.0      2020-07-21 [1] CRAN (R 3.6.2)                  
- rex           1.1.2      2017-10-19 [1] CRAN (R 3.6.0)                  
- rlang         0.4.9      2020-11-26 [1] CRAN (R 3.6.2)                  
- rmarkdown     2.5        2020-10-21 [1] CRAN (R 3.6.3)                  
- rprojroot     2.0.2      2020-11-25 [1] Github (r-lib/rprojroot@5bafca9)
- rsconnect     0.8.16     2019-12-13 [1] CRAN (R 3.6.2)                  
- rstudioapi    0.13       2020-11-12 [1] CRAN (R 3.6.2)                  
- sessioninfo   1.1.1      2018-11-05 [1] CRAN (R 3.6.0)                  
- stringi       1.5.3      2020-09-09 [1] CRAN (R 3.6.2)                  
- stringr       1.4.0      2019-02-10 [1] CRAN (R 3.6.0)                  
- testthat    * 3.0.0      2020-10-31 [1] CRAN (R 3.6.2)                  
- tibble        3.0.4      2020-10-12 [1] CRAN (R 3.6.2)                  
- vctrs         0.3.5      2020-11-17 [1] CRAN (R 3.6.2)                  
- waldo         0.2.3      2020-11-09 [1] CRAN (R 3.6.2)                  
- whisker       0.4        2019-08-28 [1] CRAN (R 3.6.1)                  
- withr         2.3.0      2020-09-22 [1] CRAN (R 3.6.2)                  
- xfun          0.19       2020-10-30 [1] CRAN (R 3.6.2)                  
- xml2          1.3.2      2020-04-23 [1] CRAN (R 3.6.2)                  
- yaml          2.2.1      2020-02-01 [1] CRAN (R 3.6.0)                  
+─ Packages ───────────────────────────────────────────────────────────────────
+ package     * version date       lib source            
+ cli           3.2.0   2022-02-14 [1] standard (@3.2.0) 
+ clipr         0.7.1   2020-10-08 [1] standard (@0.7.1) 
+ desc          1.4.1   2022-03-06 [1] standard (@1.4.1) 
+ details     * 0.2.1   2020-01-12 [1] standard (@0.2.1) 
+ digest        0.6.27  2020-10-24 [1] standard (@0.6.27)
+ evaluate      0.14    2019-05-28 [1] standard (@0.14)  
+ fastmap       1.1.0   2021-01-25 [1] standard (@1.1.0) 
+ htmltools     0.5.2   2021-08-25 [1] standard (@0.5.2) 
+ httr          1.4.2   2020-07-20 [1] standard (@1.4.2) 
+ knitr         1.37    2021-12-16 [1] standard (@1.37)  
+ magrittr      2.0.1   2020-11-17 [1] standard (@2.0.1) 
+ png           0.1-7   2013-12-03 [1] standard (@0.1-7) 
+ R6            2.5.0   2020-10-28 [1] standard (@2.5.0) 
+ rlang         0.4.11  2021-04-30 [1] standard (@0.4.11)
+ rmarkdown     2.13    2022-03-10 [1] standard (@2.13)  
+ rprojroot     2.0.2   2020-11-15 [1] standard (@2.0.2) 
+ rstudioapi    0.13    2020-11-12 [1] standard (@0.13)  
+ sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 4.1.0)    
+ stringi       1.7.6   2021-11-29 [1] standard (@1.7.6) 
+ stringr       1.4.0   2019-02-10 [1] standard (@1.4.0) 
+ withr         2.5.0   2022-03-03 [1] standard (@2.5.0) 
+ xfun          0.30    2022-03-02 [1] standard (@0.30)  
+ xml2          1.3.2   2020-04-23 [1] standard (@1.3.2) 
+ yaml          2.3.5   2022-02-21 [1] standard (@2.3.5) 
 
-[1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
+[1] /Users/yonis/Library/R/x86_64/4.1/library
+[2] /Library/Frameworks/R.framework/Versions/4.1/Resources/library
 ```
 
 </details>
@@ -280,7 +220,7 @@ details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
 <span title="Click to Expand"> My plot </span>
 </summary>
 
-![](https://i.imgur.com/Zjkngkz.png)
+![](https://i.imgur.com/qt4F1SS.png)
 
 </details>
 

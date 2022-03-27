@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![R-win build status](https://github.com/yonicd/details/workflows/R-win/badge.svg)](https://github.com/yonicd/details)
 [![R-mac build status](https://github.com/yonicd/details/workflows/R-mac/badge.svg)](https://github.com/yonicd/details)
 [![R-linux build status](https://github.com/yonicd/details/workflows/R-linux/badge.svg)](https://github.com/yonicd/details)
-[![Codecov test coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://codecov.io/gh/yonicd/details?branch=master)
+[![Codecov test coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://app.codecov.io/gh/yonicd/details?branch=master)
 [![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2021_01_13-yellowgreen.svg)](http://tinyurl.com/yyodcwc7)
 <!-- badges: end -->
 
