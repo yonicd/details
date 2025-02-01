@@ -76,7 +76,7 @@ environments.
 \donttest{
  details(
    plot(x = mtcars$mpg, y = mtcars$wt),
-   summary = 'Plots')
+   summary = 'Plots', imgur = interactive())
 }
 
 #output options

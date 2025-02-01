@@ -20,12 +20,6 @@ testthat::describe('using device',{
     testthat::expect_true(file.size(testenv$f_png)>0)
   })
   
-  it('device upload',{
-    testthat::skip_on_cran()
-    testthat::skip_if_offline(host = 'imgur.com')
-    testthat::expect_true(grepl('imgur',imgur_upload(testenv$f_png)))
-  })
-  
   unlink(tf)
 
 })

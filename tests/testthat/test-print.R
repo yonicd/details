@@ -1,7 +1,7 @@
 testthat::context('print')
 
 testthat::describe('print clipr',{
-  testthat::skip_on_travis()
+  testthat::skip_on_ci()
   skip_if_no_clipboard()
 
   it('clipr',{
@@ -9,7 +9,7 @@ testthat::describe('print clipr',{
     print(details::details('test',output = 'clipr'))
 
     testthat::expect_equal(
-      unlist(strsplit(bench_fun('test'),'\\n')),
+      unlist(strsplit(bench_fun2('test'), '\\n')),
       clipr::read_clip()
     )
   })

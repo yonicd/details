@@ -29,14 +29,14 @@ You can customize the details output:
 ### Default
 
 ```{r}
-  R.version %>%
+  R.version |>
   details::details()
 ```
 
 ### Title
 
 ```{r}
-R.version.string %>%
+R.version.string |>
   details::details(
     summary = 'R Version'
   )
@@ -45,7 +45,7 @@ R.version.string %>%
 Manipulating the title style
 
 ```{r}
-R.version.string %>%
+R.version.string |>
   details::details(
     summary = '<font color="red"> R Version </font>'
   )
@@ -54,7 +54,7 @@ R.version.string %>%
 ### Open
 
 ```{r}
-R.version.string %>%
+R.version.string |>
   details::details(
     summary = 'Open by default',
     open = TRUE
@@ -64,7 +64,7 @@ R.version.string %>%
 #### Tooltip
 
 ```{r}
-R.version.string %>%
+R.version.string |>
   details::details(
     summary = 'Use the current date as the tooltip',
     tooltip = Sys.Date()
@@ -77,7 +77,7 @@ R.version.string %>%
 
 readLines(
   'https://raw.githubusercontent.com/metrumresearchgroup/covrpage/master/_pkgdown.yml'
-  )%>%
+  )|>
   details::details(
     summary = 'yaml example',
     lang = 'yml'

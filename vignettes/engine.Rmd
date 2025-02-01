@@ -157,6 +157,8 @@ We can print out the contents of a file by putting the path in the chunk and con
 
 ## Figures
 
+Message: This feature has been deprecated in Win OS.
+
 
 ````markdown
 `r ''````{details}

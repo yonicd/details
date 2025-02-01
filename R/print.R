@@ -70,19 +70,26 @@ if (!length(attr(x,'file')))
   return(invisible())
 
   this <- attr(x,'file')
-  
+  this <- normalizePath(this, mustWork = FALSE)
+
   plot_counter <- utils::getFromNamespace("plot_counter", "knitr")
   in_base_dir <- utils::getFromNamespace("in_base_dir", "knitr")
   
-  tmp <- knitr::fig_path('png', number = plot_counter())
+  tmp <- normalizePath(knitr::fig_path('png', number = plot_counter()), mustWork = FALSE)
   tmp <- structure(tmp,class = c('knit_image_paths',class(tmp)))
   
   in_base_dir({
     dir.create(dirname(tmp), showWarnings = FALSE, recursive = TRUE)
     file.copy(this,tmp)
   })
+
+  if(xfun::is_windows()){
+    message('details knitr plots in winos disabled')
+    x <- knitr::sew(tmp)
+  }else{
+    x <- gsub(this,knitr::sew(tmp),x)  
+  }
   
-  x <- gsub(this,knitr::sew(tmp),x)
   
   knitr::asis_output(x)
   

@@ -24,7 +24,7 @@ One the most basic and popular uses for `details` is to paste the sessioninfo at
 
 ```{r}
 
-sessioninfo::session_info()%>%
+sessioninfo::session_info()|>
   details::details(
     summary = 'Current session info',
     open    = TRUE

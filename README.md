@@ -14,7 +14,7 @@ status](https://github.com/yonicd/details/workflows/R-linux/badge.svg)](https://
 [![Codecov test
 coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://app.codecov.io/gh/yonicd/details?branch=master)
 [![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2021_01_13-yellowgreen.svg)](http://tinyurl.com/yyodcwc7)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2021_01_13-yellowgreen.svg)](https://github.com/yonicd/details/blob/master/tests/README.md)
 <!-- badges: end -->
 
 # details <img src="man/figures/logo.png" align="right" class="logo" style="height:150px;"/>
@@ -87,7 +87,7 @@ the bottom of a GitHub issue.
 ``` r
 library(details)
 
-sessioninfo::session_info()%>%
+sessioninfo::session_info()|>
   details::details(summary = 'current session info')
 ```
 

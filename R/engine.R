@@ -6,6 +6,7 @@
 #' @importFrom knitr fig_path engine_output sew
 #' @importFrom grid grid.raster convertUnit unit
 #' @importFrom png readPNG
+#' @importFrom xfun is_windows
 eng_detail <- function (options) {
   
   type <- options$type %n% "details"
@@ -46,12 +47,12 @@ eng_detail <- function (options) {
   
   if(length(attr(code,'file'))>0){
     
-    this <- attr(code,'file')
+    this <- normalizePath(attr(code,'file'), mustWork = FALSE)
     
     plot_counter <- utils::getFromNamespace("plot_counter", "knitr")
     in_base_dir <- utils::getFromNamespace("in_base_dir", "knitr")
     
-    tmp <- knitr::fig_path('png', number = plot_counter())
+    tmp <- normalizePath(knitr::fig_path('png', number = plot_counter()), mustWork = FALSE)
     tmp <- structure(tmp,class = c('knit_image_paths',class(tmp)))
     
     if(!grepl('^-',tmp)){
@@ -60,8 +61,13 @@ eng_detail <- function (options) {
       dir.create(dirname(tmp), showWarnings = FALSE, recursive = TRUE)
       file.copy(this,tmp)
     })
-
-    code <- gsub(this,knitr::sew(tmp),code)
+    
+    if(xfun::is_windows()){
+      message('details knitr plots in winos disabled')
+      code <- knitr::sew(tmp)
+    }else{
+      code <- gsub(this,knitr::sew(tmp),code)  
+    }
     
     }else{
       
