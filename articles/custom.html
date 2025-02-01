@@ -6,26 +6,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Customizing Details • details</title>
-<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha256-PbSmjxuVAzJ6FPvNYsrXygfGhNJYyZ2GktDbkMBqQZg=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/v4-shims.min.css" integrity="sha256-A6jcAdwFD48VMjlI3GDxUd+eCQa7/KWy6G9oe/ovaPA=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Customizing Details">
-<meta property="og:description" content="">
-<meta property="og:image" content="/logo.png">
-<meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
+
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -38,18 +32,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">details</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.0</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
@@ -62,15 +50,9 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/yonicd/details">
+  <a href="https://github.com/yonicd/details/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="http://twitter.com/yoniceedee">
-    <span class="fas fa-lg fa-twitter"></span>
-     
+
   </a>
 </li>
       </ul>
@@ -81,22 +63,23 @@
 </div>
 <!--/.navbar -->
 
-      
 
-      </header><script src="custom_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>Customizing Details</h1>
+      <h1 data-toc-skip>Customizing Details</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/yonicd/details/blob/master/vignettes/custom.Rmd"><code>vignettes/custom.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/yonicd/details/blob/master/vignettes/custom.Rmd" class="external-link"><code>vignettes/custom.Rmd</code></a></small>
       <div class="hidden name"><code>custom.Rmd</code></div>
 
     </div>
 
     
     
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(details)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/yonicd/details" class="external-link">details</a></span><span class="op">)</span></span></code></pre></div>
 <p>You can customize the details output:</p>
 <ol style="list-style-type: decimal">
 <li><a href="#title">Customizing the title</a></li>
@@ -105,161 +88,168 @@
 <li><a href="#language">Setting the highlight language</a></li>
 <li><a href="#raw">Toggling off the language</a></li>
 </ol>
-<div id="default" class="section level3">
-<h3 class="hasAnchor">
-<a href="#default" class="anchor"></a>Default</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>  R.version <span class="op">%&gt;%</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="st">  </span>details<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/details/man/details.html">details</a></span>()</span></code></pre></div>
-<details closed><div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2"></a>               _                           </span>
-<span id="cb3-3"><a href="#cb3-3"></a>platform       x86_<span class="dv">64</span><span class="op">-</span>apple<span class="op">-</span>darwin15.<span class="fl">6.0</span>   </span>
-<span id="cb3-4"><a href="#cb3-4"></a>arch           x86_<span class="dv">64</span>                      </span>
-<span id="cb3-5"><a href="#cb3-5"></a>os             darwin15.<span class="fl">6.0</span>                </span>
-<span id="cb3-6"><a href="#cb3-6"></a>system         x86_<span class="dv">64</span>, darwin15.<span class="fl">6.0</span>        </span>
-<span id="cb3-7"><a href="#cb3-7"></a>status                                     </span>
-<span id="cb3-8"><a href="#cb3-8"></a>major          <span class="dv">3</span>                           </span>
-<span id="cb3-9"><a href="#cb3-9"></a>minor          <span class="fl">6.3</span>                         </span>
-<span id="cb3-10"><a href="#cb3-10"></a>year           <span class="dv">2020</span>                        </span>
-<span id="cb3-11"><a href="#cb3-11"></a>month          <span class="dv">02</span>                          </span>
-<span id="cb3-12"><a href="#cb3-12"></a>day            <span class="dv">29</span>                          </span>
-<span id="cb3-13"><a href="#cb3-13"></a>svn rev        <span class="dv">77875</span>                       </span>
-<span id="cb3-14"><a href="#cb3-14"></a>language       R                           </span>
-<span id="cb3-15"><a href="#cb3-15"></a>version.string R version <span class="dv">3</span>.<span class="fl">6.3</span> (<span class="dv">2020-02-29</span>)</span>
-<span id="cb3-16"><a href="#cb3-16"></a>nickname       Holding the Windsock        </span></code></pre></div>
+<div class="section level4">
+<h4 id="default">Default<a class="anchor" aria-label="anchor" href="#default"></a>
+</h4>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span>  <span class="va">R.version</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">details</span><span class="fu">::</span><span class="fu"><a href="../reference/details.html">details</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<details closed><div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>               _                           </span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>platform       x86_64<span class="sc">-</span>pc<span class="sc">-</span>linux<span class="sc">-</span>gnu         </span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>arch           x86_64                      </span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>os             linux<span class="sc">-</span>gnu                   </span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>system         x86_64, linux<span class="sc">-</span>gnu           </span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>status                                     </span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>major          <span class="dv">4</span>                           </span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>minor          <span class="fl">4.2</span>                         </span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>year           <span class="dv">2024</span>                        </span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>month          <span class="dv">10</span>                          </span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>day            <span class="dv">31</span>                          </span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a>svn rev        <span class="dv">87279</span>                       </span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a>language       R                           </span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a>version.string R version <span class="dv">4</span>.<span class="fl">4.2</span> (<span class="dv">2024-10-31</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a>nickname       Pile of Leaves              </span></code></pre></div>
 </details><p><br></p>
 </div>
-<div id="title" class="section level3">
-<h3 class="hasAnchor">
-<a href="#title" class="anchor"></a>Title</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>R.version.string <span class="op">%&gt;%</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="st">  </span>details<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/details/man/details.html">details</a></span>(</span>
-<span id="cb4-3"><a href="#cb4-3"></a>    <span class="dt">summary =</span> <span class="st">'R Version'</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  )</span></code></pre></div>
-<details closed><p><summary><span title="Click to Expand"> R Version </span> </summary></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2"></a>R version <span class="dv">3</span>.<span class="fl">6.3</span> (<span class="dv">2020-02-29</span>)</span></code></pre></div>
+<div class="section level4">
+<h4 id="title">Title<a class="anchor" aria-label="anchor" href="#title"></a>
+</h4>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">R.version.string</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">details</span><span class="fu">::</span><span class="fu"><a href="../reference/details.html">details</a></span><span class="op">(</span></span>
+<span>    summary <span class="op">=</span> <span class="st">'R Version'</span></span>
+<span>  <span class="op">)</span></span></code></pre></div>
+<details closed><summary><span title="Click to Expand"> R Version </span>
+</summary><div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>R version <span class="dv">4</span>.<span class="fl">4.2</span> (<span class="dv">2024-10-31</span>)</span></code></pre></div>
 </details><p><br></p>
 <p>Manipulating the title style</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>R.version.string <span class="op">%&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="st">  </span>details<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/details/man/details.html">details</a></span>(</span>
-<span id="cb6-3"><a href="#cb6-3"></a>    <span class="dt">summary =</span> <span class="st">'&lt;font color="red"&gt; R Version &lt;/font&gt;'</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>  )</span></code></pre></div>
-<details closed><p><summary><span title="Click to Expand"> <font color="red"> R Version </font> </span> </summary></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a></span>
-<span id="cb7-2"><a href="#cb7-2"></a>R version <span class="dv">3</span>.<span class="fl">6.3</span> (<span class="dv">2020-02-29</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">R.version.string</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">details</span><span class="fu">::</span><span class="fu"><a href="../reference/details.html">details</a></span><span class="op">(</span></span>
+<span>    summary <span class="op">=</span> <span class="st">'&lt;font color="red"&gt; R Version &lt;/font&gt;'</span></span>
+<span>  <span class="op">)</span></span></code></pre></div>
+<details closed><summary><span title="Click to Expand"> <font color="red"> R Version </font>
+</span>
+</summary><div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>R version <span class="dv">4</span>.<span class="fl">4.2</span> (<span class="dv">2024-10-31</span>)</span></code></pre></div>
 </details><p><br></p>
 </div>
-<div id="open" class="section level3">
-<h3 class="hasAnchor">
-<a href="#open" class="anchor"></a>Open</h3>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>R.version.string <span class="op">%&gt;%</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="st">  </span>details<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/details/man/details.html">details</a></span>(</span>
-<span id="cb8-3"><a href="#cb8-3"></a>    <span class="dt">summary =</span> <span class="st">'Open by default'</span>,</span>
-<span id="cb8-4"><a href="#cb8-4"></a>    <span class="dt">open =</span> <span class="ot">TRUE</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a>  )</span></code></pre></div>
-<details open><p><summary><span title="Click to Expand"> Open by default </span> </summary></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a></span>
-<span id="cb9-2"><a href="#cb9-2"></a>R version <span class="dv">3</span>.<span class="fl">6.3</span> (<span class="dv">2020-02-29</span>)</span></code></pre></div>
+<div class="section level4">
+<h4 id="open">Open<a class="anchor" aria-label="anchor" href="#open"></a>
+</h4>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">R.version.string</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">details</span><span class="fu">::</span><span class="fu"><a href="../reference/details.html">details</a></span><span class="op">(</span></span>
+<span>    summary <span class="op">=</span> <span class="st">'Open by default'</span>,</span>
+<span>    open <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>  <span class="op">)</span></span></code></pre></div>
+<details open><summary><span title="Click to Expand"> Open by default </span>
+</summary><div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>R version <span class="dv">4</span>.<span class="fl">4.2</span> (<span class="dv">2024-10-31</span>)</span></code></pre></div>
 </details><p><br></p>
-<div id="tooltip" class="section level4">
-<h4 class="hasAnchor">
-<a href="#tooltip" class="anchor"></a>Tooltip</h4>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>R.version.string <span class="op">%&gt;%</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="st">  </span>details<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/details/man/details.html">details</a></span>(</span>
-<span id="cb10-3"><a href="#cb10-3"></a>    <span class="dt">summary =</span> <span class="st">'Use the current date as the tooltip'</span>,</span>
-<span id="cb10-4"><a href="#cb10-4"></a>    <span class="dt">tooltip =</span> <span class="kw"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span>()</span>
-<span id="cb10-5"><a href="#cb10-5"></a>  )</span></code></pre></div>
-<details closed><p><summary><span title="2021-01-14"> Use the current date as the tooltip </span> </summary></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a></span>
-<span id="cb11-2"><a href="#cb11-2"></a>R version <span class="dv">3</span>.<span class="fl">6.3</span> (<span class="dv">2020-02-29</span>)</span></code></pre></div>
-</details><p><br></p>
-</div>
-</div>
-<div id="language" class="section level3">
-<h3 class="hasAnchor">
-<a href="#language" class="anchor"></a>Language</h3>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a></span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="kw"><a href="https://rdrr.io/r/base/readLines.html">readLines</a></span>(</span>
-<span id="cb12-3"><a href="#cb12-3"></a>  <span class="st">'https://raw.githubusercontent.com/metrumresearchgroup/covrpage/master/_pkgdown.yml'</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a>  )<span class="op">%&gt;%</span></span>
-<span id="cb12-5"><a href="#cb12-5"></a><span class="st">  </span>details<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/details/man/details.html">details</a></span>(</span>
-<span id="cb12-6"><a href="#cb12-6"></a>    <span class="dt">summary =</span> <span class="st">'yaml example'</span>,</span>
-<span id="cb12-7"><a href="#cb12-7"></a>    <span class="dt">lang =</span> <span class="st">'yml'</span></span>
-<span id="cb12-8"><a href="#cb12-8"></a>    )</span></code></pre></div>
-<details closed><p><summary><span title="Click to Expand"> yaml example </span> </summary></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1"></a></span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">title</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> covrpage</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="fu">development</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-5"><a href="#cb13-5"></a><span class="at">  </span><span class="fu">mode</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> auto</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a></span>
-<span id="cb13-7"><a href="#cb13-7"></a><span class="fu">template</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-8"><a href="#cb13-8"></a><span class="at">  </span><span class="fu">params</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-9"><a href="#cb13-9"></a><span class="at">    </span><span class="fu">bootswatch</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> flatly</span></span>
-<span id="cb13-10"><a href="#cb13-10"></a></span>
-<span id="cb13-11"><a href="#cb13-11"></a><span class="fu">navbar</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-12"><a href="#cb13-12"></a><span class="at">  </span><span class="fu">type</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> inverse</span></span>
-<span id="cb13-13"><a href="#cb13-13"></a><span class="at">  </span><span class="fu">right</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-14"><a href="#cb13-14"></a><span class="at">    </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> </span><span class="fu">icon</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> fa-github fa-lg</span></span>
-<span id="cb13-15"><a href="#cb13-15"></a><span class="at">      </span><span class="fu">href</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> https://github.com/yonicd/covrpage</span></span>
-<span id="cb13-16"><a href="#cb13-16"></a><span class="at">  </span><span class="fu">structure</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-17"><a href="#cb13-17"></a><span class="at">    </span><span class="fu">left</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at">  </span><span class="kw"><a href="https://rdrr.io/r/base/Extract.html">[</a></span><span class="at">home</span><span class="kw">,</span><span class="at"> reference</span><span class="kw">,</span><span class="at"> articleindex</span><span class="kw">,</span><span class="at"> news</span><span class="kw">]</span></span>
-<span id="cb13-18"><a href="#cb13-18"></a><span class="at">    </span><span class="fu">right</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> </span><span class="kw"><a href="https://rdrr.io/r/base/Extract.html">[</a></span><span class="at">github</span><span class="kw">,</span><span class="at"> twitter</span><span class="kw">]</span></span>
-<span id="cb13-19"><a href="#cb13-19"></a><span class="at">  </span><span class="fu">components</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-20"><a href="#cb13-20"></a><span class="at">    </span><span class="fu">articles</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> </span><span class="ch">~</span></span>
-<span id="cb13-21"><a href="#cb13-21"></a><span class="at">    </span><span class="fu">articleindex</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-22"><a href="#cb13-22"></a><span class="at">      </span><span class="fu">text</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> Articles</span></span>
-<span id="cb13-23"><a href="#cb13-23"></a><span class="at">      </span><span class="fu">href</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> articles/index.html</span></span>
-<span id="cb13-24"><a href="#cb13-24"></a><span class="at">    </span><span class="fu">twitter</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-25"><a href="#cb13-25"></a><span class="at">      </span><span class="fu">icon</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> fa-lg fa-twitter</span></span>
-<span id="cb13-26"><a href="#cb13-26"></a><span class="at">      </span><span class="fu">href</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> http://twitter.com/yoniceedee</span></span>
-<span id="cb13-27"><a href="#cb13-27"></a></span>
-<span id="cb13-28"><a href="#cb13-28"></a><span class="fu">hexURL</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-29"><a href="#cb13-29"></a><span class="at">  https://github.com/yonicd/covrpage/blob/master/inst/logo/covrpageLogoSCREEN.png?raw=true</span></span>
-<span id="cb13-30"><a href="#cb13-30"></a></span>
-<span id="cb13-31"><a href="#cb13-31"></a><span class="fu">reference</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-32"><a href="#cb13-32"></a><span class="at">  </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> </span><span class="fu">title</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> </span><span class="st">"Setup"</span></span>
-<span id="cb13-33"><a href="#cb13-33"></a><span class="at">    </span><span class="fu">contents</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-34"><a href="#cb13-34"></a><span class="at">      </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> has_concept("setup")</span></span>
-<span id="cb13-35"><a href="#cb13-35"></a><span class="at">  </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> </span><span class="fu">title</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> </span><span class="st">"Invoking"</span></span>
-<span id="cb13-36"><a href="#cb13-36"></a><span class="at">    </span><span class="fu">contents</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-37"><a href="#cb13-37"></a><span class="at">      </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> has_concept("invoke")</span></span>
-<span id="cb13-38"><a href="#cb13-38"></a><span class="at">  </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> </span><span class="fu">title</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> </span><span class="st">"Covrpage Trends"</span></span>
-<span id="cb13-39"><a href="#cb13-39"></a><span class="at">    </span><span class="fu">contents</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-40"><a href="#cb13-40"></a><span class="at">      </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> has_concept("log")</span></span>
-<span id="cb13-41"><a href="#cb13-41"></a><span class="at">  </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> </span><span class="fu">title</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> </span><span class="st">"Covrpage Utilities"</span></span>
-<span id="cb13-42"><a href="#cb13-42"></a><span class="at">    </span><span class="fu">contents</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-43"><a href="#cb13-43"></a><span class="at">      </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> has_concept("utility")</span></span>
-<span id="cb13-44"><a href="#cb13-44"></a></span>
-<span id="cb13-45"><a href="#cb13-45"></a><span class="fu">articles</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-46"><a href="#cb13-46"></a><span class="at">  </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> </span><span class="fu">title</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> </span><span class="st">"Basics"</span></span>
-<span id="cb13-47"><a href="#cb13-47"></a><span class="at">    </span><span class="fu">contents</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-48"><a href="#cb13-48"></a><span class="at">      </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> get-started</span></span>
-<span id="cb13-49"><a href="#cb13-49"></a><span class="at">      </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> how-to-read-covrpage-report</span></span>
-<span id="cb13-50"><a href="#cb13-50"></a><span class="at">  </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> </span><span class="fu">title</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> </span><span class="st">"Advanced"</span></span>
-<span id="cb13-51"><a href="#cb13-51"></a><span class="at">    </span><span class="fu">contents</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span></span>
-<span id="cb13-52"><a href="#cb13-52"></a><span class="at">      </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> Continuous_Integration</span></span>
-<span id="cb13-53"><a href="#cb13-53"></a><span class="at">      </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> Test_Results</span></span>
-<span id="cb13-54"><a href="#cb13-54"></a><span class="at">      </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> snapshots</span></span>
-<span id="cb13-55"><a href="#cb13-55"></a><span class="at">  </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> </span><span class="fu">title</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> </span><span class="st">"The Output"</span></span>
-<span id="cb13-56"><a href="#cb13-56"></a><span class="at">    </span><span class="fu">contents</span><span class="kw"><a href="https://rdrr.io/r/base/Colon.html">:</a></span><span class="at"> </span></span>
-<span id="cb13-57"><a href="#cb13-57"></a><span class="at">      </span><span class="kw"><a href="https://rdrr.io/r/base/Arithmetic.html">-</a></span><span class="at"> tests_and_coverage      </span></span></code></pre></div>
+<div class="section level5">
+<h5 id="tooltip">Tooltip<a class="anchor" aria-label="anchor" href="#tooltip"></a>
+</h5>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">R.version.string</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">details</span><span class="fu">::</span><span class="fu"><a href="../reference/details.html">details</a></span><span class="op">(</span></span>
+<span>    summary <span class="op">=</span> <span class="st">'Use the current date as the tooltip'</span>,</span>
+<span>    tooltip <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.Date</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code></pre></div>
+<details closed><summary><span title="2025-02-01"> Use the current date as the tooltip </span>
+</summary><div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>R version <span class="dv">4</span>.<span class="fl">4.2</span> (<span class="dv">2024-10-31</span>)</span></code></pre></div>
 </details><p><br></p>
 </div>
-<div id="raw" class="section level3">
-<h3 class="hasAnchor">
-<a href="#raw" class="anchor"></a>Raw</h3>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a></span>
-<span id="cb14-2"><a href="#cb14-2"></a>details<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/details/man/details.html">details</a></span>(</span>
-<span id="cb14-3"><a href="#cb14-3"></a><span class="st">'&lt;h1 style="color:blue;"&gt;This is a Blue Heading&lt;/h1&gt;&lt;br&gt;</span></span>
-<span id="cb14-4"><a href="#cb14-4"></a><span class="st">&lt;p style="border: 1px solid powderblue;"&gt;There is a border around the text&lt;/p&gt;'</span>,</span>
-<span id="cb14-5"><a href="#cb14-5"></a><span class="dt">summary =</span> <span class="st">'Raw code example'</span>,</span>
-<span id="cb14-6"><a href="#cb14-6"></a><span class="dt">lang =</span> <span class="st">'none'</span></span>
-<span id="cb14-7"><a href="#cb14-7"></a>)</span></code></pre></div>
-<details closed><p><summary><span title="Click to Expand"> Raw code example </span> </summary></p>
-<h1 style="color:blue;">
+</div>
+<div class="section level4">
+<h4 id="language">Language<a class="anchor" aria-label="anchor" href="#language"></a>
+</h4>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/readLines.html" class="external-link">readLines</a></span><span class="op">(</span></span>
+<span>  <span class="st">'https://raw.githubusercontent.com/metrumresearchgroup/covrpage/master/_pkgdown.yml'</span></span>
+<span>  <span class="op">)</span><span class="op">|&gt;</span></span>
+<span>  <span class="fu">details</span><span class="fu">::</span><span class="fu"><a href="../reference/details.html">details</a></span><span class="op">(</span></span>
+<span>    summary <span class="op">=</span> <span class="st">'yaml example'</span>,</span>
+<span>    lang <span class="op">=</span> <span class="st">'yml'</span></span>
+<span>    <span class="op">)</span></span></code></pre></div>
+<details closed><summary><span title="Click to Expand"> yaml example </span>
+</summary><div class="sourceCode" id="cb13"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> covrpage</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="fu">development</span><span class="kw">:</span></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="at">  </span><span class="fu">mode</span><span class="kw">:</span><span class="at"> auto</span></span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="fu">template</span><span class="kw">:</span></span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a><span class="at">  </span><span class="fu">params</span><span class="kw">:</span></span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a><span class="at">    </span><span class="fu">bootswatch</span><span class="kw">:</span><span class="at"> flatly</span></span>
+<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" tabindex="-1"></a><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb13-12"><a href="#cb13-12" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> inverse</span></span>
+<span id="cb13-13"><a href="#cb13-13" tabindex="-1"></a><span class="at">  </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb13-14"><a href="#cb13-14" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> fa-github fa-lg</span></span>
+<span id="cb13-15"><a href="#cb13-15" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/yonicd/covrpage</span></span>
+<span id="cb13-16"><a href="#cb13-16" tabindex="-1"></a><span class="at">  </span><span class="fu">structure</span><span class="kw">:</span></span>
+<span id="cb13-17"><a href="#cb13-17" tabindex="-1"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span><span class="at">  </span><span class="kw">[</span><span class="at">home</span><span class="kw">,</span><span class="at"> reference</span><span class="kw">,</span><span class="at"> articleindex</span><span class="kw">,</span><span class="at"> news</span><span class="kw">]</span></span>
+<span id="cb13-18"><a href="#cb13-18" tabindex="-1"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">github</span><span class="kw">,</span><span class="at"> twitter</span><span class="kw">]</span></span>
+<span id="cb13-19"><a href="#cb13-19" tabindex="-1"></a><span class="at">  </span><span class="fu">components</span><span class="kw">:</span></span>
+<span id="cb13-20"><a href="#cb13-20" tabindex="-1"></a><span class="at">    </span><span class="fu">articles</span><span class="kw">:</span><span class="at"> </span><span class="ch">~</span></span>
+<span id="cb13-21"><a href="#cb13-21" tabindex="-1"></a><span class="at">    </span><span class="fu">articleindex</span><span class="kw">:</span></span>
+<span id="cb13-22"><a href="#cb13-22" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Articles</span></span>
+<span id="cb13-23"><a href="#cb13-23" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> articles/index.html</span></span>
+<span id="cb13-24"><a href="#cb13-24" tabindex="-1"></a><span class="at">    </span><span class="fu">twitter</span><span class="kw">:</span></span>
+<span id="cb13-25"><a href="#cb13-25" tabindex="-1"></a><span class="at">      </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> fa-lg fa-twitter</span></span>
+<span id="cb13-26"><a href="#cb13-26" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> http://twitter.com/yoniceedee</span></span>
+<span id="cb13-27"><a href="#cb13-27" tabindex="-1"></a></span>
+<span id="cb13-28"><a href="#cb13-28" tabindex="-1"></a><span class="fu">hexURL</span><span class="kw">:</span></span>
+<span id="cb13-29"><a href="#cb13-29" tabindex="-1"></a><span class="at">  https://github.com/yonicd/covrpage/blob/master/inst/logo/covrpageLogoSCREEN.png?raw=true</span></span>
+<span id="cb13-30"><a href="#cb13-30" tabindex="-1"></a></span>
+<span id="cb13-31"><a href="#cb13-31" tabindex="-1"></a><span class="fu">reference</span><span class="kw">:</span></span>
+<span id="cb13-32"><a href="#cb13-32" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Setup"</span></span>
+<span id="cb13-33"><a href="#cb13-33" tabindex="-1"></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb13-34"><a href="#cb13-34" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> has_concept("setup")</span></span>
+<span id="cb13-35"><a href="#cb13-35" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Invoking"</span></span>
+<span id="cb13-36"><a href="#cb13-36" tabindex="-1"></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb13-37"><a href="#cb13-37" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> has_concept("invoke")</span></span>
+<span id="cb13-38"><a href="#cb13-38" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Covrpage Trends"</span></span>
+<span id="cb13-39"><a href="#cb13-39" tabindex="-1"></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb13-40"><a href="#cb13-40" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> has_concept("log")</span></span>
+<span id="cb13-41"><a href="#cb13-41" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Covrpage Utilities"</span></span>
+<span id="cb13-42"><a href="#cb13-42" tabindex="-1"></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb13-43"><a href="#cb13-43" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> has_concept("utility")</span></span>
+<span id="cb13-44"><a href="#cb13-44" tabindex="-1"></a></span>
+<span id="cb13-45"><a href="#cb13-45" tabindex="-1"></a><span class="fu">articles</span><span class="kw">:</span></span>
+<span id="cb13-46"><a href="#cb13-46" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Basics"</span></span>
+<span id="cb13-47"><a href="#cb13-47" tabindex="-1"></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb13-48"><a href="#cb13-48" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> get-started</span></span>
+<span id="cb13-49"><a href="#cb13-49" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> how-to-read-covrpage-report</span></span>
+<span id="cb13-50"><a href="#cb13-50" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Advanced"</span></span>
+<span id="cb13-51"><a href="#cb13-51" tabindex="-1"></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
+<span id="cb13-52"><a href="#cb13-52" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> Continuous_Integration</span></span>
+<span id="cb13-53"><a href="#cb13-53" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> snapshots</span></span>
+<span id="cb13-54"><a href="#cb13-54" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"The Output"</span></span>
+<span id="cb13-55"><a href="#cb13-55" tabindex="-1"></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb13-56"><a href="#cb13-56" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> tests_and_coverage      </span></span></code></pre></div>
+</details><p><br></p>
+</div>
+<div class="section level4">
+<h4 id="raw">Raw<a class="anchor" aria-label="anchor" href="#raw"></a>
+</h4>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="fu">details</span><span class="fu">::</span><span class="fu"><a href="../reference/details.html">details</a></span><span class="op">(</span></span>
+<span><span class="st">'&lt;h1 style="color:blue;"&gt;This is a Blue Heading&lt;/h1&gt;&lt;br&gt;</span></span>
+<span><span class="st">&lt;p style="border: 1px solid powderblue;"&gt;There is a border around the text&lt;/p&gt;'</span>,</span>
+<span>summary <span class="op">=</span> <span class="st">'Raw code example'</span>,</span>
+<span>lang <span class="op">=</span> <span class="st">'none'</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<details closed><summary><span title="Click to Expand"> Raw code example </span>
+</summary><h2 style="color:blue;">
 This is a Blue Heading
-</h1>
+</h2>
 <br><p style="border: 1px solid powderblue;">
 There is a border around the text
 </p>
@@ -267,7 +257,7 @@ There is a border around the text
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
       </div>
 
@@ -276,17 +266,21 @@ There is a border around the text
 
 
       <footer><div class="copyright">
-  <p>Developed by Jonathan Sidi.</p>
+  <p></p>
+<p>Developed by Jonathan Sidi.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.9000.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
       </footer>
 </div>
 
-  
+
+
+
 
 
   </body>

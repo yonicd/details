@@ -1,11 +1,10 @@
-pandoc: 2.7.3
-pkgdown: 1.4.1.9000
-pkgdown_sha: 08d56fc764f959e14840670e58df9f05177ef487
+pandoc: 3.1.3
+pkgdown: 2.1.1
+pkgdown_sha: ~
 articles:
   custom: custom.html
   documentation: documentation.html
   engine: engine.html
   objects: objects.html
   sessioninfo: sessioninfo.html
-  tests_and_coverage: tests_and_coverage.html
-
+last_built: 2025-02-01T21:17Z
