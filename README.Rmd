@@ -20,7 +20,6 @@ knitr::opts_chunk$set(
 [![R-mac build status](https://github.com/yonicd/details/workflows/R-mac/badge.svg)](https://github.com/yonicd/details)
 [![R-linux build status](https://github.com/yonicd/details/workflows/R-linux/badge.svg)](https://github.com/yonicd/details)
 [![Codecov test coverage](https://codecov.io/gh/yonicd/details/branch/master/graph/badge.svg)](https://app.codecov.io/gh/yonicd/details?branch=master)
-[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2021_01_13-yellowgreen.svg)](https://github.com/yonicd/details/blob/master/tests/README.md)
 <!-- badges: end -->
 
 
@@ -106,7 +105,7 @@ sessioninfo::session_info()
 There are a [number of objects](https://yonicd.github.io/details/articles/objects.html) that can be placed in a details block other than a character object. An example of a object is a device output such as a plot
 
 ```{r}
-details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot')
+details(plot(x=mtcars$mpg,y=mtcars$wt), summary = 'My plot',imgur = interactive())
 ```
 
 ## Package Documentation
