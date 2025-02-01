@@ -14,9 +14,6 @@ navbar:
     articleindex:
       text: Articles
       href: articles/index.html
-    twitter:
-      icon: fa-lg fa-twitter
-      href: http://twitter.com/yoniceedee
 
 reference:
   - title: 'Functions'
@@ -35,9 +32,6 @@ articles:
   - title: "Package Documentation"      
     contents:
       - documentation
-  - title: "Unit Tests and Code Coverage"
-    contents: 
-      - tests_and_coverage      
 
 hexURL:
   https://github.com/yonicd/details/blob/master/input/logo.png?raw=true
